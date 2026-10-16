@@ -1,0 +1,54 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Privacy Policy: Gmail to GitHub Issue</title><style>body{margin:0;font:16px/1.6 system-ui,Segoe UI,Roboto,sans-serif;color:#1b1b2f;background:#f6f5ff}main{max-width:760px;margin:0 auto;padding:28px 18px 60px}h1{font-size:28px;margin:.2em 0 .4em}h2{margin-top:1.6em;font-size:20px}a{color:#4f46e5}code{background:#ecebff;padding:1px 5px;border-radius:5px}ul,ol{padding-left:1.3em}footer{margin-top:40px;color:#666;font-size:14px}.card{display:block;padding:14px 16px;margin:10px 0;background:#fff;border:1px solid #e3e1ff;border-radius:14px;text-decoration:none;color:inherit}.card b{display:block}.card span{color:#666;font-size:14px}</style></head><body><main><p><a href="../">All apps</a></p><h1>Privacy Policy: Gmail to GitHub Issue</h1>
+<p>Developer: Sonith. Contact: sonythm@gmail.com. Effective date: 2026-10-16.</p>
+<p>Gmail to GitHub Issue is a Chrome extension. It adds a "GitHub issue" button to Gmail so you can turn the email you are reading into a GitHub issue.</p>
+<h2>Summary</h2>
+<ul>
+<li>No server of ours. We do not receive your data.</li>
+<li>The extension reads an email only when you click "GitHub issue".</li>
+<li>The email text goes only to GitHub, only when you click "Create issue", under your own token.</li>
+<li>No ads, no analytics, no tracking, no remote code.</li>
+</ul>
+<h2>What the extension reads</h2>
+<ul>
+<li>On Gmail pages (mail.google.com) it looks at the page to find the subject of the open email, so it can place the button. It does not read or store your inbox.</li>
+<li>When you click "GitHub issue", it reads the open thread on the page: sender name and address, date and text of the latest message, or of every message in the thread if you tick "Include the whole thread". It fills the issue dialog with that text so you can edit it.</li>
+<li>It does not use the Gmail API. It does not read other emails, labels, contacts or attachments.</li>
+</ul>
+<h2>What it sends, and to whom</h2>
+<ul>
+<li>When you click "Create issue", the title, body (the email text you see in the dialog, with the sender, date and a link to the Gmail thread) and the labels you picked are sent to the GitHub API at api.github.com, into the repository you chose.</li>
+<li>Other GitHub requests: check your token (/user), list your repositories (/user/repos), list a repository's labels.</li>
+<li>Requests carry your GitHub token in an Authorization header.</li>
+<li>Nothing is sent anywhere else. If the repository is public, the issue text is public. Check what you send.</li>
+<li>GitHub handles this data under its own privacy statement.</li>
+</ul>
+<h2>What it stores</h2>
+<p>In Chrome's local extension storage on your computer (chrome.storage.local):</p>
+<ul>
+<li>Your GitHub token and username.</li>
+<li>Your settings: default repository, default labels, "include whole thread".</li>
+<li>The last repository you used and a cached list of your repository names (refreshed after 10 minutes).</li>
+</ul>
+<p>Nothing is stored on a server of ours. The token is not synced by the extension. Chrome handles the storage on your device.</p>
+<h2>Permissions</h2>
+<ul>
+<li>storage: to keep the token and settings above.</li>
+<li>scripting: to put the button and dialog into Gmail tabs that were already open when the extension was installed or updated.</li>
+<li>Access to mail.google.com: to add the button and read the open email when you ask.</li>
+<li>Access to api.github.com: to create the issue and list repositories and labels.</li>
+</ul>
+<h2>Sharing</h2>
+<p>We do not sell your data, share it with third parties, or use it for advertising, credit or lending decisions.</p>
+<h2>Removing your data</h2>
+<ul>
+<li>Settings page: clear the token field and click Save. Your username and cached repository names stay until you uninstall.</li>
+<li>Uninstall the extension. Chrome deletes its stored data.</li>
+<li>Revoke the token at github.com/settings/tokens.</li>
+<li>Issues you created stay on GitHub. Delete them there.</li>
+</ul>
+<h2>Children</h2>
+<p>Not directed at children under 13.</p>
+<h2>Changes</h2>
+<p>A changed policy will be published at the same address with a new effective date.</p>
+<h2>Contact</h2>
+<p>sonythm@gmail.com</p><footer>Developer: Sonith. Contact: <a href="mailto:sonythm@gmail.com">sonythm@gmail.com</a></footer></main></body></html>

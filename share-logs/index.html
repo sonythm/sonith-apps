@@ -1,0 +1,61 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Privacy Policy: Share Logs to Insight</title><style>body{margin:0;font:16px/1.6 system-ui,Segoe UI,Roboto,sans-serif;color:#1b1b2f;background:#f6f5ff}main{max-width:760px;margin:0 auto;padding:28px 18px 60px}h1{font-size:28px;margin:.2em 0 .4em}h2{margin-top:1.6em;font-size:20px}a{color:#4f46e5}code{background:#ecebff;padding:1px 5px;border-radius:5px}ul,ol{padding-left:1.3em}footer{margin-top:40px;color:#666;font-size:14px}.card{display:block;padding:14px 16px;margin:10px 0;background:#fff;border:1px solid #e3e1ff;border-radius:14px;text-decoration:none;color:inherit}.card b{display:block}.card span{color:#666;font-size:14px}</style></head><body><main><p><a href="../">All apps</a></p><h1>Privacy Policy: Share Logs to Insight</h1>
+<p>Effective date: 2026-10-16 App: Share Logs to Insight, version 0.1.0, package com.sonith.sharelogs Developer: Sonith. Contact: sonythm@gmail.com</p>
+<h2>Summary</h2>
+<p>Share Logs to Insight reads log files and text on your phone and shows a summary. It does not send your logs, or anything else, to the developer or to any server. The app has no code that makes network requests. It has no account, no analytics, no ads and no crash reporting.</p>
+<h2>What the app stores on your phone</h2>
+<ul>
+<li>A copy of each log file or text you share or open in the app, kept in the app's private storage.</li>
+<li>The results of reading it: counts of errors, warnings and crashes, error groups (exception type, message, top frame, counts, times) and up to 500 occurrences per group.</li>
+<li>Your settings: retention days, demo mode, which built-in formats are on, your custom format rules (regular expressions and sample lines), your highlight package prefixes, and notification settings.</li>
+</ul>
+<p>Logs can contain personal or confidential data, such as device identifiers, user names, addresses or tokens. It depends on what the app that wrote the log recorded. This app does not look for or extract such data. It stores the log as you gave it, on the phone only. The app adds no encryption of its own on top of Android's app-private storage.</p>
+<h2>Network</h2>
+<p>The app makes no network calls. It has no hosts it connects to. Fonts are bundled in the app. Nothing is downloaded while you use it.</p>
+<h2>Notifications</h2>
+<p>Notifications are local. The app makes them on your phone. There is no push service and no server.</p>
+<ul>
+<li>The app asks for the Android notification permission (POST_NOTIFICATIONS). Android 13 and newer shows a prompt.</li>
+<li>Types: "Analysis ready" or "Could not analyse" when a log you shared finishes while the app is in the background; an optional review reminder (off by default); and a notice before logs are deleted by your retention setting, with a Keep button.</li>
+<li>The text can include the log's file name and the number of error groups, for example "Analysis ready: 3 error groups in app-2026-10-14.log". It can show on your lock screen if your phone is set to show notifications there.</li>
+<li>RECEIVE_BOOT_COMPLETED lets Android restore scheduled reminders after a restart.</li>
+<li>You can turn each type off in the app, or all of them in Android settings. Delete all data cancels them.</li>
+</ul>
+<h2>What leaves your phone, and only when you choose</h2>
+<p>If you use Export, Share or Copy, the text or file you picked goes to the app you choose in the Android share sheet, or to the clipboard. That app's own privacy policy applies from then on. Other apps may be able to read the clipboard. Long-press on a raw log line also copies it.</p>
+<h2>Permissions and access</h2>
+<ul>
+<li>POST_NOTIFICATIONS, RECEIVE_BOOT_COMPLETED, VIBRATE: for notifications.</li>
+<li>Receiving shared files and text: the app appears in the Android share sheet for text and files. It receives only what you send to it.</li>
+<li>File picker: when you open a file inside the app, Android's system file picker is used. The app gets access only to the file you pick.</li>
+<li>Storage permissions limited to Android 12 and older (up to SDK 32), added by a library. The app does not browse your files.</li>
+<li>The app does not use your camera, microphone, contacts, calendar, photos or location.</li>
+</ul>
+<h2>Analytics and advertising</h2>
+<p>None. The app has no analytics, advertising, tracking or crash-reporting code, and no third-party SDK that collects data.</p>
+<h2>Data safety summary</h2>
+<ul>
+<li>Collected by the developer: none.</li>
+<li>Shared with third parties by the developer: none.</li>
+<li>Processed only on your phone: yes.</li>
+</ul>
+<h2>Retention and deleting your data</h2>
+<ul>
+<li>Automatic: logs older than the retention period you set (default 30 days) are deleted when the app starts, with a notice. You can choose Keep from the notice.</li>
+<li>Manual: long-press a log in the Recent list and confirm. Settings, Delete all data removes every log, rule and setting, and cancels notifications.</li>
+<li>Demo logs are removed by turning demo mode off.</li>
+<li>Uninstalling the app removes everything it stored.</li>
+</ul>
+<p>Files and text you shared out of the app are outside it. Delete them there.</p>
+<h2>Backups</h2>
+<p>The developer keeps no copy. Android's own device backup may include app data, depending on your phone's settings. The developer does not control that.</p>
+<h2>Children</h2>
+<p>The app is a developer tool and is not directed at children. It does not collect personal data from anyone.</p>
+<h2>Changes</h2>
+<p>If this policy changes, the new version will be posted at the same address with a new effective date.</p>
+<h2>Contact</h2>
+<p>Sonith, sonythm@gmail.com</p>
+<p>--- Owner notes, delete before publishing:</p>
+<ul>
+<li>VERIFY ON DEVICE: INTERNET. app.json has <code>blockedPermissions: [null, "android.permission.SYSTEM_ALERT_WINDOW"]</code>. The <code>null</code> should be "android.permission.INTERNET". Without it the build may list INTERNET (the android folder manifest does). The policy says "no network calls", which is true of the code, but fix the config so the permission is also absent, then check the release build.</li>
+<li>allowBackup is true in the manifest, so the Android backup sentence applies.</li>
+</ul><footer>Developer: Sonith. Contact: <a href="mailto:sonythm@gmail.com">sonythm@gmail.com</a></footer></main></body></html>

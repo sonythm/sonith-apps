@@ -1,0 +1,56 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Voice Memo Privacy Policy</title><style>body{margin:0;font:16px/1.6 system-ui,Segoe UI,Roboto,sans-serif;color:#1b1b2f;background:#f6f5ff}main{max-width:760px;margin:0 auto;padding:28px 18px 60px}h1{font-size:28px;margin:.2em 0 .4em}h2{margin-top:1.6em;font-size:20px}a{color:#4f46e5}code{background:#ecebff;padding:1px 5px;border-radius:5px}ul,ol{padding-left:1.3em}footer{margin-top:40px;color:#666;font-size:14px}.card{display:block;padding:14px 16px;margin:10px 0;background:#fff;border:1px solid #e3e1ff;border-radius:14px;text-decoration:none;color:inherit}.card b{display:block}.card span{color:#666;font-size:14px}</style></head><body><main><p><a href="../">All apps</a></p><h1>Voice Memo Privacy Policy</h1>
+<p>Effective date: 2026-10-16 App: Voice Memo (com.sonith.voicememo), version 0.1.0 Developer: Sonith Contact: sonythm@gmail.com</p>
+<h2>Summary</h2>
+<p>Voice Memo keeps your recordings, transcripts and settings on your phone. The developer does not receive them. The app has no account, no ads, no analytics and no crash reporting. It makes one kind of network request: it downloads a speech language pack when you tap Download.</p>
+<h2>What the app stores on your phone</h2>
+<ul>
+<li>Audio recordings you make. These are your voice, and can include other people's voices. They are saved as files in the app's private storage.</li>
+<li>Transcripts of those recordings, with the time of each word. They are made on the phone.</li>
+<li>Memo titles, markers, folders, tags, the language you chose, reminders you set and app settings, in a local database.</li>
+<li>Downloaded language pack files (speech models).</li>
+<li>Trimmed copies of recordings, if you use Trim.</li>
+</ul>
+<p>This data stays on the device. The app has no sign-in and no developer server.</p>
+<h2>Data types, in plain terms</h2>
+<p>| Data | Collected by the developer | Shared | Processed on device | Optional | You can delete it | | --- | --- | --- | --- | --- | --- | | Voice recordings (audio) | No | No (only if you choose Share) | Yes | Yes, you choose to record | Yes, delete a memo, or Delete all data | | Transcripts (text of what you said) | No | No (only if you choose Share) | Yes | Yes | Yes | | Titles, folders, tags, markers, reminders, settings | No | No | Yes | Yes | Yes | | Location, contacts, photos, files, device IDs, advertising ID | Not accessed | No | n/a | n/a | n/a |</p>
+<h2>Network calls</h2>
+<p>The app contacts the internet only when you tap Download on the Language packs screen. It requests one model file from:</p>
+<ul>
+<li>huggingface.co, path /ggerganov/whisper.cpp/resolve/main/, files ggml-tiny.en.bin (English) and ggml-base.bin (Malayalam, Hindi, Tamil). Hugging Face may redirect the download to its own content delivery hosts. Like any web host, it can see your IP address and normal request details, under its own privacy policy.</li>
+</ul>
+<p>No recordings, transcripts or personal data are sent in these requests. Transcription runs on the phone. The download uses HTTPS.</p>
+<h2>Permissions and why</h2>
+<ul>
+<li>Microphone (RECORD_AUDIO): to record the audio you ask it to record. Recording starts only when you tap record.</li>
+<li>Foreground service, microphone type (FOREGROUND_SERVICE, FOREGROUND_SERVICE_MICROPHONE): lets a recording keep going when you switch apps or the screen turns off. Android shows a notification while it runs.</li>
+<li>Notifications (POST_NOTIFICATIONS): to tell you a transcript is ready or failed, to show memo reminders you set, and optional daily review and low-storage notices. You can turn each kind off in Settings or in Android.</li>
+<li>Run at start-up (RECEIVE_BOOT_COMPLETED, added by the notifications library): so reminders you set come back after the phone restarts.</li>
+<li>Internet (INTERNET): only for the language pack download above.</li>
+<li>Modify audio settings (MODIFY_AUDIO_SETTINGS): to handle audio focus, for example pausing when a call arrives.</li>
+<li>Foreground service, media playback (FOREGROUND_SERVICE_MEDIA_PLAYBACK): declared for playing memos.</li>
+<li>Vibrate and wake lock: added by libraries for notifications.</li>
+</ul>
+<p>The app does not use camera, contacts, calendar, location, SMS, call log or photo permissions.</p>
+<h2>Notifications</h2>
+<p>Reminders and transcript notices show the memo title. A memo reminder also shows the first line of the transcript. If your lock screen shows notification content, others who see your phone can read that line. You can switch notifications off, or hide sensitive content on the lock screen in Android settings.</p>
+<h2>Sharing</h2>
+<p>Nothing is shared unless you choose Share. Then the audio or text goes to the app you pick, such as email or messaging, under that app's policy. Copy to clipboard puts the transcript on the clipboard, which other apps may be able to read. The GitHub Issue option opens the companion app Share to GitHub Issue on your phone with the transcript text (first 6000 characters) in the link. Voice Memo itself sends nothing over the network.</p>
+<h2>Backups</h2>
+<p>Android may include app data in its own device backup (for example Google backup) if you have turned that on in your device settings. That is controlled by you and your device provider, not by this app.</p>
+<h2>Security</h2>
+<p>Data is kept in the app's private storage, which other apps cannot read under normal Android rules. The app does not add its own encryption. The language pack download uses HTTPS.</p>
+<h2>Analytics and ads</h2>
+<p>The app has no analytics, no advertising, no tracking and no third-party crash reporting.</p>
+<h2>Deleting your data</h2>
+<ul>
+<li>Delete a single memo from the memo screen. This removes its audio, transcript and reminders.</li>
+<li>Settings, Delete all data removes every memo, audio file, transcript, folder, reminder and setting from the phone. Downloaded language packs are not covered by this button; remove them on the Language packs screen.</li>
+<li>Uninstalling the app removes all of its data.</li>
+</ul>
+<p>The developer holds no copy, so there is nothing to request from the developer.</p>
+<h2>Children</h2>
+<p>The app is not directed at children. It does not knowingly collect data from anyone, since it collects none. Recordings can contain anyone's voice, so ask people before you record them.</p>
+<h2>Changes</h2>
+<p>If this policy changes, the new version will be posted at the same address with a new effective date.</p>
+<h2>Contact</h2>
+<p>Sonith, sonythm@gmail.com</p><footer>Developer: Sonith. Contact: <a href="mailto:sonythm@gmail.com">sonythm@gmail.com</a></footer></main></body></html>

@@ -1,0 +1,56 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Privacy Policy: Repo Widget</title><style>body{margin:0;font:16px/1.6 system-ui,Segoe UI,Roboto,sans-serif;color:#1b1b2f;background:#f6f5ff}main{max-width:760px;margin:0 auto;padding:28px 18px 60px}h1{font-size:28px;margin:.2em 0 .4em}h2{margin-top:1.6em;font-size:20px}a{color:#4f46e5}code{background:#ecebff;padding:1px 5px;border-radius:5px}ul,ol{padding-left:1.3em}footer{margin-top:40px;color:#666;font-size:14px}.card{display:block;padding:14px 16px;margin:10px 0;background:#fff;border:1px solid #e3e1ff;border-radius:14px;text-decoration:none;color:inherit}.card b{display:block}.card span{color:#666;font-size:14px}</style></head><body><main><p><a href="../">All apps</a></p><h1>Privacy Policy: Repo Widget</h1>
+<p>Developer: Sonith. Contact: sonythm@gmail.com. Effective date: 2026-10-16.</p>
+<p>Repo Widget (package com.sonith.repowidget) shows pull requests waiting on you, failed builds and green runs from GitHub on your Android home screen.</p>
+<h2>Summary</h2>
+<ul>
+<li>No account with us. No server of our own. We do not receive your data.</li>
+<li>Your data stays on your phone. The only network calls go to GitHub (api.github.com), using your own token.</li>
+<li>No ads. No analytics. No crash reporting. No tracking.</li>
+</ul>
+<h2>What the app stores on your phone</h2>
+<ul>
+<li>Your GitHub personal access token, in the Android secure store (expo-secure-store).</li>
+<li>Your GitHub username and avatar address, from GitHub.</li>
+<li>The repositories you watch (up to ten), their order and colours, and a cached list of repositories you can access.</li>
+<li>Pull request details (title, author, repository, number, link, age, draft flag) and workflow run details (name, branch, result, time, link) from GitHub, and the latest counts shown in the widgets.</li>
+<li>HTTP ETag values used to ask GitHub whether data changed.</li>
+<li>Your settings: widget options, refresh interval, theme, notification choices, quiet hours, demo mode, onboarding state.</li>
+<li>Notification events held back during quiet hours.</li>
+</ul>
+<p>All of this is in a local SQLite database and the secure store, inside the app's private storage.</p>
+<h2>Network calls</h2>
+<p>The app contacts one host only: <strong>api.github.com</strong> over HTTPS, with your token in an Authorization header.</p>
+<ul>
+<li>GET /user: checks the token and reads your username.</li>
+<li>GET /user/repos: lists repositories you can access.</li>
+<li>GET /search/issues: finds open pull requests that request your review in the repositories you chose.</li>
+<li>GET /repos/{owner}/{repo}/actions/runs: reads the latest workflow runs for each chosen repository.</li>
+</ul>
+<p>GitHub handles these requests under its own privacy statement. The home-screen widgets never call GitHub; they show the last saved result.</p>
+<p>Links you tap (a pull request, a workflow run, github.com/settings/tokens, this policy, the source code) open in your browser on github.com. GitHub then governs those pages.</p>
+<p>The app checks whether the phone is online with Android's own network status. It does not contact any other server for this.</p>
+<h2>Permissions</h2>
+<ul>
+<li>INTERNET: to call api.github.com.</li>
+<li>POST_NOTIFICATIONS: to show optional notifications for failed builds and review requests. Off until you turn them on. Notifications are created on the phone.</li>
+<li>RECEIVE_BOOT_COMPLETED: so background refresh and widgets resume after a restart.</li>
+<li>ACCESS_NETWORK_STATE, WAKE_LOCK, VIBRATE, FOREGROUND_SERVICE: added by the libraries the app uses, for connectivity checks, background refresh and notification vibration.</li>
+</ul>
+<p>The app does not ask for your contacts, camera, microphone, location, calendar, photos, files or SMS.</p>
+<h2>Sharing</h2>
+<p>We do not sell or share your data. If you use "Export data as JSON" in Settings, the text goes to the app you choose in the Android share sheet. The export does not include your token.</p>
+<h2>Backups</h2>
+<p>Android may include the app's local database in your device's own backup (Google backup, if you have it on). The token is excluded from backup by the secure store's backup rules. VERIFY ON DEVICE: that the rules files are present in the release build.</p>
+<h2>Deleting your data</h2>
+<ul>
+<li>Settings, Disconnect removes the token from the phone.</li>
+<li>Settings, Delete all data removes repositories, cached data, settings and the token.</li>
+<li>Uninstalling removes all app data.</li>
+<li>To revoke access at GitHub, delete the token at github.com/settings/tokens.</li>
+</ul>
+<h2>Children</h2>
+<p>The app is for developers and is not directed at children under 13. It does not knowingly collect data from children.</p>
+<h2>Changes</h2>
+<p>A changed policy will be published at the same address with a new effective date.</p>
+<h2>Contact</h2>
+<p>sonythm@gmail.com</p><footer>Developer: Sonith. Contact: <a href="mailto:sonythm@gmail.com">sonythm@gmail.com</a></footer></main></body></html>

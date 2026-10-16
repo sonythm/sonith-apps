@@ -1,0 +1,65 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Privacy Policy: Rent Receipt Generator</title><style>body{margin:0;font:16px/1.6 system-ui,Segoe UI,Roboto,sans-serif;color:#1b1b2f;background:#f6f5ff}main{max-width:760px;margin:0 auto;padding:28px 18px 60px}h1{font-size:28px;margin:.2em 0 .4em}h2{margin-top:1.6em;font-size:20px}a{color:#4f46e5}code{background:#ecebff;padding:1px 5px;border-radius:5px}ul,ol{padding-left:1.3em}footer{margin-top:40px;color:#666;font-size:14px}.card{display:block;padding:14px 16px;margin:10px 0;background:#fff;border:1px solid #e3e1ff;border-radius:14px;text-decoration:none;color:inherit}.card b{display:block}.card span{color:#666;font-size:14px}</style></head><body><main><p><a href="../">All apps</a></p><h1>Privacy Policy: Rent Receipt Generator</h1>
+<p>Effective date: 2026-10-16 App: Rent Receipt Generator, version 0.1.0, package com.sonith.rentreceipt Developer: Sonith. Contact: sonythm@gmail.com</p>
+<h2>Summary</h2>
+<p>Rent Receipt Generator keeps your data on your phone. The developer receives none of it. The app has no account, no server, no analytics, no ads and no crash reporting. The app does not have the Android INTERNET permission, so it cannot send data over the internet.</p>
+<h2>What the app stores on your phone</h2>
+<p>You type these details. They are saved in a local database in the app's private storage:</p>
+<ul>
+<li>Tenant: name, rented address, optional employee ID.</li>
+<li>Landlord: name, address, PAN, phone number.</li>
+<li>Payment: rent amount, payment mode, due day, start month, deposit.</li>
+<li>Your signature, if you draw one. It is saved as drawing strokes.</li>
+<li>Receipt records, and the PDF files you generate.</li>
+<li>Settings: template, second language, reminder settings, demo mode.</li>
+</ul>
+<p>The PAN is sensitive. It is stored in the same local database as the other details. The app does not add its own encryption on top of Android's app-private storage. Other apps cannot read that storage on a normal, non-rooted phone.</p>
+<h2>Network</h2>
+<p>The app makes no network calls. It has no hosts it connects to. Fonts are bundled in the app.</p>
+<h2>Notifications (reminders)</h2>
+<p>Reminders are off until you turn them on in Settings, Notifications. They are local notifications made by the app on your phone. There is no push service and no server involved.</p>
+<ul>
+<li>The app asks for the Android notification permission (POST_NOTIFICATIONS) when you turn reminders on.</li>
+<li>The notifications are: a monthly reminder, a March reminder about missing months, an optional reminder that the landlord's PAN is needed, and a "PDF ready" notice.</li>
+<li>Their text can include the tenant name and month, for example "Make the April 2026 receipt for Asha". It can show on your lock screen if your phone is set to show notifications there.</li>
+<li>The app uses RECEIVE_BOOT_COMPLETED so Android can restore scheduled reminders after a restart.</li>
+<li>You can turn reminders off in the app or in Android settings. Delete all data cancels them.</li>
+</ul>
+<h2>Permissions</h2>
+<ul>
+<li>POST_NOTIFICATIONS: for the reminders above.</li>
+<li>RECEIVE_BOOT_COMPLETED: to restore reminders after a restart.</li>
+<li>VIBRATE: used by notifications.</li>
+<li>Storage permissions limited to Android 12 and older (READ and WRITE_EXTERNAL_STORAGE, up to SDK 32): added by a library. The app saves PDFs in its own private storage and does not read your other files.</li>
+</ul>
+<p>The app does not use your camera, microphone, contacts, calendar, location or photos.</p>
+<h2>What leaves your phone, and only when you choose</h2>
+<p>The Share button on a PDF opens the Android share sheet. "Export backup" in Settings also opens the share sheet, with your saved data as text. What you send, and to which app, is your choice. After that, the other app's privacy policy applies.</p>
+<h2>Analytics, ads and tracking</h2>
+<p>None. The app has no analytics, advertising, crash reporting or tracking code.</p>
+<h2>Data safety summary</h2>
+<ul>
+<li>Collected by the developer: none.</li>
+<li>Shared with third parties by the developer: none.</li>
+<li>Processed only on your phone: yes.</li>
+</ul>
+<h2>Deleting your data</h2>
+<ul>
+<li>Delete a PDF in History, or a tenancy on the Tenancies screen (its PDFs go too).</li>
+<li>Settings, Delete saved signatures.</li>
+<li>Settings, Delete all data removes tenancies, PDFs, settings and scheduled reminders.</li>
+<li>Uninstalling the app removes everything it stored.</li>
+</ul>
+<p>Copies you shared with other apps are outside this app. Delete them there.</p>
+<h2>Backups</h2>
+<p>The developer keeps no copy. Android's own device backup may include app data, depending on your phone's settings. The developer does not control that.</p>
+<h2>Children</h2>
+<p>The app is for adults who pay rent. It is not directed at children. It collects no personal data from anyone.</p>
+<h2>Changes</h2>
+<p>If this policy changes, the new version will be posted at the same address with a new effective date.</p>
+<h2>Contact</h2>
+<p>Sonith, sonythm@gmail.com</p>
+<p>--- Owner notes, delete before publishing:</p>
+<ul>
+<li>VERIFY ON DEVICE: the final merged permission list of the release AAB. The notifications library includes Firebase Messaging, which may add ACCESS_NETWORK_STATE, WAKE_LOCK or a c2dm receive permission. INTERNET is removed in the manifest. If anything else appears, add it above.</li>
+<li>android:allowBackup is true in the manifest, so the Android backup sentence above applies.</li>
+</ul><footer>Developer: Sonith. Contact: <a href="mailto:sonythm@gmail.com">sonythm@gmail.com</a></footer></main></body></html>
