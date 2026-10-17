@@ -1,0 +1,52 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Voice Khata Privacy Policy</title><style>body{margin:0;font:16px/1.6 system-ui,Segoe UI,Roboto,sans-serif;color:#1b1b2f;background:#f6f5ff}main{max-width:760px;margin:0 auto;padding:28px 18px 60px}h1{font-size:28px;margin:.2em 0 .4em}h2{margin-top:1.6em;font-size:20px}a{color:#4f46e5}code{background:#ecebff;padding:1px 5px;border-radius:5px}ul,ol{padding-left:1.3em}footer{margin-top:40px;color:#666;font-size:14px}.card{display:block;padding:14px 16px;margin:10px 0;background:#fff;border:1px solid #e3e1ff;border-radius:14px;text-decoration:none;color:inherit}.card b{display:block}.card span{color:#666;font-size:14px}</style></head><body><main><p><a href="../">All apps</a></p><h1>Voice Khata Privacy Policy</h1>
+<p>Effective date: 2026-10-17 App: Voice Khata (com.sonith.voicekhata), version 0.1.0 Developer: Sonith Contact: sonythm@gmail.com Policy URL: https://sonythm.github.io/sonith-apps/voice-khata/</p>
+<h2>Summary</h2>
+<p>Voice Khata keeps your customers, entries and settings on your phone. The developer does not receive them. The app has no account, no ads, no analytics and no crash reporting. It makes one kind of network request: it downloads a speech model file when you tap Download.</p>
+<h2>What the app stores on your phone</h2>
+<ul>
+<li>Customers you add: name, phone number, your notes and the language for reminder messages. These can be personal data of other people (your customers).</li>
+<li>Ledger entries: amount, date and time, whether it was credit or a payment, and an item note.</li>
+<li>Settings: shop name, languages, reminder schedule, message templates.</li>
+<li>Downloaded speech model files.</li>
+</ul>
+<p>All of this is kept in the app's private storage on the device. The app has no sign-in and no developer server.</p>
+<h2>Microphone and your voice</h2>
+<p>When you press the mic button the app records a few seconds of audio from the microphone, turns it into text on the phone with a downloaded speech model, and deletes the audio file as soon as the text is ready (also if it fails, or if you cancel). The audio is not stored, not uploaded and not shared. The text appears in the entry box and, if you confirm, becomes a ledger entry. The microphone is never used in the background.</p>
+<h2>Data types, in plain terms</h2>
+<p>| Data | Collected by the developer | Shared | Processed on device | Optional | You can delete it | | --- | --- | --- | --- | --- | --- | | Customer names and phone numbers | No | No (only the text of a reminder or statement if you press Send) | Yes | Yes | Yes, delete a customer, or Delete all data | | Ledger entries and notes | No | No (same) | Yes | Yes | Yes | | Voice (microphone audio) | No | No | Yes, then deleted | Yes, you press the mic | Deleted automatically | | Settings and templates | No | No | Yes | Yes | Yes | | Location, contacts, photos, files, camera, device IDs, advertising ID | Not accessed | No | n/a | n/a | n/a |</p>
+<p>The app does not read your phone's contacts. Phone numbers are typed by you.</p>
+<h2>Network calls</h2>
+<p>The app contacts the internet only when you tap Download on the Language and speech models screen. It requests one model file from:</p>
+<ul>
+<li>huggingface.co, path /ggerganov/whisper.cpp/resolve/main/, files ggml-tiny.en.bin (English), ggml-base.bin (Hindi, Malayalam, English) and ggml-small.bin (optional, more accurate). Hugging Face may redirect the download to its own content delivery hosts. Like any web host, it can see your IP address and normal request details, under its own privacy policy.</li>
+</ul>
+<p>No customer data, entries, audio or transcripts are sent in these requests. The download uses HTTPS.</p>
+<h2>Messages and sharing</h2>
+<p>Nothing is sent by the app itself. When you tap Send reminder or share a statement, the app opens WhatsApp (a link of the form https://wa.me/&lt;number&gt;?text=...), or the Android share sheet, with the message already written. The message can include the customer's name, the amount due and your shop name. It leaves the phone only when you press Send in that other app, under that app's policy. Opening WhatsApp tells WhatsApp the phone number you chose.</p>
+<h2>Permissions and why</h2>
+<ul>
+<li>Microphone (RECORD_AUDIO): to listen while you use the mic button.</li>
+<li>Notifications (POST_NOTIFICATIONS): to remind you about dues, if you turn reminders on.</li>
+<li>Internet (INTERNET): only for the speech model download.</li>
+<li>Modify audio settings (MODIFY_AUDIO_SETTINGS), run at start-up (RECEIVE_BOOT_COMPLETED, so scheduled reminders return after a restart), and vibrate: added by libraries.</li>
+</ul>
+<p>The app does not request camera, contacts, location, SMS, call log, photo or file permissions, and does not run a foreground service.</p>
+<h2>Notifications</h2>
+<p>Reminder notices show a count and a total, for example "5 customers have dues over 30 days (Rs 12,400 to collect)". They do not show names. If your lock screen shows notification content, others who see the phone can read that line. You can turn reminders off in the app or in Android.</p>
+<h2>Backups</h2>
+<p>You can export a backup file (JSON) from Backup and restore. It contains customer names, phone numbers and entries. It goes to the app you choose in the share sheet; keep it somewhere safe. The app is set not to take part in Android's automatic device backup.</p>
+<h2>Security</h2>
+<p>Data is kept in the app's private storage, which other apps cannot read under normal Android rules. The app does not add its own encryption. Anyone who can unlock your phone and open the app can see your khata.</p>
+<h2>Analytics and ads</h2>
+<p>The app has no analytics, no advertising, no tracking and no third-party crash reporting.</p>
+<h2>Children</h2>
+<p>The app is for adults who run a shop (18 and over). It is not directed at children.</p>
+<h2>Deleting your data</h2>
+<ul>
+<li>Delete a customer to remove them and all their entries.</li>
+<li>Settings, Delete all data removes every customer, entry, template and setting. You choose whether the downloaded speech models are removed too. You can also remove models one by one on the Language and speech models screen, or uninstall the app.</li>
+</ul>
+<h2>Changes</h2>
+<p>If this policy changes, the new version will be posted at the policy URL with a new effective date.</p>
+<h2>Contact</h2>
+<p>Sonith, sonythm@gmail.com</p><footer>Developer: Sonith. Contact: <a href="mailto:sonythm@gmail.com">sonythm@gmail.com</a></footer></main></body></html>

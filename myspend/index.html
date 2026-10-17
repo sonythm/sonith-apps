@@ -27,11 +27,11 @@
 <li>If you use the app lock, Android's biometric prompt checks your fingerprint or face. The app never receives your biometric data.</li>
 </ul>
 <h2>Network</h2>
-<p>The app's own code makes no network requests and has no server to talk to. One screen in the app may open a link in your browser when you tap it; that page is then governed by its own site. DECISION: that link ("Developer handoff doc" in More) is to be removed before release, then delete this paragraph.</p>
+<p>The app's own code makes no network requests and has no server to talk to. The only link in the app is Settings, "Privacy policy", which opens this page in your browser when you tap it; that page is then governed by its own site.</p>
 <h2>Permissions</h2>
 <ul>
 <li>Notifications (POST_NOTIFICATIONS): bill, budget and goal reminders. Off until you turn them on.</li>
-<li>Exact alarms (SCHEDULE_EXACT_ALARM), boot (RECEIVE_BOOT_COMPLETED), wake lock: so reminders arrive at the time you chose and return after a restart.</li>
+<li>Boot (RECEIVE_BOOT_COMPLETED) and wake lock: so reminders return after a restart and can be delivered. The app does not use exact alarms, so a reminder can arrive a little after the time you chose.</li>
 <li>Biometric (USE_BIOMETRIC, USE_FINGERPRINT): optional unlock of the app lock.</li>
 <li>Vibrate, network state: added by libraries.</li>
 <li>Camera and photos: the app uses the Android camera and photo picker apps for bill scans. It does not hold a camera or storage permission.</li>
@@ -40,14 +40,14 @@
 <h2>Backups and exports</h2>
 <ul>
 <li>"Take a copy of your data" and backup files are created on your phone. They go where you choose in the Android share sheet or your Documents folder.</li>
-<li>Android may include the app's data in your device backup (Google backup, if you have it on). This is controlled by your phone settings. Bill photos and bill reminders are not in the app's own backup file.</li>
+<li>Android device backup is switched off for this app: its data is not copied to Google backup or to a new phone. Use the app's own backup file if you want a copy. Bill photos and bill reminders are not in that backup file.</li>
 </ul>
 <h2>Sharing</h2>
 <p>We do not sell, share or receive your data. Data leaves the phone only through actions you take, such as sharing a report, a settle-up message or a backup file.</p>
 <h2>Deleting your data</h2>
 <ul>
 <li>Delete single items in the app. "Delete import history" in SMS import clears the import fingerprints and history.</li>
-<li>Settings, "Erase everything on this phone" clears the ledger and the smart-tools data (people, shared entries, net-worth history) and starts the app over. It does not yet clear the SMS import records or the bill reminders and bill photos. Use "Delete import history" in SMS import and delete saved photos under Scan bill first, or uninstall. DECISION: fix this in code before release, then simplify this line.</li>
+<li>Settings, "Erase everything on this phone" deletes all of it and starts the app over: the ledger, the smart-tools data, SMS import records, bill records, saved bill photos, your settings (theme, app lock, reminder choices) and scheduled reminders.</li>
 <li>Uninstalling removes all app data.</li>
 <li>Files you exported are separate copies. Delete them where you saved them.</li>
 </ul>

@@ -1,34 +1,73 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Privacy Policy: Shift Roster to Calendar</title><style>body{margin:0;font:16px/1.6 system-ui,Segoe UI,Roboto,sans-serif;color:#1b1b2f;background:#f6f5ff}main{max-width:760px;margin:0 auto;padding:28px 18px 60px}h1{font-size:28px;margin:.2em 0 .4em}h2{margin-top:1.6em;font-size:20px}a{color:#4f46e5}code{background:#ecebff;padding:1px 5px;border-radius:5px}ul,ol{padding-left:1.3em}footer{margin-top:40px;color:#666;font-size:14px}.card{display:block;padding:14px 16px;margin:10px 0;background:#fff;border:1px solid #e3e1ff;border-radius:14px;text-decoration:none;color:inherit}.card b{display:block}.card span{color:#666;font-size:14px}</style></head><body><main><p><a href="../">All apps</a></p><h1>Privacy Policy: Shift Roster to Calendar</h1>
-<p>Effective date: 2026-10-14</p>
-<p>Shift Roster to Calendar ("the app", package com.sonith.shiftroster) is made by [YOUR NAME]. This policy explains what the app stores and what it does with it.</p>
+<p>Effective date: 2026-10-16 App: Shift Roster to Calendar (com.sonith.shiftroster), version 0.1.0 Developer: Sonith Contact: sonythm@gmail.com</p>
 <h2>Summary</h2>
-<p>The app keeps your data on your phone. It makes no network calls and does not hold the internet permission. It has no ads, no analytics and no accounts.</p>
+<p>The app does not collect your data. It has no account, no analytics, no advertising and no servers. It makes no network calls. The Android internet permission is blocked in the app, so it cannot connect to any host. The app does write shifts to your phone's calendar, but only when you tell it to.</p>
+<h2>What is stored on your device</h2>
+<ul>
+<li>Roster photos. The app keeps a reference to the image file, not a copy. The image is the one you took with the camera, picked in the gallery or shared to the app. VERIFY ON DEVICE: whether the image is still there after the original is deleted or the cache is cleared.</li>
+<li>The table the app read from the photo: the day numbers and every row of it. This includes the names of the other people on the roster and their shift codes, not only your own row.</li>
+<li>Your name as you typed it, the row you chose, the month and the workplace you entered.</li>
+<li>Your shifts: date, shift type, any note, and the id of the calendar event the app made for it.</li>
+<li>A swap note, for example "Swapped with &lt;colleague's name&gt;: M to N", and the colleague's name.</li>
+<li>Shift types: code, name, start and end time, colour, reminder lead time.</li>
+<li>Settings: chosen calendar, notification choices (reminder, evening note, next-month nudge, times, quiet hours), demo mode.</li>
+</ul>
+<p>This is a work schedule, so it is personal data. It is kept in a local database in the app's private storage. It is not sent anywhere by the app. A roster photo can show other people's names, so keep that in mind before you share the phone or an export.</p>
+<h2>Data types, in plain terms</h2>
+<p>| Data | Collected by the developer | Shared | Processed on device | Optional | You can delete it | | --- | --- | --- | --- | --- | --- | | Roster photos (reference) and text read from them | No | No | Yes | Yes | Yes, delete the roster, or Delete all | | Names and shift times | No | No (only if you share an .ics file) | Yes | Yes | Yes | | Calendar events the app creates | No (written to your own calendar) | No | Yes | Yes | Yes | | Settings | No | No | Yes | Yes | Yes | | Location, contacts, audio, device IDs, advertising ID | Not accessed | No | n/a | n/a | n/a |</p>
 <h2>Network calls</h2>
-<p>None. The Android internet permission is explicitly blocked in the app, so there are no hosts it contacts. Text recognition runs on the phone.</p>
-<h2>What is stored on your phone</h2>
+<p>None. The app declares no internet access. Text recognition runs on the phone using Google ML Kit text recognition. The recognition models are bundled in the app, so nothing is downloaded. Fonts are bundled.</p>
+<h2>Permissions</h2>
 <ul>
-<li>Roster photos you import (or references to them), the text read from them, and the month and workplace you enter.</li>
-<li>Your chosen row, the codes read from it, and any corrections you make.</li>
-<li>Shift types (code, name, start and end time, colour, reminder), your shifts, notes and swap details.</li>
-<li>App settings.</li>
+<li>Camera: to photograph your roster. Optional. You can pick an image from the gallery instead. The app does not record video or audio.</li>
+<li>Calendar (read and write): to add your shifts as events in a calendar you choose, to find events that overlap a new shift so you can keep or replace them, to update or delete the events the app made when you edit a shift or re-import a month, and to list your writable calendars. The app reads existing events only in the date range of the roster you are importing, to check for overlaps. It does not store them.</li>
+<li>Notifications (POST_NOTIFICATIONS): to show the reminders you switch on. If you refuse, the app works without app notifications.</li>
+<li>Run at start-up (RECEIVE_BOOT_COMPLETED, added by the notifications library): so reminders come back after the phone restarts.</li>
+<li>Vibrate and wake lock: added by libraries for notifications.</li>
+<li>Photos: the app uses the Android photo picker when you choose a gallery image. It reads only the image you select. It does not ask for access to all your photos.</li>
+<li>Share target: the app appears in the share sheet for images, so you can send it a roster from another app such as WhatsApp. It receives only what you share.</li>
 </ul>
-<p>This is held in the app's private local database. It is not sent to the developer or anyone else.</p>
-<h2>Permissions and why</h2>
+<p>The app does not use the internet, location, contacts, microphone or SMS. VERIFY ON DEVICE: Android Settings, Apps, Shift Roster, Permissions shows Camera, Calendar and Notifications only, with no microphone entry, in the release build.</p>
+<h2>Calendar events</h2>
+<p>When you tap Add to calendar, the app creates one event per working day in the calendar you pick. Each event has:</p>
 <ul>
-<li>Camera: to photograph your roster. Optional; you can pick from the gallery instead.</li>
-<li>Calendar (read and write): to add your shifts as events, to remove the events the app added when you re-import a month, and to list existing events that overlap a shift so you can keep or replace them.</li>
-<li>Notifications: to show optional shift reminders.</li>
-<li>Photos: the app uses the system photo picker when you choose an image, and accepts images you share to it from other apps.</li>
+<li>a title such as "Morning shift", the start and end time, and the workplace as location;</li>
+<li>a reminder if the shift type has one;</li>
+<li>notes: any note you added (for example "Swapped with &lt;name&gt;: M to N"), plus the line "Created by Shift Roster" and an internal tag with the roster id. The tag lets the app find its own events later.</li>
 </ul>
-<h2>Calendar and sharing</h2>
-<p>Events the app creates are stored in the calendar you choose. If that calendar syncs to an online account (for example Google Calendar), the sync is done by your phone and that provider under their own policy. If you share a month as an .ics file, it goes to the app you pick in the share sheet.</p>
+<p>Off days get no event. If you pick a calendar that syncs to an online account, for example Google Calendar, your phone and that provider sync the events under their own policy. The app does not do this.</p>
+<h2>Notifications</h2>
+<p>Notifications are made on the phone. Nothing comes from a server. They can show:</p>
+<ul>
+<li>Before a shift: the shift name and start time, the workplace, the time range, and how long until it starts. For example "Night shift at 21:00" and "ICU, 21:00-07:00, in 2 h".</li>
+<li>The evening before a shift, at the time you set (20:00 by default): "Tomorrow: &lt;shift name&gt; shift", the time range and the workplace.</li>
+<li>On the 25th at 18:00, if next month has no roster yet: "Next month's roster?"</li>
+</ul>
+<p>Shift details can appear on your lock screen. Change this in Android notification settings. The app plans notifications for about the next 14 days, at most 40 at a time. Turning notifications off, or Delete all, cancels all of them.</p>
+<h2>Sharing</h2>
+<p>Data leaves your phone only when you use Share as .ics and choose an app yourself. The file has your shift titles, times, workplace and notes. The app first saves it in its cache, then opens the Android share sheet. Once you share it, that app's own policy applies. Calendar sync is described above.</p>
+<h2>Backups</h2>
+<p>The app asks Android not to back up its data (allowBackup is false in the app configuration). VERIFY ON DEVICE: the release build's merged manifest has allowBackup="false". Your calendar events are not part of this. They are in your calendar app and follow its own backup and sync.</p>
+<h2>Security</h2>
+<p>Data is kept in the app's private storage, which other apps cannot read under normal Android rules. The app adds no encryption of its own. Nothing is transmitted.</p>
 <h2>Analytics and ads</h2>
-<p>None.</p>
+<p>None. No advertising, tracking, analytics or crash-report libraries.</p>
 <h2>Deleting your data</h2>
-<p>In the app you can delete rosters and shifts. Uninstalling the app removes everything it stored on the phone. Events already in your calendar stay there until you delete them in your calendar app (re-importing a month replaces the events the app added for it).</p>
+<ul>
+<li>Delete a roster in the app. This removes its shifts from the app and deletes the calendar events the app made for that roster.</li>
+<li>Settings, Delete all rosters and events I made, then confirm. This does the following:</li>
+<li>For each roster, it looks for the calendar events carrying the app's tag for that roster, in the calendar you used and in the roster's date range, and deletes them.</li>
+<li>It deletes all rosters, shifts, shift types and settings from the app's database, and cancels all scheduled notifications. Shift types go back to the defaults (M, E, N, O).</li>
+<li>It does not delete events that you moved out of that range or whose notes you changed to remove the tag, events you made yourself, or events the app could not reach (for example if calendar permission was turned off). Delete those in your calendar app.</li>
+<li>It does not delete image files that are outside the app, such as photos in your gallery. VERIFY ON DEVICE: whether a camera photo or an exported .ics file stays in the app's cache after Delete all. Uninstalling removes the cache.</li>
+<li>Demo data can be switched off in Settings. This removes the demo roster and shifts.</li>
+<li>Uninstalling the app removes everything the app stored. Events already in your calendar stay there until you delete them in your calendar app.</li>
+</ul>
+<p>Because the developer holds no copy, there is nothing to request from the developer.</p>
 <h2>Children</h2>
-<p>The app is not directed at children under 13 and does not knowingly collect data from anyone.</p>
+<p>The app is a work-schedule tool for adults. It is not directed at children, and it collects no personal information from anyone.</p>
 <h2>Changes</h2>
-<p>If this policy changes, the new version will be posted at this address with a new effective date.</p>
+<p>If this policy changes, the new version will be posted at the same address with a new effective date.</p>
 <h2>Contact</h2>
-<p>[YOUR EMAIL]</p><footer>Developer: Sonith. Contact: <a href="mailto:sonythm@gmail.com">sonythm@gmail.com</a></footer></main></body></html>
+<p>Sonith, sonythm@gmail.com</p>
+<p>Privacy policy URL: https://sonythm.github.io/sonith-apps/shift-roster/ Source code: https://github.com/sonythm/sonith-apps</p><footer>Developer: Sonith. Contact: <a href="mailto:sonythm@gmail.com">sonythm@gmail.com</a></footer></main></body></html>
