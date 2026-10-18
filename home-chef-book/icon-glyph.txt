@@ -1,0 +1,16 @@
+// Home Chef Book icon: a white chef's hat (three puffs over a band) with a berry heart on the band.
+// For store/tools/make-icons.mjs. Same 100x100 grid and helpers (R, P, S, C) and types ('w' white, 'a' accent, 'c' ink detail).
+
+// 1) Add to GLYPHS:
+  'home-chef-book': [
+    ['w', C(30, 45, 16)], ['w', C(70, 45, 16)], ['w', C(50, 33, 21)],
+    ['w', R(30, 40, 40, 28, 6)],
+    ['w', R(28, 66, 44, 20, 6)],
+    ['c', R(28, 63.5, 44, 3.6, 1.8)],
+    ['a', P('M50 83c-6.4-4.4-9.4-7.8-9.4-11.4a4.8 4.8 0 0 1 9.4-1.7a4.8 4.8 0 0 1 9.4 1.7c0 3.6-3 7-9.4 11.4z')],
+  ],
+
+// 2) Add to OVERRIDE (berry gradient, berry heart; the same values are in store/home-chef-book/assets.json):
+  'home-chef-book': { accent: '#BE185D', blobs: ['#EC4899', '#FBCFE8', '#9D174D'] },
+
+// 3) Then: node store/tools/make-icons.mjs home-chef-book
