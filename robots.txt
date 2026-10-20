@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sonythm.github.io/sonith-apps/sitemap.xml
