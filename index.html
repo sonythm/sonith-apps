@@ -156,8 +156,8 @@ details.q{border:1px solid var(--bd);border-radius:12px;background:var(--card);p
 .acard svg{height:150px;width:100%;background:linear-gradient(135deg,hsl(var(--ah,255) 90% 94%),hsl(calc(var(--ah,255) + var(--d,50)) 90% 90%))}
 .ahead{background:linear-gradient(135deg,hsl(var(--ah,255) 90% 94%),hsl(calc(var(--ah,255) + var(--d,50)) 90% 90%));padding:24px 0 44px}
 .ahead .blobs i:nth-child(1){background:radial-gradient(circle at 40% 40%,hsl(var(--ah,255) 90% 68% / .5),transparent 66%)}
-.ahead .blobs i:nth-child(2){background:radial-gradient(circle at 50% 50%,hsl(calc(var(--ah,255) + 60) 90% 66% / .4),transparent 66%)}
-.ahead .blobs i:nth-child(3){background:radial-gradient(circle at 50% 50%,hsl(calc(var(--ah,255) - 50) 90% 70% / .35),transparent 66%)}
+.ahead .blobs i:nth-child(2){background:radial-gradient(circle at 50% 50%,hsl(calc(var(--ah,255) + var(--d,50)) 90% 66% / .4),transparent 66%)}
+.ahead .blobs i:nth-child(3){background:radial-gradient(circle at 50% 50%,hsl(calc(var(--ah,255) - var(--d,50)) 90% 70% / .35),transparent 66%)}
 .ahead h1{font-size:clamp(32px,6.4vw,52px);letter-spacing:-.02em;line-height:1.1;margin:8px 0 12px}
 .ahead .lead{font-size:clamp(18px,2.3vw,21px);margin-bottom:0}
 .hg2{display:grid;gap:24px;align-items:center}
@@ -175,7 +175,7 @@ details.q{border:1px solid var(--bd);border-radius:12px;background:var(--card);p
 .alay{max-width:720px;margin:0 auto}.col{min-width:0}
 .toc-wrap{margin:18px 0}.toc{margin:0;max-width:none}
 .toc a{text-decoration:none;border-radius:6px}.toc a:hover{text-decoration:underline}
-.toc a[aria-current]{font-weight:700;color:var(--fg);box-shadow:inset 3px 0 0 hsl(var(--ah,255) 75% 40%);padding-left:8px}
+.toc a[aria-current]{font-weight:700;color:var(--fg);text-decoration:underline;text-decoration-color:hsl(var(--ah,255) 75% 40%);text-decoration-thickness:3px;text-underline-offset:4px}
 .lvl{display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin:8px 0 20px}.lvl-l{font-size:14px;color:var(--mut);margin-right:6px}
 .lvl input{position:absolute;opacity:0;width:1px;height:1px}
 .lvl label{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--bd);background:var(--card);cursor:pointer;font-weight:600;font-size:15px}
@@ -185,12 +185,11 @@ details.q{border:1px solid var(--bd);border-radius:12px;background:var(--card);p
 .alay:has(#lv-expert:checked) .prose>:not(h2):not(.expert){display:none}
 .prose{counter-reset:sec;font-size:19px;line-height:1.78}
 .prose>p:first-child{font-size:21px;line-height:1.7}
-.prose>p:first-child::first-letter{float:left;font-size:3.5em;line-height:.85;font-weight:800;padding:.07em .1em 0 0;color:var(--link)}
 .prose h2{counter-increment:sec;display:flex;align-items:center;gap:12px;margin:2.4em 0 .6em;padding-top:1.3em;border-top:1px solid var(--bd);font-size:clamp(24px,4vw,31px);line-height:1.2}
 .prose h2:first-of-type{border-top:0;padding-top:0;margin-top:1.4em}
-.prose h2::before{content:counter(sec);flex:none;width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,hsl(var(--ah,255) 75% 30%),hsl(calc(var(--ah,255) + var(--d,50)) 75% 26%));color:#fff;font-size:17px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.prose h2::before{content:counter(sec);flex:none;width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,hsl(var(--ah,255) 75% var(--bl,30%)),hsl(calc(var(--ah,255) + var(--d,50)) 75% calc(var(--bl,30%) - 4%)));color:#fff;font-size:17px;font-weight:700;display:flex;align-items:center;justify-content:center}
 .prose a{color:var(--link);text-decoration:none;background:linear-gradient(90deg,var(--link),hsl(var(--ah,255) 80% 45%)) 0 100%/100% 2px no-repeat;padding-bottom:1px}.prose a:hover{background-size:100% 4px}
-.prose ul:not(.why):not(.vstats):not(.vicons){padding-left:1.2em}.prose ul.why{padding-left:0}
+.prose ul:not(.why):not(.vstats):not(.vicons):not(.tk){padding-left:1.2em}.prose ul.why,.prose ul.vicons,.prose ul.vstats{padding:0;margin:0}
 .prose ol:not(.flow):not(.tl):not(.vsteps){list-style:none;padding:0;counter-reset:st}
 .prose ol:not(.flow):not(.tl):not(.vsteps)>li{counter-increment:st;position:relative;background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:12px 14px 12px 58px;margin:10px 0}
 .prose ol:not(.flow):not(.tl):not(.vsteps)>li::before{content:counter(st);position:absolute;left:14px;top:12px;width:30px;height:30px;border-radius:50%;background:var(--btn);color:var(--btnfg);font-weight:700;display:flex;align-items:center;justify-content:center}
@@ -212,11 +211,11 @@ details.q summary{list-style:none;justify-content:space-between;gap:12px}details
 details.q summary::after{content:"+";font-size:24px;line-height:1;color:var(--link);flex:none}
 details.q[open] summary::after{content:"\2212"}details.q[open]{border-color:var(--link)}
 details.expert{margin:1.8em 0;border:1px solid hsl(var(--ah,255) 40% 78%);border-left:6px solid hsl(var(--ah,255) 70% 38%);border-radius:18px;background:hsl(var(--ah,255) 60% 97%)}
-details.expert summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:12px 16px;min-height:48px}
+details.expert summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;flex-wrap:nowrap;padding:12px 16px;min-height:48px}.et{flex:1 1 0;min-width:0}
 details.expert summary::-webkit-details-marker{display:none}
-details.expert summary::after{content:"+";margin-left:auto;font-size:26px;line-height:1;color:var(--link)}
+details.expert summary::after{content:"+";flex:none;margin-left:auto;font-size:26px;line-height:1;color:var(--link)}
 details.expert[open] summary::after{content:"\2212"}
-.eb{display:inline-flex;align-items:center;gap:6px;padding:3px 10px;border-radius:999px;background:hsl(var(--ah,255) 70% 30%);color:#fff;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+.eb{display:inline-flex;align-items:center;gap:6px;padding:3px 10px;border-radius:999px;background:hsl(var(--ah,255) 70% var(--bl,30%));color:#fff;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
 .eb .vi{width:16px;height:16px;stroke:#fff}.et{font-weight:700;font-size:17px}
 .eg{padding:0 18px 12px;font-size:17.5px;line-height:1.7}.eg>:first-child{margin-top:0}.eg p{margin:0 0 .9em}
 .vis{margin:1.8em 0}.vis figcaption,.fig figcaption{font-size:15px;color:var(--mut);margin-top:8px;text-align:center}
@@ -228,7 +227,7 @@ details.expert[open] summary::after{content:"\2212"}
 .vsteps li:not(:last-child)::after{content:"\2193";position:absolute;left:30px;bottom:-27px;color:hsl(var(--ah,255) 60% 38%);font-size:22px;line-height:1}
 .vsteps b::before{content:counter(vs) ". "}
 .vsteps b,.vicons b{display:block}.vsteps .d,.vicons .d{display:block;color:var(--mut);font-size:16px;line-height:1.5;margin-top:2px}
-.vicons{list-style:none;margin:0;padding:0;display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+.vicons{list-style:none;margin:0;padding:0;display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(270px,1fr))}
 .vicons li,.vstats li{background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:16px;box-shadow:var(--sh)}
 .vicons .vbadge{margin-bottom:8px}
 .vstats{list-style:none;margin:0;padding:0;display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
@@ -265,8 +264,8 @@ details.expert[open] summary::after{content:"\2212"}
 @media (prefers-color-scheme:dark){
 .ahead{background:linear-gradient(135deg,hsl(var(--ah,255) 50% 17%),hsl(calc(var(--ah,255) + var(--d,50)) 50% 12%))}
 .ahead .blobs i:nth-child(1){background:radial-gradient(circle at 40% 40%,hsl(var(--ah,255) 80% 45% / .45),transparent 66%)}
-.ahead .blobs i:nth-child(2){background:radial-gradient(circle at 50% 50%,hsl(calc(var(--ah,255) + 60) 80% 40% / .4),transparent 66%)}
-.ahead .blobs i:nth-child(3){background:radial-gradient(circle at 50% 50%,hsl(calc(var(--ah,255) - 50) 80% 40% / .35),transparent 66%)}
+.ahead .blobs i:nth-child(2){background:radial-gradient(circle at 50% 50%,hsl(calc(var(--ah,255) + var(--d,50)) 80% 40% / .4),transparent 66%)}
+.ahead .blobs i:nth-child(3){background:radial-gradient(circle at 50% 50%,hsl(calc(var(--ah,255) - var(--d,50)) 80% 40% / .35),transparent 66%)}
 .hart{background:linear-gradient(145deg,hsl(var(--ah,255) 35% 15% / .95),hsl(calc(var(--ah,255) + var(--d,50)) 35% 12% / .95));border-color:hsl(var(--ah,255) 30% 28%);box-shadow:0 24px 60px rgba(0,0,0,.45)}
 .co.key{background:hsl(170 25% 13%)}.co.example{background:hsl(38 30% 13%)}.co.warn{background:hsl(0 30% 14%)}
 .acard svg{background:linear-gradient(135deg,hsl(var(--ah,255) 45% 18%),hsl(calc(var(--ah,255) + var(--d,50)) 45% 13%))}
@@ -285,7 +284,7 @@ details.expert{background:hsl(var(--ah,255) 25% 13%);border-color:hsl(var(--ah,2
 }
 @media (prefers-reduced-motion:no-preference){.hart{animation:fl 7s ease-in-out infinite}.hart.sm{animation:none}details.q[open] p,details.expert[open] .eg{animation:qin .3s ease}@keyframes qin{from{opacity:0;transform:translateY(-6px)}}.vsteps li{animation:lit 8s infinite;animation-delay:calc(var(--i)*1.4s)}.v-spin{animation:spin 8s linear infinite}.nextc{transition:transform .2s,box-shadow .2s}.nextc:hover{transform:translateY(-3px)}}
 /*menu*/header.top .wrap{flex-wrap:nowrap;position:relative}
-.brand{white-space:nowrap}.mn{display:flex;align-items:center}
+.brand{white-space:nowrap}.mn{display:flex;align-items:center;margin-left:auto}
 .mn-tg,.mn-ck{position:absolute;opacity:0;width:1px;height:1px;margin:0}
 .mn-burger{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;min-width:46px;min-height:46px;border-radius:12px;border:1px solid var(--bd);background:var(--card);cursor:pointer}
 .mn-burger i{display:block;width:20px;height:2px;border-radius:2px;background:var(--fg);transition:transform .2s,opacity .2s}
@@ -308,7 +307,6 @@ details.expert{background:hsl(var(--ah,255) 25% 13%);border-color:hsl(var(--ah,2
 @media (prefers-reduced-motion:no-preference){.mn-tg:checked~.mn-list{animation:mnin .22s ease}.mn-sub{animation:mnin .18s ease}@keyframes mnin{from{opacity:0;transform:translateY(-6px)}}}
 footer{border-top:1px solid var(--bd);padding:28px 0 40px;color:var(--mut);font-size:15px}
 footer ul{list-style:none;display:flex;flex-wrap:wrap;gap:0 10px;padding:0;margin:0 0 10px}footer a{display:inline-flex;align-items:center;min-height:44px}
-@media (max-width:759px){.js .menu{display:inline-flex;align-items:center}.js nav{width:100%}.js nav ul{display:none;flex-direction:column;padding-bottom:8px}.js nav.open ul{display:flex}}
 @media (min-width:760px){.hg{grid-template-columns:1.15fr .85fr;gap:36px}.hero{padding:64px 0 68px}.gal li{flex-basis:220px}}
 @media (min-width:980px){.flow{grid-template-columns:repeat(var(--n,5),1fr);gap:30px}.flow li:not(:last-child)::after{content:"\2192";left:auto;right:-26px;bottom:auto;top:50%;translate:0 -50%}}
 @media (prefers-reduced-motion:no-preference){
@@ -624,18 +622,18 @@ footer ul{list-style:none;display:flex;flex-wrap:wrap;gap:0 10px;padding:0;margi
 <h2 id="art-h">Featured articles</h2>
 <p class="sub">Plain-language explanations of AI tools, software engineering and the industries I work in.</p>
 <ul class="grid">
-<li class="card acard" style="--ah:24;--d:50"><svg viewBox="0 0 640 300" aria-hidden="true" focusable="false"><rect class="a-bg" width="640" height="300"/>
+<li class="card acard" style="--ah:14;--d:-16;--bl:40%"><svg viewBox="0 0 640 300" aria-hidden="true" focusable="false"><rect class="a-bg" width="640" height="300"/>
 <rect class="a-bub" x="40" y="40" width="250" height="84" rx="22"/><path class="a-ln" d="M66 68H250M66 90H210"/>
 <rect class="a-bub" x="350" y="150" width="250" height="100" rx="22"/><path class="a-ln" d="M376 178H560M376 200H520M376 222H470"/>
 <circle class="a-nd a-pulse" cx="120" cy="190" r="9" style="animation-delay:0s"/><circle class="a-nd a-pulse" cx="164" cy="190" r="9" style="animation-delay:0.35s"/><circle class="a-nd a-pulse" cx="208" cy="190" r="9" style="animation-delay:0.7s"/><circle class="a-nd a-pulse" cx="252" cy="190" r="9" style="animation-delay:1.0499999999999998s"/><circle class="a-nd a-pulse" cx="296" cy="190" r="9" style="animation-delay:1.4s"/><circle class="a-nd a-pulse" cx="330" cy="90" r="6" style="animation-delay:0s"/><circle class="a-nd a-pulse" cx="374" cy="90" r="6" style="animation-delay:0.35s"/><circle class="a-nd a-pulse" cx="418" cy="90" r="6" style="animation-delay:0.7s"/><circle class="a-nd a-pulse" cx="462" cy="90" r="6" style="animation-delay:1.0499999999999998s"/>
-<path class="a-fl" d="M290 100 C330 100 330 150 350 190"/></svg><div class="tx"><p class="meta"><span class="chip">Claude AI</span><span class="chip">7 min read</span></p><h3><a href="/sonith-apps/articles/claude-ai-what-is-claude/">What is Claude AI? A plain-language guide</a></h3><p>Who makes Claude, what a language model is, what it can and cannot do, and how people use it, with the newest models as of 21 October 2026.</p></div></li>
-<li class="card acard" style="--ah:261;--d:50"><svg viewBox="0 0 640 300" aria-hidden="true" focusable="false"><rect class="a-bg" width="640" height="300"/>
+<path class="a-fl" d="M290 100 C330 100 330 150 350 190"/></svg><div class="tx"><p class="meta"><span class="chip">Claude AI</span><span class="chip">9 min read</span></p><h3><a href="/sonith-apps/articles/claude-ai-what-is-claude/">What is Claude AI? A plain-language guide</a></h3><p>Who makes Claude, what a language model is, what it can and cannot do, and how people use it, with the newest models as of 21 October 2026.</p></div></li>
+<li class="card acard" style="--ah:261;--d:50;--bl:30%"><svg viewBox="0 0 640 300" aria-hidden="true" focusable="false"><rect class="a-bg" width="640" height="300"/>
 <rect class="a-bub" x="40" y="130" width="120" height="110" rx="10"/><path class="a-ln" d="M62 160H138M62 184H138M62 208H110"/>
 <rect class="a-bub" x="480" y="110" width="130" height="130" rx="10"/><path class="a-ln" d="M502 140H588M502 166H588M502 192H560"/>
 <path class="a-fl" d="M170 250 H470"/>
 <g class="a-move"><circle class="a-nd" cx="190" cy="214" r="14"/><rect class="a-nd" x="178" y="230" width="24" height="22" rx="8"/></g>
-<circle class="a-nd a-pulse" cx="320" cy="70" r="8" style="animation-delay:0s"/><circle class="a-nd a-pulse" cx="360" cy="70" r="8" style="animation-delay:0.35s"/><circle class="a-nd a-pulse" cx="400" cy="70" r="8" style="animation-delay:0.7s"/></svg><div class="tx"><p class="meta"><span class="chip">Software engineering</span><span class="chip">5 min read</span></p><h3><a href="/sonith-apps/articles/forward-deployed-engineering-explained/">Forward Deployed Engineering explained</a></h3><p>What a forward deployed engineer does, where the term comes from, how the role differs from a software engineer, solutions engineer, consultant or product manager, and how AI is making it more important.</p></div></li>
-<li class="card acard" style="--ah:255;--d:50"><svg viewBox="0 0 480 270" aria-hidden="true" focusable="false"><circle class="a-bub" cx="190" cy="135" r="124"/><circle class="s-dev" cx="190" cy="135" r="90"/><circle class="s-twin a-pulse" cx="190" cy="135" r="52" style="fill:var(--chip)"/><text class="s-t" x="190" y="36" text-anchor="middle" style="font-size:16px">Screens, database, web</text><text class="s-t" x="190" y="76" text-anchor="middle" style="font-size:16px">Application (use cases)</text><text class="s-t" x="190" y="140" text-anchor="middle" style="font-size:16px">Domain</text><text class="s-t" x="190" y="158" text-anchor="middle" style="font-size:14px;font-weight:400">(business rules)</text><path class="a-fl" d="M440 60 H350"/><path class="s-ar" d="M345 53 L333 60 L345 67Z"/><text class="s-t" x="450" y="90" text-anchor="end" style="font-size:16px">Dependencies</text><text class="s-t" x="450" y="108" text-anchor="end" style="font-size:16px">point inward</text></svg><div class="tx"><p class="meta"><span class="chip">Software engineering</span><span class="chip">5 min read</span></p><h3><a href="/sonith-apps/articles/clean-architecture-dotnet-core/">Clean Architecture in .NET Core, explained simply</a></h3><p>A kitchen analogy for layers, the one rule that makes the design work, a small C# example, what it does for testing, common mistakes, and when not to use it.</p></div></li>
+<circle class="a-nd a-pulse" cx="320" cy="70" r="8" style="animation-delay:0s"/><circle class="a-nd a-pulse" cx="360" cy="70" r="8" style="animation-delay:0.35s"/><circle class="a-nd a-pulse" cx="400" cy="70" r="8" style="animation-delay:0.7s"/></svg><div class="tx"><p class="meta"><span class="chip">Software engineering</span><span class="chip">7 min read</span></p><h3><a href="/sonith-apps/articles/forward-deployed-engineering-explained/">Forward Deployed Engineering explained</a></h3><p>What a forward deployed engineer does, where the term comes from, how the role differs from nearby roles, and how AI is making it more important.</p></div></li>
+<li class="card acard" style="--ah:255;--d:50;--bl:30%"><svg viewBox="0 0 480 270" aria-hidden="true" focusable="false"><circle class="a-bub" cx="190" cy="135" r="124"/><circle class="s-dev" cx="190" cy="135" r="90"/><circle class="s-twin a-pulse" cx="190" cy="135" r="52" style="fill:var(--chip)"/><text class="s-t" x="190" y="36" text-anchor="middle" style="font-size:16px">Screens, database, web</text><text class="s-t" x="190" y="76" text-anchor="middle" style="font-size:16px">Application (use cases)</text><text class="s-t" x="190" y="140" text-anchor="middle" style="font-size:16px">Domain</text><text class="s-t" x="190" y="158" text-anchor="middle" style="font-size:14px;font-weight:400">(business rules)</text><path class="a-fl" d="M440 60 H350"/><path class="s-ar" d="M345 53 L333 60 L345 67Z"/><text class="s-t" x="450" y="90" text-anchor="end" style="font-size:16px">Dependencies</text><text class="s-t" x="450" y="108" text-anchor="end" style="font-size:16px">point inward</text></svg><div class="tx"><p class="meta"><span class="chip">Software engineering</span><span class="chip">7 min read</span></p><h3><a href="/sonith-apps/articles/clean-architecture-dotnet-core/">Clean Architecture in .NET Core, explained simply</a></h3><p>A kitchen analogy for layers, the one rule that makes the design work, a small C# example, what it does for testing, common mistakes, and when not to use it.</p></div></li>
 </ul>
 <p class="btns" style="margin-top:20px"><a class="btn" href="/sonith-apps/articles/">All articles</a></p>
 </div></section>
