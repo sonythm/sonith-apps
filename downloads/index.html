@@ -1,16 +1,47 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Android app downloads</title><meta name="description" content="Direct APK downloads of Sonith's small offline Android apps, with SHA-256 checksums and install help."><style>body{margin:0;font:16px/1.6 system-ui,Segoe UI,Roboto,sans-serif;color:#1b1b2f;background:#f6f5ff}main{max-width:760px;margin:0 auto;padding:28px 18px 60px}h1{font-size:28px;margin:.2em 0 .4em}h2{margin-top:1.8em;font-size:21px}h3{font-size:17px;margin:1.2em 0 .3em}a{color:#4f46e5}code{background:#ecebff;padding:1px 5px;border-radius:5px;overflow-wrap:anywhere}ul,ol{padding-left:1.3em}footer{margin-top:40px;color:#666;font-size:14px}
-.btn{display:inline-block;padding:10px 18px;background:#4f46e5;color:#fff;border-radius:12px;text-decoration:none;font-weight:600}
-.app{padding:14px;margin:12px 0;background:#fff;border:1px solid #e3e1ff;border-radius:14px}.top{display:flex;gap:12px;align-items:flex-start}.top img{width:56px;height:56px;border-radius:12px;flex:none}.top b{display:block;font-size:17px}.top p{margin:.1em 0 .3em;color:#444;font-size:15px}.meta{font-size:13px;color:#555;margin:.3em 0}.meta code{font-size:12px}
-.row{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;margin-top:8px;font-size:14px}details{margin-top:8px;font-size:14px}summary{cursor:pointer;color:#4f46e5}.hash{display:block;margin-top:6px;word-break:break-all;font-size:12px}.shots{display:flex;gap:6px;overflow-x:auto;margin-top:8px}.shots img{height:140px;width:auto;border-radius:8px;border:1px solid #e3e1ff}
-.note{padding:12px 14px;background:#fff7e6;border:1px solid #f3d38a;border-radius:12px;margin:12px 0}.warn{padding:12px 14px;background:#fff0f0;border:1px solid #f0a8a8;border-radius:12px;margin:12px 0}.tbl{width:100%;border-collapse:collapse;font-size:14px}.tbl td,.tbl th{border-bottom:1px solid #e3e1ff;padding:6px 4px;text-align:left;vertical-align:top}</style></head><body><main><h1>Android app downloads (test builds)</h1>
-<p>I am Sonith, an independent developer in India. These are 24 small Android apps that I have built. They have no ads, no accounts, and keep your data on your phone. Some of them are not yet on Google Play, so for now you can install them straight from a file (an APK). This page lists each one with its checksum so you can confirm that the file you got is the file I made.</p>
-<div class="note"><strong>Please read:</strong> these are version 0.1.0 test builds. They work, but expect rough edges. Because your data lives only on your phone, uninstalling an app deletes its data. If an app has an export or backup option, use it before you uninstall or switch to another version.</div>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Android app downloads | Sonith Apps</title>
+<meta name="description" content="Direct APK downloads of Sonith's small offline Android apps, with SHA-256 checksums and install help.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f7f7fd" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#12121c" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://sonythm.github.io/sonith-apps/downloads/">
+<link rel="icon" type="image/png" href="/sonith-apps/img/favicon.png">
+<link rel="apple-touch-icon" href="/sonith-apps/img/apple-touch-icon.png">
+<link rel="stylesheet" href="/sonith-apps/assets/site.css?v=45471f17">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap">
+<a class="brand" href="/sonith-apps/"><img src="/sonith-apps/img/logo.png" width="36" height="36" alt="">Sonith Manakkat</a>
+<nav class="mn" aria-label="Main">
+<input type="checkbox" id="mn-open" class="mn-tg" aria-label="Open the menu"><label for="mn-open" class="mn-burger" aria-hidden="true"><i></i><i></i><i></i></label>
+<ul class="mn-list">
+<li class="mn-i"><a href="/sonith-apps/">Home</a></li>
+<li class="mn-i"><input type="checkbox" id="mg0" class="mn-ck" aria-label="About me submenu"><label for="mg0">About me<svg class="mn-chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></label><ul class="mn-sub"><li><a href="/sonith-apps/#about">Biography</a></li><li><a href="/sonith-apps/#strengths">Skills and strengths</a></li><li><a href="/sonith-apps/#career">Experience</a></li><li><a href="/sonith-apps/#dom-h">Domains</a></li><li><a href="/sonith-apps/#craft">Engineering craft</a></li><li><a href="/sonith-apps/#fde">Forward Deployed Engineering</a></li><li><a href="/sonith-apps/contact/">Contact</a></li></ul></li>
+<li class="mn-i"><input type="checkbox" id="mg1" class="mn-ck" aria-label="Work submenu"><label for="mg1">Work<svg class="mn-chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></label><ul class="mn-sub"><li><a href="/sonith-apps/apps/">All apps</a></li><li><a href="/sonith-apps/apps/myspend/">MySpend</a></li><li><a href="/sonith-apps/#gallery">Screenshot gallery</a></li><li><a href="/sonith-apps/#trading">Trading platform</a></li><li><a href="/sonith-apps/articles/digital-twins-and-simulators-explained/">Digital twins explained</a></li></ul></li>
+<li class="mn-i"><input type="checkbox" id="mg2" class="mn-ck" aria-label="Articles submenu"><label for="mg2">Articles<svg class="mn-chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></label><ul class="mn-sub"><li><a href="/sonith-apps/articles/">All articles</a></li><li><a href="/sonith-apps/articles/claude-ai/">Claude AI series</a></li><li><a href="/sonith-apps/articles/software-engineering/">Software engineering series</a></li><li><a href="/sonith-apps/articles/industry-explained/">Industry software series</a></li><li><a href="/sonith-apps/articles/algorithms/">Algorithms explained</a></li><li><a href="/sonith-apps/articles/trading/">Trading explained</a></li><li class="mn-h" role="presentation">Featured</li><li><a href="/sonith-apps/articles/claude-ai-what-is-claude/">What is Claude AI? A plain-language guide</a></li><li><a href="/sonith-apps/articles/forward-deployed-engineering-explained/">Forward Deployed Engineering explained</a></li><li><a href="/sonith-apps/articles/clean-architecture-dotnet-core/">Clean Architecture in .NET Core, explained simply</a></li></ul></li>
+<li class="mn-i cur"><input type="checkbox" id="mg3" class="mn-ck" aria-label="Play testing submenu"><label for="mg3">Play testing<svg class="mn-chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></label><ul class="mn-sub"><li><a href="/sonith-apps/play/">Test links</a></li><li><a href="/sonith-apps/play/#s1-h">Join the testers group</a></li><li><a href="/sonith-apps/testers/">Tester instructions</a></li><li><a href="/sonith-apps/downloads/">Downloads</a></li><li><a href="/sonith-apps/privacy/">Privacy policies</a></li></ul></li>
+<li class="mn-cta-li"><a class="mn-cta" href="/sonith-apps/contact/">Get in touch</a></li>
+</ul>
+</nav>
+</div><div id="pg" aria-hidden="true"></div></header>
+<main id="main">
+<div class="hero ahead"><div class="blobs" aria-hidden="true"><i></i><i></i><i></i></div><div class="wrap" style="position:relative">
+<nav class="crumb" aria-label="Breadcrumb"><ol><li><a href="/sonith-apps/">Home</a></li><li><a href="/sonith-apps/play/">Play testing</a></li><li aria-current="page">Downloads</li></ol></nav><p class="eyebrow">Test builds</p><h1>Android app downloads</h1>
+<p class="lead">Install a test build straight from a file, with checksums so you can verify it.</p>
+</div></div>
+<div class="wrap"><div class="prose" style="margin:28px auto 48px"><p>I am Sonith, an independent developer in India. These are 24 small Android apps that I have built. They have no ads, no accounts, and keep your data on your phone. Some of them are not yet on Google Play, so for now you can install them straight from a file (an APK). This page lists each one with its checksum so you can confirm that the file you got is the file I made.</p>
+<div class="dlnote"><strong>Please read:</strong> these are version 0.1.0 test builds. They work, but expect rough edges. Because your data lives only on your phone, uninstalling an app deletes its data. If an app has an export or backup option, use it before you uninstall or switch to another version.</div>
 
 <h2>Who can install these</h2>
 <ul>
 <li>Phones running Android 7.0 or newer (the apps need API 24 or higher).</li>
 <li>Almost all phones sold since 2017 (64-bit ARM, called <code>arm64-v8a</code>). Most of the apps are built for that CPU type only, so they will <strong>not</strong> install on a 32-bit-only phone or on an x86 device or emulator. The two MySpend files include all CPU types.</li>
-<li>Free. No payment, no sign-up, no ads, no tracking on this page (it uses no scripts, no analytics and no external fonts).</li>
+<li>Free. No payment, no sign-up, no ads, no tracking on this page (no analytics, no trackers and no external fonts; the only script is a small one that runs the menu).</li>
 </ul>
 
 <h2 id="install">How to install</h2>
@@ -32,7 +63,7 @@
 <p>Sideloaded apps do not update themselves. When a new version is announced, download the new file from this page and open it. Because every file uses the same package name and the same signing key, Android installs it <strong>over the old one and keeps your data</strong>. You do not need to uninstall first.</p>
 
 <h2 id="caveat">Important: sideloading and the Google Play version</h2>
-<div class="warn"><strong>The key caveat.</strong> These files are signed with my <em>upload key</em>. When an app goes live on Google Play, Google re-signs it with its own app-signing key. Android refuses to update an app when the signing key differs. So if you install an APK from this page, you <strong>cannot later update to the Play version</strong>; you would have to uninstall first, <strong>which deletes the app's data on your phone</strong> unless you export it first. If you can wait, <strong>install from Google Play once the app is listed there</strong>. If you do install the APK, use the app's export or backup option regularly.</div>
+<div class="dlwarn"><strong>The key caveat.</strong> These files are signed with my <em>upload key</em>. When an app goes live on Google Play, Google re-signs it with its own app-signing key. Android refuses to update an app when the signing key differs. So if you install an APK from this page, you <strong>cannot later update to the Play version</strong>; you would have to uninstall first, <strong>which deletes the app's data on your phone</strong> unless you export it first. If you can wait, <strong>install from Google Play once the app is listed there</strong>. If you do install the APK, use the app's export or backup option regularly.</div>
 
 <h2>Honest limitations</h2>
 <ul>
@@ -44,188 +75,188 @@
 </ul>
 
 <h2 id="apps">The apps</h2>
-<div class="app" id="rent-receipt">
-<div class="top"><img src="img/rent-receipt/icon.png" alt="" width="56" height="56"><div><b>Rent Receipt Generator</b><p>Make a year of rent receipts as one A5 PDF for your HRA claim.</p></div></div>
-<div class="meta">Version 0.1.0 (build 1) &middot; 42.4 MB &middot; arm64-v8a<br>SHA-256 <code>fa6950203924&hellip;1a60ae60</code></div>
-<div class="row"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.rentreceipt-0.1.0.apk">Download APK (42.4 MB)</a><a href="https://sonythm.github.io/sonith-apps/rent-receipt/">Privacy policy</a></div>
+<div class="dlapp" id="rent-receipt">
+<div class="dltop"><img src="img/rent-receipt/icon.png" alt="" width="56" height="56"><div><b>Rent Receipt Generator</b><p>Make a year of rent receipts as one A5 PDF for your HRA claim.</p></div></div>
+<div class="dlmeta">Version 0.1.0 (build 1) &middot; 42.4 MB &middot; arm64-v8a<br>SHA-256 <code>fa6950203924&hellip;1a60ae60</code></div>
+<div class="dlrow"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.rentreceipt-0.1.0.apk">Download APK (42.4 MB)</a><a href="https://sonythm.github.io/sonith-apps/rent-receipt/">Privacy policy</a></div>
 <details><summary>Full SHA-256 and file name</summary><code class="hash">fa695020392454dfebaaee3c3009ea2d3417a743522aaa30a17a18b31a60ae60</code><code class="hash">com.sonith.rentreceipt-0.1.0.apk</code></details>
 <details><summary>Screenshots</summary><div class="shots"><img src="img/rent-receipt/s1.jpg" alt="Rent Receipt Generator screenshot 1" loading="lazy"><img src="img/rent-receipt/s2.jpg" alt="Rent Receipt Generator screenshot 2" loading="lazy"><img src="img/rent-receipt/s3.jpg" alt="Rent Receipt Generator screenshot 3" loading="lazy"><img src="img/rent-receipt/s4.jpg" alt="Rent Receipt Generator screenshot 4" loading="lazy"></div></details>
 </div>
-<div class="app" id="barber-book">
-<div class="top"><img src="img/barber-book/icon.png" alt="" width="56" height="56"><div><b>Barber Book: Salon Accounts</b><p>One-tap sales, expenses and reports for your barber shop. Works offline.</p></div></div>
-<div class="meta">Version 0.1.0 (build 1) &middot; 41.7 MB &middot; arm64-v8a<br>SHA-256 <code>61da7d260890&hellip;fc7dad0d</code></div>
-<div class="row"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.barberbook-0.1.0.apk">Download APK (41.7 MB)</a><a href="https://sonythm.github.io/sonith-apps/barber-book/">Privacy policy</a></div>
+<div class="dlapp" id="barber-book">
+<div class="dltop"><img src="img/barber-book/icon.png" alt="" width="56" height="56"><div><b>Barber Book: Salon Accounts</b><p>One-tap sales, expenses and reports for your barber shop. Works offline.</p></div></div>
+<div class="dlmeta">Version 0.1.0 (build 1) &middot; 41.7 MB &middot; arm64-v8a<br>SHA-256 <code>61da7d260890&hellip;fc7dad0d</code></div>
+<div class="dlrow"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.barberbook-0.1.0.apk">Download APK (41.7 MB)</a><a href="https://sonythm.github.io/sonith-apps/barber-book/">Privacy policy</a></div>
 <details><summary>Full SHA-256 and file name</summary><code class="hash">61da7d2608906f1d4be17da128249ae73ea1f294dc012c487b8f4d34fc7dad0d</code><code class="hash">com.sonith.barberbook-0.1.0.apk</code></details>
 <details><summary>Screenshots</summary><div class="shots"><img src="img/barber-book/s1.jpg" alt="Barber Book: Salon Accounts screenshot 1" loading="lazy"><img src="img/barber-book/s2.jpg" alt="Barber Book: Salon Accounts screenshot 2" loading="lazy"><img src="img/barber-book/s3.jpg" alt="Barber Book: Salon Accounts screenshot 3" loading="lazy"><img src="img/barber-book/s4.jpg" alt="Barber Book: Salon Accounts screenshot 4" loading="lazy"></div></details>
 </div>
-<div class="app" id="daily-dues">
-<div class="top"><img src="img/daily-dues/icon.png" alt="" width="56" height="56"><div><b>Daily Dues</b><p>Track milk, maid, paper and more. One tap a day, exact monthly dues.</p></div></div>
-<div class="meta">Version 0.1.0 (build 1) &middot; 41.5 MB &middot; arm64-v8a<br>SHA-256 <code>d310c9ecf458&hellip;c374b2fa</code></div>
-<div class="row"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.dailydues-0.1.0.apk">Download APK (41.5 MB)</a><a href="https://sonythm.github.io/sonith-apps/daily-dues/">Privacy policy</a></div>
+<div class="dlapp" id="daily-dues">
+<div class="dltop"><img src="img/daily-dues/icon.png" alt="" width="56" height="56"><div><b>Daily Dues</b><p>Track milk, maid, paper and more. One tap a day, exact monthly dues.</p></div></div>
+<div class="dlmeta">Version 0.1.0 (build 1) &middot; 41.5 MB &middot; arm64-v8a<br>SHA-256 <code>d310c9ecf458&hellip;c374b2fa</code></div>
+<div class="dlrow"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.dailydues-0.1.0.apk">Download APK (41.5 MB)</a><a href="https://sonythm.github.io/sonith-apps/daily-dues/">Privacy policy</a></div>
 <details><summary>Full SHA-256 and file name</summary><code class="hash">d310c9ecf458b9ce03546cf49abd327f1614404b159de1594d87a670c374b2fa</code><code class="hash">com.sonith.dailydues-0.1.0.apk</code></details>
 <details><summary>Screenshots</summary><div class="shots"><img src="img/daily-dues/s1.jpg" alt="Daily Dues screenshot 1" loading="lazy"><img src="img/daily-dues/s2.jpg" alt="Daily Dues screenshot 2" loading="lazy"><img src="img/daily-dues/s3.jpg" alt="Daily Dues screenshot 3" loading="lazy"><img src="img/daily-dues/s4.jpg" alt="Daily Dues screenshot 4" loading="lazy"></div></details>
 </div>
-<div class="app" id="iron-book">
-<div class="top"><img src="img/iron-book/icon.png" alt="" width="56" height="56"><div><b>Iron Book: Press Shop Khata</b><p>Ironing orders, customer khata, expenses and reports for press shops. Offline.</p></div></div>
-<div class="meta">Version 0.1.0 (build 1) &middot; 41.6 MB &middot; arm64-v8a<br>SHA-256 <code>b6783d318d81&hellip;6f4a7bc2</code></div>
-<div class="row"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.ironbook-0.1.0.apk">Download APK (41.6 MB)</a><a href="https://sonythm.github.io/sonith-apps/iron-book/">Privacy policy</a></div>
+<div class="dlapp" id="iron-book">
+<div class="dltop"><img src="img/iron-book/icon.png" alt="" width="56" height="56"><div><b>Iron Book: Press Shop Khata</b><p>Ironing orders, customer khata, expenses and reports for press shops. Offline.</p></div></div>
+<div class="dlmeta">Version 0.1.0 (build 1) &middot; 41.6 MB &middot; arm64-v8a<br>SHA-256 <code>b6783d318d81&hellip;6f4a7bc2</code></div>
+<div class="dlrow"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.ironbook-0.1.0.apk">Download APK (41.6 MB)</a><a href="https://sonythm.github.io/sonith-apps/iron-book/">Privacy policy</a></div>
 <details><summary>Full SHA-256 and file name</summary><code class="hash">b6783d318d81f225ec200d8ac283fb9c6aa97fdf6837b674e7662b7e6f4a7bc2</code><code class="hash">com.sonith.ironbook-0.1.0.apk</code></details>
 <details><summary>Screenshots</summary><div class="shots"><img src="img/iron-book/s1.jpg" alt="Iron Book: Press Shop Khata screenshot 1" loading="lazy"><img src="img/iron-book/s2.jpg" alt="Iron Book: Press Shop Khata screenshot 2" loading="lazy"><img src="img/iron-book/s3.jpg" alt="Iron Book: Press Shop Khata screenshot 3" loading="lazy"><img src="img/iron-book/s4.jpg" alt="Iron Book: Press Shop Khata screenshot 4" loading="lazy"></div></details>
 </div>
-<div class="app" id="kitchen-book">
-<div class="top"><img src="img/kitchen-book/icon.png" alt="" width="56" height="56"><div><b>Kitchen Book: Grocery &amp; Meals</b><p>Monthly grocery list, pantry, meal plan, gas booking and kitchen spend. Offline.</p></div></div>
-<div class="meta">Version 0.1.0 (build 1) &middot; 41.6 MB &middot; arm64-v8a<br>SHA-256 <code>edce338dd55c&hellip;baea792e</code></div>
-<div class="row"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.kitchenbook-0.1.0.apk">Download APK (41.6 MB)</a><a href="https://sonythm.github.io/sonith-apps/kitchen-book/">Privacy policy</a></div>
+<div class="dlapp" id="kitchen-book">
+<div class="dltop"><img src="img/kitchen-book/icon.png" alt="" width="56" height="56"><div><b>Kitchen Book: Grocery &amp; Meals</b><p>Monthly grocery list, pantry, meal plan, gas booking and kitchen spend. Offline.</p></div></div>
+<div class="dlmeta">Version 0.1.0 (build 1) &middot; 41.6 MB &middot; arm64-v8a<br>SHA-256 <code>edce338dd55c&hellip;baea792e</code></div>
+<div class="dlrow"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.kitchenbook-0.1.0.apk">Download APK (41.6 MB)</a><a href="https://sonythm.github.io/sonith-apps/kitchen-book/">Privacy policy</a></div>
 <details><summary>Full SHA-256 and file name</summary><code class="hash">edce338dd55c01b0babbd92713066663e24e982db9e4265a41731064baea792e</code><code class="hash">com.sonith.kitchenbook-0.1.0.apk</code></details>
 <details><summary>Screenshots</summary><div class="shots"><img src="img/kitchen-book/s1.jpg" alt="Kitchen Book: Grocery &amp; Meals screenshot 1" loading="lazy"><img src="img/kitchen-book/s2.jpg" alt="Kitchen Book: Grocery &amp; Meals screenshot 2" loading="lazy"><img src="img/kitchen-book/s3.jpg" alt="Kitchen Book: Grocery &amp; Meals screenshot 3" loading="lazy"><img src="img/kitchen-book/s4.jpg" alt="Kitchen Book: Grocery &amp; Meals screenshot 4" loading="lazy"></div></details>
 </div>
-<div class="app" id="home-chef-book">
-<div class="top"><img src="img/home-chef-book/icon.png" alt="" width="56" height="56"><div><b>Home Chef Book: Order Diary</b><p>Orders, menu, advance and khata for home bakers and cooks. Offline, no login.</p></div></div>
-<div class="meta">Version 0.1.0 (build 1) &middot; 41.6 MB &middot; arm64-v8a<br>SHA-256 <code>11a04c48d0d2&hellip;93c5290b</code></div>
-<div class="row"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.homechefbook-0.1.0.apk">Download APK (41.6 MB)</a><a href="https://sonythm.github.io/sonith-apps/home-chef-book/">Privacy policy</a></div>
+<div class="dlapp" id="home-chef-book">
+<div class="dltop"><img src="img/home-chef-book/icon.png" alt="" width="56" height="56"><div><b>Home Chef Book: Order Diary</b><p>Orders, menu, advance and khata for home bakers and cooks. Offline, no login.</p></div></div>
+<div class="dlmeta">Version 0.1.0 (build 1) &middot; 41.6 MB &middot; arm64-v8a<br>SHA-256 <code>11a04c48d0d2&hellip;93c5290b</code></div>
+<div class="dlrow"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.homechefbook-0.1.0.apk">Download APK (41.6 MB)</a><a href="https://sonythm.github.io/sonith-apps/home-chef-book/">Privacy policy</a></div>
 <details><summary>Full SHA-256 and file name</summary><code class="hash">11a04c48d0d27e4b03b38da8f2e1e85949e39e6efd49d72b67cebb2b93c5290b</code><code class="hash">com.sonith.homechefbook-0.1.0.apk</code></details>
 <details><summary>Screenshots</summary><div class="shots"><img src="img/home-chef-book/s1.jpg" alt="Home Chef Book: Order Diary screenshot 1" loading="lazy"><img src="img/home-chef-book/s2.jpg" alt="Home Chef Book: Order Diary screenshot 2" loading="lazy"><img src="img/home-chef-book/s3.jpg" alt="Home Chef Book: Order Diary screenshot 3" loading="lazy"><img src="img/home-chef-book/s4.jpg" alt="Home Chef Book: Order Diary screenshot 4" loading="lazy"></div></details>
 </div>
-<div class="app" id="flashcards">
-<div class="top"><img src="img/flashcards/icon.png" alt="" width="56" height="56"><div><b>Flashcards from Screenshots</b><p>Turn screenshots into flashcards and review them on schedule. No account.</p></div></div>
-<div class="meta">Version 0.1.0 (build 1) &middot; 53.4 MB &middot; arm64-v8a<br>SHA-256 <code>57386014c685&hellip;f9883ab0</code></div>
-<div class="row"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.flashcards-0.1.0.apk">Download APK (53.4 MB)</a><a href="https://sonythm.github.io/sonith-apps/flashcards/">Privacy policy</a></div>
+<div class="dlapp" id="flashcards">
+<div class="dltop"><img src="img/flashcards/icon.png" alt="" width="56" height="56"><div><b>Flashcards from Screenshots</b><p>Turn screenshots into flashcards and review them on schedule. No account.</p></div></div>
+<div class="dlmeta">Version 0.1.0 (build 1) &middot; 53.4 MB &middot; arm64-v8a<br>SHA-256 <code>57386014c685&hellip;f9883ab0</code></div>
+<div class="dlrow"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.flashcards-0.1.0.apk">Download APK (53.4 MB)</a><a href="https://sonythm.github.io/sonith-apps/flashcards/">Privacy policy</a></div>
 <details><summary>Full SHA-256 and file name</summary><code class="hash">57386014c6853e8167d1602f9465b3523c686d9fe003cc2e658da4bff9883ab0</code><code class="hash">com.sonith.flashcards-0.1.0.apk</code></details>
 <details><summary>Screenshots</summary><div class="shots"><img src="img/flashcards/s1.jpg" alt="Flashcards from Screenshots screenshot 1" loading="lazy"><img src="img/flashcards/s2.jpg" alt="Flashcards from Screenshots screenshot 2" loading="lazy"><img src="img/flashcards/s3.jpg" alt="Flashcards from Screenshots screenshot 3" loading="lazy"><img src="img/flashcards/s4.jpg" alt="Flashcards from Screenshots screenshot 4" loading="lazy"></div></details>
 </div>
-<div class="app" id="chore-rota">
-<div class="top"><img src="img/chore-rota/icon.png" alt="" width="56" height="56"><div><b>Chore Rota</b><p>Fair household chores: rotation, proof photos, helper log, shareable week.</p></div></div>
-<div class="meta">Version 0.1.0 (build 1) &middot; 41.3 MB &middot; arm64-v8a<br>SHA-256 <code>c23ee17c4676&hellip;617acb14</code></div>
-<div class="row"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.chorerota-0.1.0.apk">Download APK (41.3 MB)</a><a href="https://sonythm.github.io/sonith-apps/chore-rota/">Privacy policy</a></div>
+<div class="dlapp" id="chore-rota">
+<div class="dltop"><img src="img/chore-rota/icon.png" alt="" width="56" height="56"><div><b>Chore Rota</b><p>Fair household chores: rotation, proof photos, helper log, shareable week.</p></div></div>
+<div class="dlmeta">Version 0.1.0 (build 1) &middot; 41.3 MB &middot; arm64-v8a<br>SHA-256 <code>c23ee17c4676&hellip;617acb14</code></div>
+<div class="dlrow"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.chorerota-0.1.0.apk">Download APK (41.3 MB)</a><a href="https://sonythm.github.io/sonith-apps/chore-rota/">Privacy policy</a></div>
 <details><summary>Full SHA-256 and file name</summary><code class="hash">c23ee17c467690d7aa50d92f00882b7ae0f6d2a591ce20c9302d9ed1617acb14</code><code class="hash">com.sonith.chorerota-0.1.0.apk</code></details>
 <details><summary>Screenshots</summary><div class="shots"><img src="img/chore-rota/s1.jpg" alt="Chore Rota screenshot 1" loading="lazy"><img src="img/chore-rota/s2.jpg" alt="Chore Rota screenshot 2" loading="lazy"><img src="img/chore-rota/s3.jpg" alt="Chore Rota screenshot 3" loading="lazy"><img src="img/chore-rota/s4.jpg" alt="Chore Rota screenshot 4" loading="lazy"></div></details>
 </div>
-<div class="app" id="routine-runner">
-<div class="top"><img src="img/routine-runner/icon.png" alt="" width="56" height="56"><div><b>ADHD Routine Runner</b><p>Run morning and evening routines one step at a time with a gentle timer.</p></div></div>
-<div class="meta">Version 0.1.0 (build 1) &middot; 43.6 MB &middot; arm64-v8a<br>SHA-256 <code>0cbf7d26ddcd&hellip;14f300b4</code></div>
-<div class="row"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.routinerunner-0.1.0.apk">Download APK (43.6 MB)</a><a href="https://sonythm.github.io/sonith-apps/routine-runner/">Privacy policy</a></div>
+<div class="dlapp" id="routine-runner">
+<div class="dltop"><img src="img/routine-runner/icon.png" alt="" width="56" height="56"><div><b>ADHD Routine Runner</b><p>Run morning and evening routines one step at a time with a gentle timer.</p></div></div>
+<div class="dlmeta">Version 0.1.0 (build 1) &middot; 43.6 MB &middot; arm64-v8a<br>SHA-256 <code>0cbf7d26ddcd&hellip;14f300b4</code></div>
+<div class="dlrow"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.routinerunner-0.1.0.apk">Download APK (43.6 MB)</a><a href="https://sonythm.github.io/sonith-apps/routine-runner/">Privacy policy</a></div>
 <details><summary>Full SHA-256 and file name</summary><code class="hash">0cbf7d26ddcd2127d0e787198cb8f07d9e4c360e8b248e4f36eedafa14f300b4</code><code class="hash">com.sonith.routinerunner-0.1.0.apk</code></details>
 <details><summary>Screenshots</summary><div class="shots"><img src="img/routine-runner/s1.jpg" alt="ADHD Routine Runner screenshot 1" loading="lazy"><img src="img/routine-runner/s2.jpg" alt="ADHD Routine Runner screenshot 2" loading="lazy"><img src="img/routine-runner/s3.jpg" alt="ADHD Routine Runner screenshot 3" loading="lazy"><img src="img/routine-runner/s4.jpg" alt="ADHD Routine Runner screenshot 4" loading="lazy"></div></details>
 </div>
-<div class="app" id="warranty-vault">
-<div class="top"><img src="img/warranty-vault/icon.png" alt="" width="56" height="56"><div><b>Warranty Vault</b><p>Keep warranties and documents in one place and get reminded before they expire.</p></div></div>
-<div class="meta">Version 0.1.0 (build 1) &middot; 56.1 MB &middot; arm64-v8a<br>SHA-256 <code>fc59597ea1e0&hellip;f7c9ff07</code></div>
-<div class="row"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.warrantyvault-0.1.0.apk">Download APK (56.1 MB)</a><a href="https://sonythm.github.io/sonith-apps/warranty-vault/">Privacy policy</a></div>
+<div class="dlapp" id="warranty-vault">
+<div class="dltop"><img src="img/warranty-vault/icon.png" alt="" width="56" height="56"><div><b>Warranty Vault</b><p>Keep warranties and documents in one place and get reminded before they expire.</p></div></div>
+<div class="dlmeta">Version 0.1.0 (build 1) &middot; 56.1 MB &middot; arm64-v8a<br>SHA-256 <code>fc59597ea1e0&hellip;f7c9ff07</code></div>
+<div class="dlrow"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.warrantyvault-0.1.0.apk">Download APK (56.1 MB)</a><a href="https://sonythm.github.io/sonith-apps/warranty-vault/">Privacy policy</a></div>
 <details><summary>Full SHA-256 and file name</summary><code class="hash">fc59597ea1e0a16104039556e9f16364e728327a16182e2d3b0d4c6ef7c9ff07</code><code class="hash">com.sonith.warrantyvault-0.1.0.apk</code></details>
 <details><summary>Screenshots</summary><div class="shots"><img src="img/warranty-vault/s1.jpg" alt="Warranty Vault screenshot 1" loading="lazy"><img src="img/warranty-vault/s2.jpg" alt="Warranty Vault screenshot 2" loading="lazy"><img src="img/warranty-vault/s3.jpg" alt="Warranty Vault screenshot 3" loading="lazy"><img src="img/warranty-vault/s4.jpg" alt="Warranty Vault screenshot 4" loading="lazy"></div></details>
 </div>
-<div class="app" id="move-in-report">
-<div class="top"><img src="img/move-in-report/icon.png" alt="" width="56" height="56"><div><b>Move-In Report</b><p>Room-by-room condition photos and notes for your rental, kept on your phone.</p></div></div>
-<div class="meta">Version 0.1.0 (build 1) &middot; 42.9 MB &middot; arm64-v8a<br>SHA-256 <code>600b6f1ef495&hellip;76aae20a</code></div>
-<div class="row"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.moveinreport-0.1.0.apk">Download APK (42.9 MB)</a><a href="https://sonythm.github.io/sonith-apps/move-in-report/">Privacy policy</a></div>
+<div class="dlapp" id="move-in-report">
+<div class="dltop"><img src="img/move-in-report/icon.png" alt="" width="56" height="56"><div><b>Move-In Report</b><p>Room-by-room condition photos and notes for your rental, kept on your phone.</p></div></div>
+<div class="dlmeta">Version 0.1.0 (build 1) &middot; 42.9 MB &middot; arm64-v8a<br>SHA-256 <code>600b6f1ef495&hellip;76aae20a</code></div>
+<div class="dlrow"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.moveinreport-0.1.0.apk">Download APK (42.9 MB)</a><a href="https://sonythm.github.io/sonith-apps/move-in-report/">Privacy policy</a></div>
 <details><summary>Full SHA-256 and file name</summary><code class="hash">600b6f1ef495b6a5d9ecb1247a1b021caa46987cc4a3dda83f0a227376aae20a</code><code class="hash">com.sonith.moveinreport-0.1.0.apk</code></details>
 <details><summary>Screenshots</summary><div class="shots"><img src="img/move-in-report/s1.jpg" alt="Move-In Report screenshot 1" loading="lazy"><img src="img/move-in-report/s2.jpg" alt="Move-In Report screenshot 2" loading="lazy"><img src="img/move-in-report/s3.jpg" alt="Move-In Report screenshot 3" loading="lazy"><img src="img/move-in-report/s4.jpg" alt="Move-In Report screenshot 4" loading="lazy"></div></details>
 </div>
-<div class="app" id="voice-khata">
-<div class="top"><img src="img/voice-khata/icon.png" alt="" width="56" height="56"><div><b>Voice Khata: Udhaar Ledger</b><p>Speak the udhaar in Hindi, Malayalam or English. Offline khata for your shop.</p></div></div>
-<div class="meta">Version 0.1.0 (build 1) &middot; 61.1 MB &middot; arm64-v8a<br>SHA-256 <code>060a6909336e&hellip;e7ececef</code></div>
-<div class="row"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.voicekhata-0.1.0.apk">Download APK (61.1 MB)</a><a href="https://sonythm.github.io/sonith-apps/voice-khata/">Privacy policy</a></div>
+<div class="dlapp" id="voice-khata">
+<div class="dltop"><img src="img/voice-khata/icon.png" alt="" width="56" height="56"><div><b>Voice Khata: Udhaar Ledger</b><p>Speak the udhaar in Hindi, Malayalam or English. Offline khata for your shop.</p></div></div>
+<div class="dlmeta">Version 0.1.0 (build 1) &middot; 61.1 MB &middot; arm64-v8a<br>SHA-256 <code>060a6909336e&hellip;e7ececef</code></div>
+<div class="dlrow"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.voicekhata-0.1.0.apk">Download APK (61.1 MB)</a><a href="https://sonythm.github.io/sonith-apps/voice-khata/">Privacy policy</a></div>
 <details><summary>Full SHA-256 and file name</summary><code class="hash">060a6909336e5c1e849bd80430ebf9893a1921f709fa402536e64be9e7ececef</code><code class="hash">com.sonith.voicekhata-0.1.0.apk</code></details>
 <details><summary>Screenshots</summary><div class="shots"><img src="img/voice-khata/s1.jpg" alt="Voice Khata: Udhaar Ledger screenshot 1" loading="lazy"><img src="img/voice-khata/s2.jpg" alt="Voice Khata: Udhaar Ledger screenshot 2" loading="lazy"><img src="img/voice-khata/s3.jpg" alt="Voice Khata: Udhaar Ledger screenshot 3" loading="lazy"><img src="img/voice-khata/s4.jpg" alt="Voice Khata: Udhaar Ledger screenshot 4" loading="lazy"></div></details>
 </div>
-<div class="app" id="card-follow-up">
-<div class="top"><img src="img/card-follow-up/icon.png" alt="" width="56" height="56"><div><b>Card to Follow-up</b><p>Scan a visiting card, note where you met, get a reminder to follow up.</p></div></div>
-<div class="meta">Version 0.1.0 (build 1) &middot; 50.2 MB &middot; arm64-v8a<br>SHA-256 <code>b3c36368adf8&hellip;56ad343c</code></div>
-<div class="row"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.cardfollowup-0.1.0.apk">Download APK (50.2 MB)</a><a href="https://sonythm.github.io/sonith-apps/card-follow-up/">Privacy policy</a></div>
+<div class="dlapp" id="card-follow-up">
+<div class="dltop"><img src="img/card-follow-up/icon.png" alt="" width="56" height="56"><div><b>Card to Follow-up</b><p>Scan a visiting card, note where you met, get a reminder to follow up.</p></div></div>
+<div class="dlmeta">Version 0.1.0 (build 1) &middot; 50.2 MB &middot; arm64-v8a<br>SHA-256 <code>b3c36368adf8&hellip;56ad343c</code></div>
+<div class="dlrow"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.cardfollowup-0.1.0.apk">Download APK (50.2 MB)</a><a href="https://sonythm.github.io/sonith-apps/card-follow-up/">Privacy policy</a></div>
 <details><summary>Full SHA-256 and file name</summary><code class="hash">b3c36368adf8ca1a56caf1c0df6df77f80e63c90ebde9152f80b1c6a56ad343c</code><code class="hash">com.sonith.cardfollowup-0.1.0.apk</code></details>
 <details><summary>Screenshots</summary><div class="shots"><img src="img/card-follow-up/s1.jpg" alt="Card to Follow-up screenshot 1" loading="lazy"><img src="img/card-follow-up/s2.jpg" alt="Card to Follow-up screenshot 2" loading="lazy"><img src="img/card-follow-up/s3.jpg" alt="Card to Follow-up screenshot 3" loading="lazy"><img src="img/card-follow-up/s4.jpg" alt="Card to Follow-up screenshot 4" loading="lazy"></div></details>
 </div>
-<div class="app" id="share-logs">
-<div class="top"><img src="img/share-logs/icon.png" alt="" width="56" height="56"><div><b>Share Logs to Insight</b><p>Share a log file and see its errors grouped by cause, counted, on a timeline.</p></div></div>
-<div class="meta">Version 0.1.0 (build 1) &middot; 41.8 MB &middot; arm64-v8a<br>SHA-256 <code>b6b2992f9946&hellip;d505cc9f</code></div>
-<div class="row"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.sharelogs-0.1.0.apk">Download APK (41.8 MB)</a><a href="https://sonythm.github.io/sonith-apps/share-logs/">Privacy policy</a></div>
+<div class="dlapp" id="share-logs">
+<div class="dltop"><img src="img/share-logs/icon.png" alt="" width="56" height="56"><div><b>Share Logs to Insight</b><p>Share a log file and see its errors grouped by cause, counted, on a timeline.</p></div></div>
+<div class="dlmeta">Version 0.1.0 (build 1) &middot; 41.8 MB &middot; arm64-v8a<br>SHA-256 <code>b6b2992f9946&hellip;d505cc9f</code></div>
+<div class="dlrow"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.sharelogs-0.1.0.apk">Download APK (41.8 MB)</a><a href="https://sonythm.github.io/sonith-apps/share-logs/">Privacy policy</a></div>
 <details><summary>Full SHA-256 and file name</summary><code class="hash">b6b2992f9946e52fd7f12e3bc33166447b255ad344c2ec81fbf9b4fad505cc9f</code><code class="hash">com.sonith.sharelogs-0.1.0.apk</code></details>
 <details><summary>Screenshots</summary><div class="shots"><img src="img/share-logs/s1.jpg" alt="Share Logs to Insight screenshot 1" loading="lazy"><img src="img/share-logs/s2.jpg" alt="Share Logs to Insight screenshot 2" loading="lazy"><img src="img/share-logs/s3.jpg" alt="Share Logs to Insight screenshot 3" loading="lazy"><img src="img/share-logs/s4.jpg" alt="Share Logs to Insight screenshot 4" loading="lazy"></div></details>
 </div>
-<div class="app" id="share-to-github-issue">
-<div class="top"><img src="img/share-to-github-issue/icon.png" alt="" width="56" height="56"><div><b>Share to GitHub Issue</b><p>Share a screenshot, text or link from any app and it becomes a GitHub issue.</p></div></div>
-<div class="meta">Version 0.1.0 (build 1) &middot; 41.3 MB &middot; arm64-v8a<br>SHA-256 <code>88c4887ac44b&hellip;228dc17a</code></div>
-<div class="row"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.sharetogithubissue-0.1.0.apk">Download APK (41.3 MB)</a><a href="https://sonythm.github.io/sonith-apps/share-to-github-issue/">Privacy policy</a></div>
+<div class="dlapp" id="share-to-github-issue">
+<div class="dltop"><img src="img/share-to-github-issue/icon.png" alt="" width="56" height="56"><div><b>Share to GitHub Issue</b><p>Share a screenshot, text or link from any app and it becomes a GitHub issue.</p></div></div>
+<div class="dlmeta">Version 0.1.0 (build 1) &middot; 41.3 MB &middot; arm64-v8a<br>SHA-256 <code>88c4887ac44b&hellip;228dc17a</code></div>
+<div class="dlrow"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.sharetogithubissue-0.1.0.apk">Download APK (41.3 MB)</a><a href="https://sonythm.github.io/sonith-apps/share-to-github-issue/">Privacy policy</a></div>
 <details><summary>Full SHA-256 and file name</summary><code class="hash">88c4887ac44bd275052e71f83d375efe4ed7e75984b35a3a2c5ab333228dc17a</code><code class="hash">com.sonith.sharetogithubissue-0.1.0.apk</code></details>
 <details><summary>Screenshots</summary><div class="shots"><img src="img/share-to-github-issue/s1.jpg" alt="Share to GitHub Issue screenshot 1" loading="lazy"><img src="img/share-to-github-issue/s2.jpg" alt="Share to GitHub Issue screenshot 2" loading="lazy"><img src="img/share-to-github-issue/s3.jpg" alt="Share to GitHub Issue screenshot 3" loading="lazy"><img src="img/share-to-github-issue/s4.jpg" alt="Share to GitHub Issue screenshot 4" loading="lazy"></div></details>
 </div>
-<div class="app" id="repo-widget">
-<div class="top"><img src="img/repo-widget/icon.png" alt="" width="56" height="56"><div><b>Repo Widget</b><p>GitHub reviews and failed builds on your Android home screen.</p></div></div>
-<div class="meta">Version 0.1.0 (build 1) &middot; 45.1 MB &middot; arm64-v8a<br>SHA-256 <code>cc41704c23c4&hellip;83f09534</code></div>
-<div class="row"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.repowidget-0.1.0.apk">Download APK (45.1 MB)</a><a href="https://sonythm.github.io/sonith-apps/repo-widget/">Privacy policy</a></div>
+<div class="dlapp" id="repo-widget">
+<div class="dltop"><img src="img/repo-widget/icon.png" alt="" width="56" height="56"><div><b>Repo Widget</b><p>GitHub reviews and failed builds on your Android home screen.</p></div></div>
+<div class="dlmeta">Version 0.1.0 (build 1) &middot; 45.1 MB &middot; arm64-v8a<br>SHA-256 <code>cc41704c23c4&hellip;83f09534</code></div>
+<div class="dlrow"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.repowidget-0.1.0.apk">Download APK (45.1 MB)</a><a href="https://sonythm.github.io/sonith-apps/repo-widget/">Privacy policy</a></div>
 <details><summary>Full SHA-256 and file name</summary><code class="hash">cc41704c23c45e5195269868cb7d66d6880370eebcec373cb643d88c83f09534</code><code class="hash">com.sonith.repowidget-0.1.0.apk</code></details>
 <details><summary>Screenshots</summary><div class="shots"><img src="img/repo-widget/s1.jpg" alt="Repo Widget screenshot 1" loading="lazy"><img src="img/repo-widget/s2.jpg" alt="Repo Widget screenshot 2" loading="lazy"><img src="img/repo-widget/s3.jpg" alt="Repo Widget screenshot 3" loading="lazy"><img src="img/repo-widget/s4.jpg" alt="Repo Widget screenshot 4" loading="lazy"></div></details>
 </div>
-<div class="app" id="screenshot-calendar">
-<div class="top"><img src="img/screenshot-calendar/icon.png" alt="" width="56" height="56"><div><b>Screenshot to Calendar</b><p>Turn dates in screenshots and messages into calendar events.</p></div></div>
-<div class="meta">Version 0.1.0 (build 1) &middot; 53.7 MB &middot; arm64-v8a<br>SHA-256 <code>625e32363cec&hellip;953c0e8d</code></div>
-<div class="row"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.screenshotcalendar-0.1.0.apk">Download APK (53.7 MB)</a><a href="https://sonythm.github.io/sonith-apps/screenshot-calendar/">Privacy policy</a></div>
+<div class="dlapp" id="screenshot-calendar">
+<div class="dltop"><img src="img/screenshot-calendar/icon.png" alt="" width="56" height="56"><div><b>Screenshot to Calendar</b><p>Turn dates in screenshots and messages into calendar events.</p></div></div>
+<div class="dlmeta">Version 0.1.0 (build 1) &middot; 53.7 MB &middot; arm64-v8a<br>SHA-256 <code>625e32363cec&hellip;953c0e8d</code></div>
+<div class="dlrow"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.screenshotcalendar-0.1.0.apk">Download APK (53.7 MB)</a><a href="https://sonythm.github.io/sonith-apps/screenshot-calendar/">Privacy policy</a></div>
 <details><summary>Full SHA-256 and file name</summary><code class="hash">625e32363ceca4936992364d114d11b38be8ab3aa986e591da06eea9953c0e8d</code><code class="hash">com.sonith.screenshotcalendar-0.1.0.apk</code></details>
 <details><summary>Screenshots</summary><div class="shots"><img src="img/screenshot-calendar/s1.jpg" alt="Screenshot to Calendar screenshot 1" loading="lazy"><img src="img/screenshot-calendar/s2.jpg" alt="Screenshot to Calendar screenshot 2" loading="lazy"><img src="img/screenshot-calendar/s3.jpg" alt="Screenshot to Calendar screenshot 3" loading="lazy"><img src="img/screenshot-calendar/s4.jpg" alt="Screenshot to Calendar screenshot 4" loading="lazy"></div></details>
 </div>
-<div class="app" id="shift-roster">
-<div class="top"><img src="img/shift-roster/icon.png" alt="" width="56" height="56"><div><b>Shift Roster to Calendar</b><p>Photograph your duty roster and add your shifts to your calendar.</p></div></div>
-<div class="meta">Version 0.1.0 (build 1) &middot; 67.9 MB &middot; arm64-v8a<br>SHA-256 <code>407449b6f8c4&hellip;0fe6488d</code></div>
-<div class="row"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.shiftroster-0.1.0.apk">Download APK (67.9 MB)</a><a href="https://sonythm.github.io/sonith-apps/shift-roster/">Privacy policy</a></div>
+<div class="dlapp" id="shift-roster">
+<div class="dltop"><img src="img/shift-roster/icon.png" alt="" width="56" height="56"><div><b>Shift Roster to Calendar</b><p>Photograph your duty roster and add your shifts to your calendar.</p></div></div>
+<div class="dlmeta">Version 0.1.0 (build 1) &middot; 67.9 MB &middot; arm64-v8a<br>SHA-256 <code>407449b6f8c4&hellip;0fe6488d</code></div>
+<div class="dlrow"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.shiftroster-0.1.0.apk">Download APK (67.9 MB)</a><a href="https://sonythm.github.io/sonith-apps/shift-roster/">Privacy policy</a></div>
 <details><summary>Full SHA-256 and file name</summary><code class="hash">407449b6f8c41b5c6504398b249f3f581ddf44133dc5aee26e8e89fc0fe6488d</code><code class="hash">com.sonith.shiftroster-0.1.0.apk</code></details>
 <details><summary>Screenshots</summary><div class="shots"><img src="img/shift-roster/s1.jpg" alt="Shift Roster to Calendar screenshot 1" loading="lazy"><img src="img/shift-roster/s2.jpg" alt="Shift Roster to Calendar screenshot 2" loading="lazy"><img src="img/shift-roster/s3.jpg" alt="Shift Roster to Calendar screenshot 3" loading="lazy"><img src="img/shift-roster/s4.jpg" alt="Shift Roster to Calendar screenshot 4" loading="lazy"></div></details>
 </div>
-<div class="app" id="voice-memo">
-<div class="top"><img src="img/voice-memo/icon.png" alt="" width="56" height="56"><div><b>Voice Memo</b><p>Record, transcribe on your phone, and search every word you said.</p></div></div>
-<div class="meta">Version 0.1.0 (build 1) &middot; 59.9 MB &middot; arm64-v8a<br>SHA-256 <code>5f4845634964&hellip;4ffd4d97</code></div>
-<div class="row"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.voicememo-0.1.0.apk">Download APK (59.9 MB)</a><a href="https://sonythm.github.io/sonith-apps/voice-memo/">Privacy policy</a></div>
+<div class="dlapp" id="voice-memo">
+<div class="dltop"><img src="img/voice-memo/icon.png" alt="" width="56" height="56"><div><b>Voice Memo</b><p>Record, transcribe on your phone, and search every word you said.</p></div></div>
+<div class="dlmeta">Version 0.1.0 (build 1) &middot; 59.9 MB &middot; arm64-v8a<br>SHA-256 <code>5f4845634964&hellip;4ffd4d97</code></div>
+<div class="dlrow"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.voicememo-0.1.0.apk">Download APK (59.9 MB)</a><a href="https://sonythm.github.io/sonith-apps/voice-memo/">Privacy policy</a></div>
 <details><summary>Full SHA-256 and file name</summary><code class="hash">5f4845634964966f9c73b25562f6eb5c31ca7981f2408616021f35604ffd4d97</code><code class="hash">com.sonith.voicememo-0.1.0.apk</code></details>
 <details><summary>Screenshots</summary><div class="shots"><img src="img/voice-memo/s1.jpg" alt="Voice Memo screenshot 1" loading="lazy"><img src="img/voice-memo/s2.jpg" alt="Voice Memo screenshot 2" loading="lazy"><img src="img/voice-memo/s3.jpg" alt="Voice Memo screenshot 3" loading="lazy"><img src="img/voice-memo/s4.jpg" alt="Voice Memo screenshot 4" loading="lazy"></div></details>
 </div>
-<div class="app" id="kid-health-book">
-<div class="top"><img src="img/kid-health-book/icon.png" alt="" width="56" height="56"><div><b>Kid Health Book: Vaccines</b><p>Your child's vaccines, growth, doctor visits and medicines. Private, offline.</p></div></div>
-<div class="meta">Version 0.1.0 (build 1) &middot; 41.5 MB &middot; arm64-v8a<br>SHA-256 <code>8abb3f80e87a&hellip;cc722c03</code></div>
-<div class="row"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.kidhealthbook-0.1.0.apk">Download APK (41.5 MB)</a><a href="https://sonythm.github.io/sonith-apps/kid-health-book/">Privacy policy</a></div>
+<div class="dlapp" id="kid-health-book">
+<div class="dltop"><img src="img/kid-health-book/icon.png" alt="" width="56" height="56"><div><b>Kid Health Book: Vaccines</b><p>Your child's vaccines, growth, doctor visits and medicines. Private, offline.</p></div></div>
+<div class="dlmeta">Version 0.1.0 (build 1) &middot; 41.5 MB &middot; arm64-v8a<br>SHA-256 <code>8abb3f80e87a&hellip;cc722c03</code></div>
+<div class="dlrow"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.kidhealthbook-0.1.0.apk">Download APK (41.5 MB)</a><a href="https://sonythm.github.io/sonith-apps/kid-health-book/">Privacy policy</a></div>
 <details><summary>Full SHA-256 and file name</summary><code class="hash">8abb3f80e87a62577a620cea5858911622fc065e46a740400d2147bbcc722c03</code><code class="hash">com.sonith.kidhealthbook-0.1.0.apk</code></details>
 <details><summary>Screenshots</summary><div class="shots"><img src="img/kid-health-book/s1.jpg" alt="Kid Health Book: Vaccines screenshot 1" loading="lazy"><img src="img/kid-health-book/s2.jpg" alt="Kid Health Book: Vaccines screenshot 2" loading="lazy"><img src="img/kid-health-book/s3.jpg" alt="Kid Health Book: Vaccines screenshot 3" loading="lazy"><img src="img/kid-health-book/s4.jpg" alt="Kid Health Book: Vaccines screenshot 4" loading="lazy"></div></details>
 </div>
-<div class="app" id="myspend">
-<div class="top"><img src="img/myspend/icon.png" alt="" width="56" height="56"><div><b>MySpend</b><p>Track spending, bills and budgets. Your data stays on your phone.</p></div></div>
-<div class="meta">Version 0.1.0 (build 1) &middot; 49.4 MB &middot; all CPU types<br>SHA-256 <code>c5992727d6ee&hellip;2577d95d</code></div>
-<div class="row"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.myspend-0.1.0.apk">Download APK (49.4 MB)</a><a href="https://sonythm.github.io/sonith-apps/myspend/">Privacy policy</a></div>
+<div class="dlapp" id="myspend">
+<div class="dltop"><img src="img/myspend/icon.png" alt="" width="56" height="56"><div><b>MySpend</b><p>Track spending, bills and budgets. Your data stays on your phone.</p></div></div>
+<div class="dlmeta">Version 0.1.0 (build 1) &middot; 49.4 MB &middot; all CPU types<br>SHA-256 <code>c5992727d6ee&hellip;2577d95d</code></div>
+<div class="dlrow"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.myspend-0.1.0.apk">Download APK (49.4 MB)</a><a href="https://sonythm.github.io/sonith-apps/myspend/">Privacy policy</a></div>
 <details><summary>Full SHA-256 and file name</summary><code class="hash">c5992727d6ee2acbe6284cae23374b286a65517af255e113379bbc832577d95d</code><code class="hash">com.sonith.myspend-0.1.0.apk</code></details>
 <details><summary>Screenshots</summary><div class="shots"><img src="img/myspend/s1.jpg" alt="MySpend screenshot 1" loading="lazy"><img src="img/myspend/s2.jpg" alt="MySpend screenshot 2" loading="lazy"><img src="img/myspend/s3.jpg" alt="MySpend screenshot 3" loading="lazy"><img src="img/myspend/s4.jpg" alt="MySpend screenshot 4" loading="lazy"></div></details>
 </div>
-<div class="app" id="tables-hero">
-<div class="top"><img src="img/tables-hero/icon.png" alt="" width="56" height="56"><div><b>Tables Hero: Times Tables</b><p>Times tables and quick maths practice for kids. No ads, works offline.</p></div></div>
-<div class="meta">Version 0.1.0 (build 1) &middot; 44.6 MB &middot; arm64-v8a<br>SHA-256 <code>45dc7538c5f2&hellip;4c51363a</code></div>
-<div class="row"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.tableshero-0.1.0.apk">Download APK (44.6 MB)</a><a href="https://sonythm.github.io/sonith-apps/tables-hero/">Privacy policy</a></div>
+<div class="dlapp" id="tables-hero">
+<div class="dltop"><img src="img/tables-hero/icon.png" alt="" width="56" height="56"><div><b>Tables Hero: Times Tables</b><p>Times tables and quick maths practice for kids. No ads, works offline.</p></div></div>
+<div class="dlmeta">Version 0.1.0 (build 1) &middot; 44.6 MB &middot; arm64-v8a<br>SHA-256 <code>45dc7538c5f2&hellip;4c51363a</code></div>
+<div class="dlrow"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.tableshero-0.1.0.apk">Download APK (44.6 MB)</a><a href="https://sonythm.github.io/sonith-apps/tables-hero/">Privacy policy</a></div>
 <details><summary>Full SHA-256 and file name</summary><code class="hash">45dc7538c5f23bdecb8c0ad5353add588f4c72568aa4ae503cc5a4ae4c51363a</code><code class="hash">com.sonith.tableshero-0.1.0.apk</code></details>
 <details><summary>Screenshots</summary><div class="shots"><img src="img/tables-hero/s1.jpg" alt="Tables Hero: Times Tables screenshot 1" loading="lazy"><img src="img/tables-hero/s2.jpg" alt="Tables Hero: Times Tables screenshot 2" loading="lazy"><img src="img/tables-hero/s3.jpg" alt="Tables Hero: Times Tables screenshot 3" loading="lazy"><img src="img/tables-hero/s4.jpg" alt="Tables Hero: Times Tables screenshot 4" loading="lazy"></div></details>
 </div>
-<div class="app" id="star-chart">
-<div class="top"><img src="img/star-chart/icon.png" alt="" width="56" height="56"><div><b>Star Chart: Kids Habit Rewards</b><p>A happy star chart for good habits and rewards. No ads. Stays on your phone.</p></div></div>
-<div class="meta">Version 0.1.0 (build 1) &middot; 41.3 MB &middot; arm64-v8a<br>SHA-256 <code>4ff0452d1153&hellip;f51ae29b</code></div>
-<div class="row"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.starchart-0.1.0.apk">Download APK (41.3 MB)</a><a href="https://sonythm.github.io/sonith-apps/star-chart/">Privacy policy</a></div>
+<div class="dlapp" id="star-chart">
+<div class="dltop"><img src="img/star-chart/icon.png" alt="" width="56" height="56"><div><b>Star Chart: Kids Habit Rewards</b><p>A happy star chart for good habits and rewards. No ads. Stays on your phone.</p></div></div>
+<div class="dlmeta">Version 0.1.0 (build 1) &middot; 41.3 MB &middot; arm64-v8a<br>SHA-256 <code>4ff0452d1153&hellip;f51ae29b</code></div>
+<div class="dlrow"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.starchart-0.1.0.apk">Download APK (41.3 MB)</a><a href="https://sonythm.github.io/sonith-apps/star-chart/">Privacy policy</a></div>
 <details><summary>Full SHA-256 and file name</summary><code class="hash">4ff0452d115329bcf88b345a033c14aad3c9493352cf43ffa25076ddf51ae29b</code><code class="hash">com.sonith.starchart-0.1.0.apk</code></details>
 <details><summary>Screenshots</summary><div class="shots"><img src="img/star-chart/s1.jpg" alt="Star Chart: Kids Habit Rewards screenshot 1" loading="lazy"><img src="img/star-chart/s2.jpg" alt="Star Chart: Kids Habit Rewards screenshot 2" loading="lazy"><img src="img/star-chart/s3.jpg" alt="Star Chart: Kids Habit Rewards screenshot 3" loading="lazy"><img src="img/star-chart/s4.jpg" alt="Star Chart: Kids Habit Rewards screenshot 4" loading="lazy"></div></details>
 </div>
-<div class="app" id="puzzle-tree">
-<div class="top"><img src="img/puzzle-tree/icon.png" alt="" width="56" height="56"><div><b>Puzzle Tree: Kids Learning</b><p>Maths, English, GK and logic puzzles for kids 5-12. No ads. Works offline.</p></div></div>
-<div class="meta">Version 0.1.0 (build 1) &middot; 41.5 MB &middot; arm64-v8a<br>SHA-256 <code>76dd284eb7b4&hellip;f78bf2e1</code></div>
-<div class="row"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.puzzletree-0.1.0.apk">Download APK (41.5 MB)</a><a href="https://sonythm.github.io/sonith-apps/puzzle-tree/">Privacy policy</a></div>
+<div class="dlapp" id="puzzle-tree">
+<div class="dltop"><img src="img/puzzle-tree/icon.png" alt="" width="56" height="56"><div><b>Puzzle Tree: Kids Learning</b><p>Maths, English, GK and logic puzzles for kids 5-12. No ads. Works offline.</p></div></div>
+<div class="dlmeta">Version 0.1.0 (build 1) &middot; 41.5 MB &middot; arm64-v8a<br>SHA-256 <code>76dd284eb7b4&hellip;f78bf2e1</code></div>
+<div class="dlrow"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.puzzletree-0.1.0.apk">Download APK (41.5 MB)</a><a href="https://sonythm.github.io/sonith-apps/puzzle-tree/">Privacy policy</a></div>
 <details><summary>Full SHA-256 and file name</summary><code class="hash">76dd284eb7b4b88bdeab4838e127be5987c3880f390b654d18483ea0f78bf2e1</code><code class="hash">com.sonith.puzzletree-0.1.0.apk</code></details>
 <details><summary>Screenshots</summary><div class="shots"><img src="img/puzzle-tree/s1.jpg" alt="Puzzle Tree: Kids Learning screenshot 1" loading="lazy"><img src="img/puzzle-tree/s2.jpg" alt="Puzzle Tree: Kids Learning screenshot 2" loading="lazy"><img src="img/puzzle-tree/s3.jpg" alt="Puzzle Tree: Kids Learning screenshot 3" loading="lazy"><img src="img/puzzle-tree/s4.jpg" alt="Puzzle Tree: Kids Learning screenshot 4" loading="lazy"></div></details>
 </div>
 
 <h2 id="advanced">Advanced: MySpend with SMS import</h2>
 <p>A separate version of MySpend for people who want automatic expense entry from bank SMS. It is not the same as the plain MySpend above, and it comes with a warning.</p>
-<div class="app" id="myspend-sms">
-<div class="top"><img src="img/myspend-sms/icon.png" alt="" width="56" height="56"><div><b>MySpend (SMS import, advanced)</b><p>The MySpend expense tracker with an extra button that reads bank and UPI SMS on your phone to fill in expenses. Needs the READ_SMS permission. Sideload only.</p></div></div>
-<div class="meta">Version 0.1.0 (build 1) &middot; 49.4 MB &middot; all CPU types<br>SHA-256 <code>1248a7ff33b4&hellip;f851f998</code></div>
-<div class="warn"><strong>Read this first.</strong> This build asks for the <code>READ_SMS</code> permission so it can read bank and UPI messages in your inbox when you tap <em>Scan my messages</em>. Messages are read on your phone only and nothing is sent anywhere, but SMS is sensitive. It is for sideloading only and is never offered on Google Play. It has the same package name as the plain MySpend above, so install one or the other. Android may also block the SMS permission for apps installed from a file until you allow it (see "Allow restricted settings" in the install notes). Only install it if you understand and accept this. The privacy policy linked here is written for the plain build; the SMS difference is described above.</div><div class="row"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.myspend-sms-0.1.0.apk">Download APK (49.4 MB)</a><a href="https://sonythm.github.io/sonith-apps/myspend/">Privacy policy</a></div>
+<div class="dlapp" id="myspend-sms">
+<div class="dltop"><img src="img/myspend-sms/icon.png" alt="" width="56" height="56"><div><b>MySpend (SMS import, advanced)</b><p>The MySpend expense tracker with an extra button that reads bank and UPI SMS on your phone to fill in expenses. Needs the READ_SMS permission. Sideload only.</p></div></div>
+<div class="dlmeta">Version 0.1.0 (build 1) &middot; 49.4 MB &middot; all CPU types<br>SHA-256 <code>1248a7ff33b4&hellip;f851f998</code></div>
+<div class="dlwarn"><strong>Read this first.</strong> This build asks for the <code>READ_SMS</code> permission so it can read bank and UPI messages in your inbox when you tap <em>Scan my messages</em>. Messages are read on your phone only and nothing is sent anywhere, but SMS is sensitive. It is for sideloading only and is never offered on Google Play. It has the same package name as the plain MySpend above, so install one or the other. Android may also block the SMS permission for apps installed from a file until you allow it (see "Allow restricted settings" in the install notes). Only install it if you understand and accept this. The privacy policy linked here is written for the plain build; the SMS difference is described above.</div><div class="dlrow"><a class="btn" href="https://github.com/sonythm/sonith-apps-downloads/releases/download/v0.1.0/com.sonith.myspend-sms-0.1.0.apk">Download APK (49.4 MB)</a><a href="https://sonythm.github.io/sonith-apps/myspend/">Privacy policy</a></div>
 <details><summary>Full SHA-256 and file name</summary><code class="hash">1248a7ff33b4d09a8c730a7c18f9ccc1857a6b6aadeca8f8bfebbb4bf851f998</code><code class="hash">com.sonith.myspend-sms-0.1.0.apk</code></details>
 <details><summary>Screenshots</summary><div class="shots"><img src="img/myspend-sms/s1.jpg" alt="MySpend (SMS import, advanced) screenshot 1" loading="lazy"><img src="img/myspend-sms/s2.jpg" alt="MySpend (SMS import, advanced) screenshot 2" loading="lazy"><img src="img/myspend-sms/s3.jpg" alt="MySpend (SMS import, advanced) screenshot 3" loading="lazy"><img src="img/myspend-sms/s4.jpg" alt="MySpend (SMS import, advanced) screenshot 4" loading="lazy"></div></details>
 </div>
 
 <h2>Releases and checksums</h2>
 <p>All files are attached to one GitHub release: <a href="https://github.com/sonythm/sonith-apps-downloads/releases/tag/v0.1.0">https://github.com/sonythm/sonith-apps-downloads/releases/tag/v0.1.0</a>. Total 25 files.</p>
-<table class="tbl"><thead><tr><th>File</th><th>Size</th></tr></thead><tbody>
+<table class="dltbl"><thead><tr><th>File</th><th>Size</th></tr></thead><tbody>
 <tr><td>com.sonith.rentreceipt-0.1.0.apk</td><td>42.4 MB</td></tr>
 <tr><td>com.sonith.barberbook-0.1.0.apk</td><td>41.7 MB</td></tr>
 <tr><td>com.sonith.dailydues-0.1.0.apk</td><td>41.5 MB</td></tr>
@@ -252,4 +283,27 @@
 <tr><td>com.sonith.puzzletree-0.1.0.apk</td><td>41.5 MB</td></tr>
 <tr><td>com.sonith.myspend-sms-0.1.0.apk</td><td>49.4 MB</td></tr>
 </tbody></table>
-<footer>Developer: Sonith. Contact: <a href="mailto:sonythm@gmail.com">sonythm@gmail.com</a>. <a href="../">Privacy policies</a></footer></main></body></html>
+</div></div>
+</main>
+<footer><div class="wrap">
+<div class="fcols">
+<div><b>Explore</b><ul><li><a href="/sonith-apps/">Home</a></li><li><a href="/sonith-apps/apps/">Apps</a></li><li><a href="/sonith-apps/articles/">Articles</a></li><li><a href="/sonith-apps/contact/">Contact</a></li></ul></div>
+<div><b>Test the apps</b><ul><li><a href="/sonith-apps/play/">Play testing</a></li><li><a href="/sonith-apps/testers/">Testers</a></li><li><a href="/sonith-apps/downloads/">Downloads</a></li></ul></div>
+<div><b>More</b><ul><li><a href="/sonith-apps/privacy/">Privacy policies</a></li><li><a href="https://www.linkedin.com/in/sonith-manakkat-74860989/" rel="me noopener" target="_blank">LinkedIn</a></li><li><a href="mailto:sonythm@gmail.com">Email</a></li></ul></div>
+</div>
+<p>&copy; 2026 Sonith Manakkat. No ads and no trackers on this site.</p></div></footer>
+<script>(function(){var d=document,h=d.documentElement,R=matchMedia('(prefers-reduced-motion:reduce)').matches,q=function(s){return[].slice.call(d.querySelectorAll(s))};h.classList.add('js');
+var cm=function(){q('.mn input:checked').forEach(function(c){c.checked=false})};q('.mn a').forEach(function(a){a.addEventListener('click',cm)});d.addEventListener('keydown',function(e){if(e.key==='Escape')cm()});d.addEventListener('click',function(e){if(!e.target.closest('.mn,.mn *'))cm()});
+var g=d.getElementById('gal');q('.gb button').forEach(function(b){b.onclick=function(){g.scrollBy({left:b.dataset.d*g.clientWidth*.8,behavior:R?'auto':'smooth'})}});
+q('.cp').forEach(function(b){b.onclick=function(){var u=b.dataset.u,i=d.getElementById('shurl'),ok=function(){var t=b.textContent;b.textContent='Copied';setTimeout(function(){b.textContent=t},1800)},fb=function(){if(i){i.select();try{d.execCommand('copy')}catch(e){}}ok()};navigator.clipboard&&navigator.clipboard.writeText?navigator.clipboard.writeText(u).then(ok,fb):fb()}});
+var ts=q('.toc a');if(ts.length&&window.IntersectionObserver){var to=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){ts.forEach(function(a){a.removeAttribute('aria-current')});var a=d.querySelector('.toc a[href="#'+x.target.id+'"]');if(a)a.setAttribute('aria-current','true')}})},{rootMargin:'0px 0px -70% 0px'});q('.prose h2').forEach(function(e){to.observe(e)})}
+if(R||!window.IntersectionObserver)return;h.classList.add('mo');
+q('section h2,.sub,p.bio,.stats li,ul.why li,.tl li,.skills li,.card,.flow li,.fig,.gal li,.mqw,.note,.co,.acard,.pn a,.vis,.vmf,.author,.takeaways,.nextc,details.expert').forEach(function(e){var p=e.parentNode,i=[].indexOf.call(p.children,e);e.classList.add('rv');e.style.setProperty('--i',Math.min(i,8))});
+var o=new IntersectionObserver(function(es){es.forEach(function(x){if(!x.isIntersecting)return;var e=x.target;e.classList.add('in');o.unobserve(e);setTimeout(function(){e.classList.remove('rv','in')},1400);
+var c=e.querySelector&&e.querySelector('.num');if(c){var t=+c.dataset.to,s=c.dataset.suf||'',t0=performance.now();(function f(t1){var k=Math.min((t1-t0)/1100,1);c.textContent=Math.round(t*(1-Math.pow(1-k,3)))+s;if(k<1)requestAnimationFrame(f)})(t0)}})},{threshold:.12});
+q('.rv').forEach(function(e){o.observe(e)});
+var tl=q('.tl'),tk=0;function u(){tk=0;var y=scrollY,H=h.scrollHeight-innerHeight;h.style.setProperty('--sp',H>0?y/H:0);tl.forEach(function(e){var r=e.getBoundingClientRect();e.style.setProperty('--p',Math.max(0,Math.min(1,(innerHeight*.75-r.top)/r.height)))})}
+addEventListener('scroll',function(){tk||(tk=requestAnimationFrame(u))},{passive:true});u()})();</script>
+
+</body>
+</html>
