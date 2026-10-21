@@ -388,7 +388,7 @@ footer ul{list-style:none;display:flex;flex-wrap:wrap;gap:0 10px;padding:0;margi
 .far u{position:absolute;left:-6px;top:0;width:10px;height:10px;border-radius:50%;background:var(--link);opacity:0}
 .fgd .yes em,.fgd .no em{font-style:normal;font-weight:700;color:var(--link);margin-right:6px}.fgd .no{font-size:14px}.fgd li.last{border-style:dashed}
 .fgq svg.fgv{display:block;width:100%;height:auto;max-width:560px;margin:0 auto;background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:6px}
-.fgx{fill:var(--fg);font:600 18px system-ui,sans-serif;paint-order:stroke;stroke:var(--card);stroke-width:5px;stroke-linejoin:round}
+.fgx{fill:var(--fg);font:600 18px system-ui,sans-serif}.fgx.lb{paint-order:stroke;stroke:var(--card);stroke-width:5px;stroke-linejoin:round}
 .fgn{fill:var(--chip);stroke:var(--bd);stroke-width:2}.fgn.start{stroke:#0f766e;stroke-width:3}.fgn.end{stroke:var(--btn);stroke-width:3}.fgn.bad{stroke:#b91c1c;stroke-width:3}
 .fgl2{stroke:var(--bd);stroke-width:2;stroke-dasharray:5 6}
 .fgar{stroke:var(--link);stroke-width:2.5;fill:none}.fgar.ret{stroke-dasharray:6 5}.fgh{fill:var(--link)}
@@ -406,7 +406,7 @@ footer ul{list-style:none;display:flex;flex-wrap:wrap;gap:0 10px;padding:0;margi
 .fgs-c.l0{border-left:6px solid #6d5bd0}.fgs-c.l1{border-left:6px solid #0f766e}.fgs-c.l2{border-left:6px solid #b45309}.fgs-c.l3{border-left:6px solid #2563eb}
 .fgu{display:grid;gap:8px;justify-items:center}.fgu-s{padding-right:14px;text-align:left;min-width:230px}.fgu-s b{padding-right:0}.fgu-s em{font-style:normal;font-weight:700;color:var(--link);display:block;font-size:15px}
 @media (min-width:760px){
-.fgf ol{grid-template-columns:repeat(var(--c),minmax(0,1fr));gap:34px 38px}.fgf li{min-width:0;overflow-wrap:anywhere}
+.fgf ol{grid-template-columns:repeat(var(--c),minmax(0,1fr));gap:34px 38px}.fgf li{min-width:0;overflow-wrap:break-word;padding:12px 12px 12px 50px}.fgf li b{padding-right:28px}
 .far{left:auto;right:-38px;top:50%;bottom:auto;width:38px;height:2px;border-left:0;border-top:2px dashed var(--link);--dx:30px;--dy:0px}
 .far u{left:0;top:-6px}
 .fgf.c3 li:nth-child(3n) .far,.fgf.c4 li:nth-child(4n) .far,.fgf.c1 .far{display:none}
