@@ -285,6 +285,28 @@ details.expert{background:hsl(var(--ah,255) 25% 13%);border-color:hsl(var(--ah,2
 .prose a{background-image:linear-gradient(90deg,var(--link),hsl(var(--ah,255) 90% 70%))}
 }
 @media (prefers-reduced-motion:no-preference){.hart{animation:fl 7s ease-in-out infinite}.hart.sm{animation:none}details.q[open] p,details.expert[open] .eg{animation:qin .3s ease}@keyframes qin{from{opacity:0;transform:translateY(-6px)}}.vsteps li{animation:lit 8s infinite;animation-delay:calc(var(--i)*1.4s)}.v-spin{animation:spin 8s linear infinite}.nextc{transition:transform .2s,box-shadow .2s}.nextc:hover{transform:translateY(-3px)}}
+/*menu*/header.top .wrap{flex-wrap:nowrap;position:relative}
+.brand{white-space:nowrap}.mn{display:flex;align-items:center}
+.mn-tg,.mn-ck{position:absolute;opacity:0;width:1px;height:1px;margin:0}
+.mn-burger{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;min-width:46px;min-height:46px;border-radius:12px;border:1px solid var(--bd);background:var(--card);cursor:pointer}
+.mn-burger i{display:block;width:20px;height:2px;border-radius:2px;background:var(--fg);transition:transform .2s,opacity .2s}
+.mn-tg:focus-visible+.mn-burger,.mn-ck:focus-visible+label{outline:3px solid var(--link);outline-offset:2px}
+.mn-tg:checked+.mn-burger i:nth-child(1){transform:translateY(7px) rotate(45deg)}.mn-tg:checked+.mn-burger i:nth-child(2){opacity:0}.mn-tg:checked+.mn-burger i:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mn-list{display:none;list-style:none;margin:0;padding:6px 16px 18px;position:absolute;left:0;right:0;top:100%;background:var(--bg);border-bottom:1px solid var(--bd);box-shadow:var(--sh);max-height:calc(100vh - 64px);overflow:auto}
+.mn-tg:checked~.mn-list{display:block}
+.mn-i{border-bottom:1px solid var(--bd)}
+.mn-i>a,.mn-i>label{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:48px;padding:0;font-weight:600;color:var(--fg);text-decoration:none;cursor:pointer;border-radius:0}
+.mn-chev{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}
+.mn-ck:checked+label .mn-chev{transform:rotate(180deg)}
+.mn-sub{display:none;list-style:none;margin:0 0 8px;padding:0 0 0 12px}.mn-ck:checked~.mn-sub{display:block}
+.mn .mn-sub a{display:flex;align-items:center;min-height:44px;padding:0 8px;border-radius:10px;color:var(--link);text-decoration:none;font-weight:500}.mn .mn-sub a:hover{background:var(--chip)}
+.mn-h{padding:10px 8px 2px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)}
+.mn-i.cur>a,.mn-i.cur>label{color:var(--link)}
+.mn .mn-cta-li{border:0;padding-top:12px}
+.mn .mn-cta{display:flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:999px;background:var(--btn);color:var(--btnfg);font-weight:700;text-decoration:none}
+.tk:empty{display:none}.fcols{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-bottom:12px}.fcols b{display:block;color:var(--fg);margin-bottom:4px}.fcols ul{display:block;margin:0}
+@media (min-width:960px){.mn-burger{display:none}.mn-list{display:flex;position:static;padding:0;border:0;box-shadow:none;background:transparent;max-height:none;overflow:visible;align-items:center;gap:2px}.mn-i{position:relative;border:0}.mn-i>a,.mn-i>label{padding:0 12px;min-height:46px;border-radius:12px}.mn-i>a:hover,.mn-i>label:hover{background:var(--chip)}.mn-i.cur>a,.mn-i.cur>label{box-shadow:inset 0 -3px 0 var(--btn);border-radius:12px 12px 0 0}.mn-sub{position:absolute;left:0;top:100%;min-width:270px;margin:0;padding:8px;background:var(--card);border:1px solid var(--bd);border-radius:16px;box-shadow:var(--sh)}.mn-i:hover>.mn-sub,.mn-i:focus-within>.mn-sub{display:block}.mn .mn-cta-li{padding:0 0 0 8px}.mn .mn-cta{min-height:44px;padding:0 20px}.mn-i:nth-last-child(2)>.mn-sub{left:auto;right:0}}
+@media (prefers-reduced-motion:no-preference){.mn-tg:checked~.mn-list{animation:mnin .22s ease}.mn-sub{animation:mnin .18s ease}@keyframes mnin{from{opacity:0;transform:translateY(-6px)}}}
 footer{border-top:1px solid var(--bd);padding:28px 0 40px;color:var(--mut);font-size:15px}
 footer ul{list-style:none;display:flex;flex-wrap:wrap;gap:0 10px;padding:0;margin:0 0 10px}footer a{display:inline-flex;align-items:center;min-height:44px}
 @media (max-width:759px){.js .menu{display:inline-flex;align-items:center}.js nav{width:100%}.js nav ul{display:none;flex-direction:column;padding-bottom:8px}.js nav.open ul{display:flex}}
@@ -330,10 +352,17 @@ footer ul{list-style:none;display:flex;flex-wrap:wrap;gap:0 10px;padding:0;margi
 <a class="skip" href="#main">Skip to content</a>
 <header class="top"><div class="wrap">
 <a class="brand" href="/sonith-apps/"><img src="/sonith-apps/img/logo.png" width="36" height="36" alt="">Sonith Apps</a>
-<button class="menu" id="mb" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
-<nav aria-label="Main" id="nav"><ul>
-<li><a href="/sonith-apps/">Home</a></li><li><a href="/sonith-apps/articles/">Articles</a></li><li><a href="/sonith-apps/apps/">Apps</a></li><li><a href="/sonith-apps/play/" aria-current="page">Play apps</a></li><li><a href="/sonith-apps/#contact">Contact</a></li>
-</ul></nav>
+<nav class="mn" aria-label="Main">
+<input type="checkbox" id="mn-open" class="mn-tg" aria-label="Open the menu"><label for="mn-open" class="mn-burger" aria-hidden="true"><i></i><i></i><i></i></label>
+<ul class="mn-list">
+<li class="mn-i"><a href="/sonith-apps/">Home</a></li>
+<li class="mn-i"><input type="checkbox" id="mg0" class="mn-ck" aria-label="About me submenu"><label for="mg0">About me<svg class="mn-chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></label><ul class="mn-sub"><li><a href="/sonith-apps/#about">Biography</a></li><li><a href="/sonith-apps/#strengths">Skills and strengths</a></li><li><a href="/sonith-apps/#career">Experience</a></li><li><a href="/sonith-apps/#dom-h">Domains</a></li><li><a href="/sonith-apps/#craft">Engineering craft</a></li><li><a href="/sonith-apps/#fde">Forward Deployed Engineering</a></li><li><a href="/sonith-apps/#contact">Contact</a></li></ul></li>
+<li class="mn-i"><input type="checkbox" id="mg1" class="mn-ck" aria-label="Work submenu"><label for="mg1">Work<svg class="mn-chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></label><ul class="mn-sub"><li><a href="/sonith-apps/apps/">All apps</a></li><li><a href="/sonith-apps/apps/myspend/">MySpend</a></li><li><a href="/sonith-apps/#gallery">Screenshot gallery</a></li><li><a href="/sonith-apps/#trading">Trading platform</a></li><li><a href="/sonith-apps/articles/digital-twins-and-simulators-explained/">Digital twins explained</a></li></ul></li>
+<li class="mn-i"><input type="checkbox" id="mg2" class="mn-ck" aria-label="Articles submenu"><label for="mg2">Articles<svg class="mn-chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></label><ul class="mn-sub"><li><a href="/sonith-apps/articles/">All articles</a></li><li><a href="/sonith-apps/articles/claude-ai/">Claude AI series</a></li><li><a href="/sonith-apps/articles/software-engineering/">Software engineering series</a></li><li><a href="/sonith-apps/articles/industry-explained/">Industry software series</a></li><li class="mn-h" role="presentation">Featured</li><li><a href="/sonith-apps/articles/claude-ai-what-is-claude/">What is Claude AI? A plain-language guide</a></li><li><a href="/sonith-apps/articles/forward-deployed-engineering-explained/">Forward Deployed Engineering explained</a></li><li><a href="/sonith-apps/articles/clean-architecture-dotnet-core/">Clean Architecture in .NET Core, explained simply</a></li></ul></li>
+<li class="mn-i cur"><input type="checkbox" id="mg3" class="mn-ck" aria-label="Play testing submenu"><label for="mg3">Play testing<svg class="mn-chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></label><ul class="mn-sub"><li><a href="/sonith-apps/play/">Test links</a></li><li><a href="/sonith-apps/play/#s1-h">Join the testers group</a></li><li><a href="/sonith-apps/testers/">Tester instructions</a></li><li><a href="/sonith-apps/downloads/">Downloads</a></li><li><a href="/sonith-apps/privacy/">Privacy policies</a></li></ul></li>
+<li class="mn-cta-li"><a class="mn-cta" href="/sonith-apps/#contact">Get in touch</a></li>
+</ul>
+</nav>
 </div><div id="pg" aria-hidden="true"></div></header>
 <main id="main">
 <div class="hero ahead"><div class="blobs" aria-hidden="true"><i></i><i></i><i></i></div><div class="wrap" style="position:relative">
@@ -541,18 +570,15 @@ footer ul{list-style:none;display:flex;flex-wrap:wrap;gap:0 10px;padding:0;margi
 <p class="back"><a class="btn alt" href="/sonith-apps/apps/">Back to all apps</a></p>
 </div>
 </main>
-<footer><div class="wrap"><ul>
-<li><a href="/sonith-apps/articles/">Articles</a></li>
-<li><a href="/sonith-apps/apps/">Apps</a></li>
-<li><a href="/sonith-apps/play/">Play apps</a></li>
-<li><a href="/sonith-apps/privacy/">Privacy policies</a></li>
-<li><a href="/sonith-apps/downloads/">Downloads</a></li>
-<li><a href="/sonith-apps/testers/">Testers</a></li>
-<li><a href="https://www.linkedin.com/in/sonith-manakkat-74860989/" rel="me noopener" target="_blank">LinkedIn</a></li>
-</ul><p>&copy; 2026 Sonith Manakkat. No ads and no trackers on this site.</p></div></footer>
+<footer><div class="wrap">
+<div class="fcols">
+<div><b>Explore</b><ul><li><a href="/sonith-apps/">Home</a></li><li><a href="/sonith-apps/apps/">Apps</a></li><li><a href="/sonith-apps/articles/">Articles</a></li></ul></div>
+<div><b>Test the apps</b><ul><li><a href="/sonith-apps/play/">Play testing</a></li><li><a href="/sonith-apps/testers/">Testers</a></li><li><a href="/sonith-apps/downloads/">Downloads</a></li></ul></div>
+<div><b>More</b><ul><li><a href="/sonith-apps/privacy/">Privacy policies</a></li><li><a href="https://www.linkedin.com/in/sonith-manakkat-74860989/" rel="me noopener" target="_blank">LinkedIn</a></li><li><a href="mailto:sonythm@gmail.com">Email</a></li></ul></div>
+</div>
+<p>&copy; 2026 Sonith Manakkat. No ads and no trackers on this site.</p></div></footer>
 <script>(function(){var d=document,h=d.documentElement,R=matchMedia('(prefers-reduced-motion:reduce)').matches,q=function(s){return[].slice.call(d.querySelectorAll(s))};h.classList.add('js');
-var m=d.getElementById('mb'),n=d.getElementById('nav');if(m)m.onclick=function(){m.setAttribute('aria-expanded',n.classList.toggle('open'))};
-q('#nav a').forEach(function(a){a.onclick=function(){if(n){n.classList.remove('open');m&&m.setAttribute('aria-expanded','false')}}});
+var cm=function(){q('.mn input:checked').forEach(function(c){c.checked=false})};q('.mn a').forEach(function(a){a.addEventListener('click',cm)});d.addEventListener('keydown',function(e){if(e.key==='Escape')cm()});d.addEventListener('click',function(e){if(!e.target.closest('.mn,.mn *'))cm()});
 var g=d.getElementById('gal');q('.gb button').forEach(function(b){b.onclick=function(){g.scrollBy({left:b.dataset.d*g.clientWidth*.8,behavior:R?'auto':'smooth'})}});
 var ts=q('.toc a');if(ts.length&&window.IntersectionObserver){var to=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){ts.forEach(function(a){a.removeAttribute('aria-current')});var a=d.querySelector('.toc a[href="#'+x.target.id+'"]');if(a)a.setAttribute('aria-current','true')}})},{rootMargin:'0px 0px -70% 0px'});q('.prose h2').forEach(function(e){to.observe(e)})}
 if(R||!window.IntersectionObserver)return;h.classList.add('mo');
