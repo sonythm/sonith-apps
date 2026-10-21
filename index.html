@@ -99,6 +99,7 @@ p.bio{max-width:40em;font-size:17px}
 .fig svg{display:block;width:100%;height:auto;max-width:640px;margin:0 auto}.fig figcaption{color:var(--mut);font-size:15px;margin-top:8px}
 .s-belt{fill:var(--chip);stroke:var(--bd)}.s-box{fill:var(--btn)}.s-dev{fill:var(--card);stroke:var(--btn);stroke-width:2}.s-twin{fill:none;stroke:var(--link);stroke-width:2;stroke-dasharray:6 6}
 .s-sig{fill:none;stroke:var(--link);stroke-width:2;stroke-dasharray:4 8}.s-t{fill:var(--fg);font:600 18px system-ui,sans-serif}.s-led{fill:var(--link)}.s-dash{stroke:var(--mut);stroke-width:2;stroke-dasharray:8 10}
+.s-ring{fill:none;stroke:var(--bd);stroke-width:3;stroke-dasharray:4 6}.s-dot{fill:var(--btn)}.s-ar{fill:var(--link)}
 .flow{list-style:none;margin:22px 0;padding:0;display:grid;gap:34px;counter-reset:f}
 .flow li{position:relative;background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:14px}
 .flow b{display:block}.flow span.d{display:block;color:var(--mut);font-size:15px;margin-top:2px}
@@ -145,6 +146,7 @@ footer ul{list-style:none;display:flex;flex-wrap:wrap;gap:0 10px;padding:0;margi
 @keyframes arw{0%{opacity:.4}8%{opacity:1}20%,100%{opacity:.4}}
 .mo .rv{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease;transition-delay:calc(var(--i,0)*70ms)}
 .mo .rv.in{opacity:1;transform:none}
+.s-spin{animation:spin 8s linear infinite;transform-origin:160px 100px}@keyframes spin{to{transform:rotate(360deg)}}
 .mo .tl::after{transition:transform .15s linear}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important;scroll-behavior:auto!important}.mq.cp{display:none}.mqw{overflow:visible;-webkit-mask-image:none;mask-image:none}.mq{width:auto;flex-wrap:wrap}.rot{display:inline}.rot span,.rot span+span{display:inline}.rot span+span::before{content:" \00b7 ";font-weight:400;color:var(--mut)}}</style>
@@ -155,7 +157,7 @@ footer ul{list-style:none;display:flex;flex-wrap:wrap;gap:0 10px;padding:0;margi
 <a class="brand" href="/sonith-apps/"><img src="/sonith-apps/img/logo.png" width="36" height="36" alt="">Sonith Manakkat</a>
 <button class="menu" id="mb" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
 <nav aria-label="Main" id="nav"><ul>
-<li><a href="/sonith-apps/" aria-current="page">Home</a></li><li><a href="#about">About</a></li><li><a href="#trading">Trading</a></li><li><a href="/sonith-apps/apps/">Apps</a></li><li><a href="#contact">Contact</a></li>
+<li><a href="/sonith-apps/" aria-current="page">Home</a></li><li><a href="#about">About</a></li><li><a href="#fde">Forward deployed</a></li><li><a href="#trading">Trading</a></li><li><a href="/sonith-apps/apps/">Apps</a></li><li><a href="#contact">Contact</a></li>
 </ul></nav>
 </div><div id="pg" aria-hidden="true"></div></header>
 <main id="main">
@@ -296,6 +298,28 @@ footer ul{list-style:none;display:flex;flex-wrap:wrap;gap:0 10px;padding:0;margi
 </ul>
 <p class="note">Built so far: the collector, the decision gate, the risk engine, the order state machine and an operator console, backed by hundreds of automated tests. Some console screens and the services behind them are deliberately marked planned until the backend exists, rather than showing screens with nothing behind them. It runs as paper trading only: no order is sent anywhere.</p>
 <p class="sub"><em>A personal research and engineering project. Not investment advice and not offered to others.</em></p>
+</div></section>
+
+<section id="fde" aria-labelledby="fde-h"><div class="wrap">
+<h2 id="fde-h">Forward Deployed Engineering: Built for the front line</h2>
+<p class="bio">I am interested in Forward Deployed Engineering: working close to the people who use the software, learning their domain and shipping something that works for them.</p>
+<ul class="why">
+<li><b>Understand the problem on site</b>I start from the real problem and the people who have it. My background in requirements analysis and delivery management helps me ask good questions and keep track of what has been decided.</li>
+<li><b>Learn the domain fast</b>I pick up new technologies and domains quickly. Over my career that has meant ASP.NET, Delphi, the MEAN stack, Xamarin and Azure, and today it includes industrial automation with PLCs and C#, including digital twins built with simulators.</li>
+<li><b>Build and ship the working thing</b>I take work from idea to release. On my own time I have designed and prepared 24 small Android apps end to end with AI-assisted development, including signing, store and release processes, and I am building a trading-platform engineering project.</li>
+<li><b>Stay and iterate with the user</b>I track status honestly and keep the loop short: put something in front of the user, learn from it and feed that back into the product.</li>
+</ul>
+<figure class="fig"><svg viewBox="0 0 320 200" aria-hidden="true" focusable="false">
+<circle class="s-ring" cx="160" cy="100" r="58"/>
+<g class="s-spin"><circle class="s-dot" cx="218" cy="100" r="8"/></g>
+<text class="s-t" x="160" y="24" text-anchor="middle">Discover</text>
+<text class="s-t" x="232" y="106">Prototype</text>
+<text class="s-t" x="160" y="190" text-anchor="middle">Deploy</text>
+<text class="s-t" x="88" y="106" text-anchor="end">Feedback</text>
+<text class="s-t" x="160" y="106" text-anchor="middle" style="font-size:14px;font-weight:400">repeat</text>
+</svg><figcaption>Diagram of a repeating loop: discover, prototype, deploy, feedback.</figcaption></figure>
+<p class="note"><strong>Open to Forward Deployed Engineer roles.</strong></p>
+<p class="btns" style="margin-top:16px"><a class="btn" href="#contact">Get in touch</a></p>
 </div></section>
 
 <section id="interests" aria-labelledby="int-h"><div class="wrap">
