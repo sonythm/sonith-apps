@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Software in finance, explained for non-technical people | Sonith Manakkat</title>
+<meta name="description" content="Why software that handles money is built differently: ledgers and double-entry, accuracy, audit trails, reconciliation, idempotency, security and a compliance mindset. General education only.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://sonythm.github.io/sonith-apps/articles/software-in-finance-explained/">
+<link rel="icon" type="image/png" href="/sonith-apps/img/favicon.png">
+<link rel="apple-touch-icon" href="/sonith-apps/img/apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Sonith Manakkat">
+<meta property="og:title" content="Software in finance, explained for non-technical people | Sonith Manakkat">
+<meta property="og:description" content="Why software that handles money is built differently: ledgers and double-entry, accuracy, audit trails, reconciliation, idempotency, security and a compliance mindset. General education only.">
+<meta property="og:url" content="https://sonythm.github.io/sonith-apps/articles/software-in-finance-explained/">
+<meta property="og:image" content="https://sonythm.github.io/sonith-apps/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://sonythm.github.io/sonith-apps/articles/software-in-finance-explained/#article","headline":"Software in finance, explained for non-technical people","description":"Why software that handles money is built differently: ledgers and double-entry, accuracy, audit trails, reconciliation, idempotency, security and a compliance mindset. General education only.","datePublished":"2026-10-21","dateModified":"2026-10-21","inLanguage":"en","mainEntityOfPage":"https://sonythm.github.io/sonith-apps/articles/software-in-finance-explained/","image":"https://sonythm.github.io/sonith-apps/img/og.jpg","author":{"@type":"Person","@id":"https://sonythm.github.io/sonith-apps/#person","name":"Sonith Manakkat","url":"https://sonythm.github.io/sonith-apps/"},"publisher":{"@id":"https://sonythm.github.io/sonith-apps/#person"},"wordCount":1082},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://sonythm.github.io/sonith-apps/"},{"@type":"ListItem","position":2,"name":"Articles","item":"https://sonythm.github.io/sonith-apps/articles/"},{"@type":"ListItem","position":3,"name":"Industry software, explained","item":"https://sonythm.github.io/sonith-apps/articles/industry-explained/"},{"@type":"ListItem","position":4,"name":"Software in finance, explained for non-technical people","item":"https://sonythm.github.io/sonith-apps/articles/software-in-finance-explained/"}]}]}</script>
+<style>:root{--bg:#f7f7fd;--fg:#1b1b2f;--mut:#4a4a63;--card:#fff;--bd:#cfcfe8;--link:#3730a3;--btn:#4338ca;--btnfg:#fff;--chip:#e8e8fa;--hero:#eceafd;--hdr:rgba(247,247,253,.88);--b1:rgba(129,118,255,.42);--b2:rgba(45,212,191,.34);--b3:rgba(244,114,182,.30);--glow:rgba(67,56,202,.22);--sh:0 10px 28px rgba(40,30,120,.14)}
+@media (prefers-color-scheme:dark){:root{--bg:#12121c;--fg:#ececf8;--mut:#b4b4cc;--card:#1b1b2b;--bd:#3a3a58;--link:#b4bbff;--btn:#b4bbff;--btnfg:#12121c;--chip:#2a2a40;--hero:#161628;--hdr:rgba(18,18,28,.88);--b1:rgba(99,84,235,.45);--b2:rgba(20,150,135,.38);--b3:rgba(190,60,130,.30);--glow:rgba(180,187,255,.22);--sh:0 10px 28px rgba(0,0,0,.45)}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--fg);background:var(--bg);overflow-x:hidden}
+a{color:var(--link)}img{max-width:100%;height:auto}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+.skip{position:absolute;left:-999px;top:0;background:var(--btn);color:var(--btnfg);padding:10px 14px;z-index:99}.skip:focus{left:8px;top:8px}
+header.top{position:sticky;top:0;z-index:30;background:var(--hdr);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--bd)}
+header.top .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:0 16px}
+.brand{display:inline-flex;align-items:center;gap:10px;min-height:48px;font-weight:700;color:var(--fg);text-decoration:none}
+.brand img{border-radius:8px}
+nav ul{display:flex;flex-wrap:wrap;gap:0 2px;list-style:none;margin:0;padding:0}
+nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 10px;border-radius:10px}
+nav a[aria-current=page]{font-weight:700;text-decoration:none}
+.menu{display:none;min-height:44px;min-width:44px;padding:0 14px;border-radius:10px;border:1px solid var(--bd);background:var(--card);color:var(--fg);font:inherit;cursor:pointer}
+#pg{position:absolute;left:0;bottom:-1px;height:3px;width:100%;background:var(--btn);transform:scaleX(var(--sp,0));transform-origin:left;opacity:0}
+.mo #pg{opacity:1}
+.hero{position:relative;overflow:hidden;background:var(--hero);padding:40px 0 44px}
+.blobs{position:absolute;inset:0;pointer-events:none}
+.blobs i{position:absolute;width:60vmax;max-width:640px;height:60vmax;max-height:640px;border-radius:50%;filter:blur(8px)}
+.blobs i:nth-child(1){left:-12%;top:-30%;background:radial-gradient(circle at 40% 40%,var(--b1),transparent 66%)}
+.blobs i:nth-child(2){right:-14%;top:-8%;background:radial-gradient(circle at 50% 50%,var(--b2),transparent 66%)}
+.blobs i:nth-child(3){left:22%;bottom:-46%;background:radial-gradient(circle at 50% 50%,var(--b3),transparent 66%)}
+.hg{position:relative;display:grid;gap:28px;align-items:center}
+h1{font-size:clamp(34px,8vw,64px);line-height:1.05;margin:0 0 10px;letter-spacing:-.02em}
+.role{font-size:clamp(19px,3.4vw,26px);font-weight:700;margin:0 0 4px}
+.loc{color:var(--mut);margin:0 0 14px}
+.focus{margin:0 0 14px;font-size:18px;color:var(--mut)}
+.rot{display:inline-grid;vertical-align:bottom}.rot span{grid-area:1/1;font-weight:700;color:var(--link)}
+.rot span+span{display:none}
+.lead{font-size:18px;color:var(--mut);max-width:36em;margin:0 0 24px}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:12px;background:var(--btn);color:var(--btnfg);font-weight:700;text-decoration:none;border:2px solid var(--btn)}
+.btn.alt{background:transparent;color:var(--link);border-color:var(--link)}
+a:focus-visible,button:focus-visible,ul.gal:focus-visible{outline:3px solid var(--link);outline-offset:2px}
+.cluster{position:relative;width:100%;max-width:400px;aspect-ratio:1/1.05;margin:0 auto}
+.ph{position:absolute;width:41%;perspective:700px}
+.ph:nth-child(1){left:0;top:12%;rotate:-7deg;z-index:1}
+.ph:nth-child(2){left:30%;top:0;z-index:3}
+.ph:nth-child(3){right:0;top:14%;rotate:7deg;z-index:2}
+.phone{border:5px solid #15151f;border-radius:22px;background:#15151f;overflow:hidden;box-shadow:var(--sh);transition:transform .3s}
+.phone img{display:block;width:100%;height:auto;border-radius:16px}
+.stats{border-bottom:1px solid var(--bd)}
+.stats ul{list-style:none;margin:0;padding:22px 0;display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr))}
+.stats b{display:block;font-size:clamp(30px,6vw,44px);line-height:1.1;color:var(--link)}.stats span{color:var(--mut)}
+section{padding:40px 0;scroll-margin-top:60px}section+section{border-top:1px solid var(--bd)}
+h2{font-size:clamp(24px,4.4vw,32px);margin:0 0 10px;line-height:1.2}h3{font-size:19px;margin:28px 0 12px}
+.sub{color:var(--mut);margin:0 0 8px;max-width:42em}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 0}
+.chips button{min-height:44px;padding:0 16px;border-radius:22px;border:1px solid var(--bd);background:var(--chip);color:var(--fg);font:inherit;cursor:pointer}
+.chips button[aria-pressed=true]{background:var(--btn);color:var(--btnfg);border-color:var(--btn)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,290px),1fr));gap:14px;list-style:none;margin:0;padding:0}
+.card,ul.why li{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:16px}
+.card{display:flex;flex-direction:column;gap:8px}
+.ch{display:flex;gap:12px;align-items:center}.ch img{border-radius:14px;flex:none}
+.card h4{margin:0;font-size:17px;line-height:1.3}.card p{margin:0;color:var(--mut);font-size:15px}
+.chip{display:inline-block;font-size:12px;padding:1px 8px;border-radius:10px;background:var(--chip);color:var(--mut);margin-top:2px}
+.acts{margin-top:auto;display:flex;flex-wrap:wrap;gap:4px 14px;align-items:center;padding-top:6px}
+.acts a.l{display:inline-flex;align-items:center;min-height:44px}
+.play{display:inline-flex;flex-direction:column;justify-content:center;min-height:44px;padding:2px 14px;border-radius:8px;background:#000;color:#fff;text-decoration:none;font-size:11px;line-height:1.15;border:1px solid #888}
+.play b{font-size:16px}
+.soon{display:inline-flex;align-items:center;min-height:44px;color:var(--mut);font-size:14px}
+ul.why{list-style:none;padding:0;margin:16px 0;display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(min(100%,230px),1fr))}
+ul.why b{display:block}
+ul.net li{margin:8px 0}
+.tl{position:relative;list-style:none;margin:16px 0;padding:0 0 0 22px}
+.tl::before,.tl::after{content:"";position:absolute;left:0;top:4px;bottom:4px;width:2px}
+.tl::before{background:var(--bd)}.tl::after{background:var(--btn);transform-origin:top;transform:scaleY(var(--p,1))}
+.tl li{position:relative;margin:0 0 18px;padding-left:4px}
+.tl li::before{content:"";position:absolute;left:-28px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:3px solid var(--btn)}
+.tl b{display:block}.tl .when{color:var(--mut);font-size:15px}.tl p{margin:4px 0 0;color:var(--mut);font-size:15px}
+.skills{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:12px 0;padding:0}
+.skills li{padding:4px 12px;border-radius:16px;border:1px solid var(--bd);background:var(--chip);color:var(--fg);font-size:15px}
+.tag{display:inline-block;font-size:12px;padding:1px 8px;border-radius:10px;border:1px solid var(--bd);color:var(--mut);margin-left:6px}
+ul.plain{margin:12px 0;padding-left:20px}ul.plain li{margin:8px 0}
+p.bio{max-width:40em;font-size:17px}
+.fig{margin:20px 0 0;padding:14px;border:1px solid var(--bd);border-radius:18px;background:var(--card)}
+.fig svg{display:block;width:100%;height:auto;max-width:640px;margin:0 auto}.fig figcaption{color:var(--mut);font-size:15px;margin-top:8px}
+.s-belt{fill:var(--chip);stroke:var(--bd)}.s-box{fill:var(--btn)}.s-dev{fill:var(--card);stroke:var(--btn);stroke-width:2}.s-twin{fill:none;stroke:var(--link);stroke-width:2;stroke-dasharray:6 6}
+.s-sig{fill:none;stroke:var(--link);stroke-width:2;stroke-dasharray:4 8}.s-t{fill:var(--fg);font:600 18px system-ui,sans-serif}.s-led{fill:var(--link)}.s-dash{stroke:var(--mut);stroke-width:2;stroke-dasharray:8 10}
+.s-ring{fill:none;stroke:var(--bd);stroke-width:3;stroke-dasharray:4 6}.s-dot{fill:var(--btn)}.s-ar{fill:var(--link)}
+.flow{list-style:none;margin:22px 0;padding:0;display:grid;gap:34px;counter-reset:f}
+.flow li{position:relative;background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:14px}
+.flow b{display:block}.flow span.d{display:block;color:var(--mut);font-size:15px;margin-top:2px}
+.flow li:not(:last-child)::after{content:"\2193";position:absolute;left:50%;bottom:-30px;translate:-50% 0;color:var(--link);font-size:24px;line-height:1;opacity:.5}
+.note{border-left:4px solid var(--btn);padding:4px 0 4px 14px;color:var(--mut);max-width:44em}
+.mqw{overflow:hidden;margin:18px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.mq{display:flex;flex:none;width:max-content;gap:14px;list-style:none;margin:0;padding:6px 14px 6px 0}
+.mq li{flex:none}.mq a{display:block;border-radius:16px}.mq img{display:block;border-radius:14px}
+.mq.cp{display:none}
+.galw{position:relative}
+ul.gal{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;list-style:none;margin:16px 0 0;padding:0 0 12px}
+.gal li{flex:0 0 min(62%,230px);scroll-snap-align:start;margin:0}
+.gal figure{margin:0}.gal img{display:block;width:100%;height:auto;border-radius:16px;border:1px solid var(--bd)}
+.gal figcaption{padding:6px 2px;font-size:15px}.gal figcaption a{display:inline-flex;align-items:center;min-height:44px}
+.gb{display:none;gap:10px;margin-top:4px}.js .gb{display:flex}
+.gb button{min-width:48px;min-height:48px;border-radius:50%;border:2px solid var(--link);background:transparent;color:var(--link);font:700 20px system-ui;cursor:pointer}
+.crumb{font-size:15px;color:var(--mut);margin:0 0 8px}.crumb ol{list-style:none;display:flex;flex-wrap:wrap;gap:0 8px;margin:0;padding:0}.crumb li+li::before{content:"\203A";margin-right:8px}.crumb a{display:inline-flex;align-items:center;min-height:44px}
+.eyebrow{font-weight:700;color:var(--link);margin:0 0 6px;font-size:15px}
+.meta{color:var(--mut);font-size:15px;display:flex;flex-wrap:wrap;gap:4px 16px;margin:10px 0 0}
+.ahead{padding:20px 0 28px}.ahead h1{font-size:clamp(30px,6vw,46px);max-width:20em}.ahead .lead{margin-bottom:0}
+.ahero{margin:22px 0 8px;border-radius:20px;overflow:hidden;border:1px solid var(--bd);background:var(--card)}.ahero svg{display:block;width:100%;height:auto;max-height:340px}
+.prose{max-width:68ch;margin:0 auto;font-size:18px;line-height:1.75}
+.prose p{margin:0 0 1.1em}.prose h2{margin:1.8em 0 .5em;font-size:clamp(24px,4vw,30px)}.prose h3{margin:1.4em 0 .4em;font-size:20px}
+.prose ul,.prose ol{padding-left:1.3em;margin:0 0 1.1em}.prose li{margin:.35em 0}
+.prose code{background:var(--chip);padding:1px 6px;border-radius:6px;font-size:.92em}
+pre.code{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:14px 16px;overflow-x:auto;font:15px/1.55 ui-monospace,SFMono-Regular,Consolas,monospace;margin:1.2em 0}pre.code code{background:none;padding:0;font-size:inherit}
+.toc{max-width:68ch;margin:18px auto;border:1px solid var(--bd);border-radius:16px;background:var(--card);padding:4px 16px}.toc summary{cursor:pointer;min-height:48px;display:flex;align-items:center;font-weight:700}.toc ol{margin:0 0 10px;padding-left:1.2em}.toc a{display:inline-flex;align-items:center;min-height:40px}
+.co{border:1px solid var(--bd);border-left:6px solid var(--btn);border-radius:16px;background:var(--card);padding:12px 18px;margin:1.5em 0}.co p:last-child,.co dl{margin-bottom:0}
+.co b.k{display:block;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--link);margin-bottom:4px}
+.co.key{border-left-color:#0f766e}.co.example{border-left-color:#b45309}.co.warn{border-left-color:#b91c1c}
+.co dt{font-weight:700;margin-top:.6em}.co dd{margin:0;color:var(--mut)}
+details.q{border:1px solid var(--bd);border-radius:12px;background:var(--card);padding:0 16px;margin:10px 0}details.q summary{cursor:pointer;min-height:48px;display:flex;align-items:center;font-weight:700}details.q p{margin:0 0 .9em;color:var(--mut)}
+.fig.in-art{margin:1.6em 0}.fig.in-art figcaption{font-size:15px}
+.prose .flow{grid-template-columns:1fr}.prose .flow li:not(:last-child)::after{content:"\2193";left:50%;right:auto;top:auto;bottom:-30px;translate:-50% 0}
+.sn{max-width:68ch;margin:2em auto;border:1px solid var(--bd);border-radius:16px;background:var(--card);padding:12px 18px}.sn b{display:block}.sn ol{margin:8px 0 0;padding-left:1.3em}.sn li{margin:2px 0}.sn a,.sn span{display:inline-flex;align-items:center;min-height:36px}.sn [aria-current]{font-weight:700}
+.pn{display:grid;gap:12px;max-width:68ch;margin:28px auto}.pn a{display:block;padding:14px 16px;border:1px solid var(--bd);border-radius:14px;background:var(--card);text-decoration:none;color:var(--fg)}.pn small{display:block;color:var(--mut)}.pn b{color:var(--link)}
+.back{max-width:68ch;margin:0 auto 40px}
+.src{max-width:68ch;margin:2em auto}.src li{overflow-wrap:anywhere}
+.acard{position:relative;padding:0;overflow:hidden;gap:0}.acard svg{display:block;width:100%;height:auto;background:var(--hero)}.acard .tx{padding:14px 16px 16px}.acard h3{margin:0 0 6px;font-size:19px;line-height:1.3}.acard h3 a{color:var(--fg);text-decoration:none}.acard h3 a::after{content:"";position:absolute;inset:0}.acard h3 a:focus-visible{outline:3px solid var(--link);outline-offset:-3px}.acard p{margin:0 0 6px}.acard .meta{margin:0;font-size:14px}
+.pager{margin-top:20px}
+.phoneli{flex:0 0 min(70%,240px)}.phoneli .phone{box-shadow:var(--sh)}.phoneli p{margin:8px 2px 0;font-size:15px;color:var(--mut)}.phoneli b{display:block;color:var(--fg);font-size:16px}
+.ic{width:40px;height:40px;border-radius:12px;background:var(--chip);display:flex;align-items:center;justify-content:center;margin-bottom:8px}.ic svg{width:24px;height:24px;stroke:var(--link);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.a-bg{fill:var(--hero)}.a-bub{fill:var(--card);stroke:var(--bd);stroke-width:2}.a-key{stroke:var(--btn);stroke-width:3}.a-ln{stroke:var(--mut);stroke-width:3;stroke-linecap:round;fill:none}.a-nd{fill:var(--btn)}.a-fl{stroke:var(--link);stroke-width:2;fill:none;stroke-dasharray:6 8}.a-no{stroke:#b91c1c;stroke-width:5;stroke-linecap:round;fill:none}
+@media (prefers-color-scheme:dark){.a-no{stroke:#fca5a5}}
+@media (min-width:640px){.pn{grid-template-columns:1fr 1fr}.pn a:last-child:nth-child(odd){grid-column:1/-1}}
+footer{border-top:1px solid var(--bd);padding:28px 0 40px;color:var(--mut);font-size:15px}
+footer ul{list-style:none;display:flex;flex-wrap:wrap;gap:0 10px;padding:0;margin:0 0 10px}footer a{display:inline-flex;align-items:center;min-height:44px}
+@media (max-width:759px){.js .menu{display:inline-flex;align-items:center}.js nav{width:100%}.js nav ul{display:none;flex-direction:column;padding-bottom:8px}.js nav.open ul{display:flex}}
+@media (min-width:760px){.hg{grid-template-columns:1.15fr .85fr;gap:36px}.hero{padding:64px 0 68px}.gal li{flex-basis:220px}}
+@media (min-width:980px){.flow{grid-template-columns:repeat(var(--n,5),1fr);gap:30px}.flow li:not(:last-child)::after{content:"\2192";left:auto;right:-26px;bottom:auto;top:50%;translate:0 -50%}}
+@media (prefers-reduced-motion:no-preference){
+.blobs i:nth-child(1){animation:bl1 18s ease-in-out infinite alternate}.blobs i:nth-child(2){animation:bl1 22s ease-in-out -6s infinite alternate-reverse}.blobs i:nth-child(3){animation:bl1 26s ease-in-out -12s infinite alternate}
+@keyframes bl1{to{transform:translate(8%,10%) scale(1.15)}}
+.rot span{opacity:0;animation:rot 12s infinite}.rot span+span{display:block}.rot span:nth-child(2){animation-delay:3s}.rot span:nth-child(3){animation-delay:6s}.rot span:nth-child(4){animation-delay:9s}
+@keyframes rot{0%{opacity:0;transform:translateY(10px)}4%,22%{opacity:1;transform:none}26%,100%{opacity:0;transform:translateY(-10px)}}
+.ph{animation:fl 6s ease-in-out infinite}.ph:nth-child(2){animation-delay:-2s}.ph:nth-child(3){animation-delay:-4s}
+@keyframes fl{50%{translate:0 -12px}}
+.ph:hover .phone{transform:rotateY(-10deg) rotateX(5deg) scale(1.04)}
+.card,ul.why li{transition:transform .2s,box-shadow .2s}.card:hover,ul.why li:hover{transform:translateY(-4px);box-shadow:var(--sh)}
+.btn{transition:transform .15s}.btn:hover{transform:translateY(-2px)}
+.mq{animation:mq 70s linear infinite}.mq.cp{display:flex;animation-name:mq}.mqw:hover .mq,.mqw:focus-within .mq{animation-play-state:paused}
+.mqw{display:flex}
+@keyframes mq{to{transform:translateX(-100%)}}
+.s-dash{animation:dsh 1s linear infinite}.s-sig{animation:dsh 1.4s linear infinite}
+@keyframes dsh{to{stroke-dashoffset:-18}}
+.s-box{animation:mv 6s linear infinite}.s-box:nth-of-type(2){animation-delay:-2s}.s-box:nth-of-type(3){animation-delay:-4s}
+@keyframes mv{0%{transform:translateX(0);opacity:0}8%{opacity:1}92%{opacity:1}100%{transform:translateX(330px);opacity:0}}
+.s-mini{animation:mv2 3s linear infinite}@keyframes mv2{0%{transform:translateX(0);opacity:0}10%,90%{opacity:1}100%{transform:translateX(120px);opacity:0}}
+.s-led{animation:led 1.6s steps(2,start) infinite}.s-led:nth-of-type(2){animation-delay:.5s}.s-led:nth-of-type(3){animation-delay:1s}
+@keyframes led{50%{opacity:.2}}
+.flow li{animation:lit 7s infinite;animation-delay:calc(var(--i)*1.2s)}.flow li::after{animation:arw 7s infinite;animation-delay:calc(var(--i)*1.2s + .6s)}
+@keyframes lit{0%,15%{border-color:var(--btn);box-shadow:0 0 0 4px var(--glow)}20%,100%{border-color:var(--bd);box-shadow:none}}
+@keyframes arw{0%{opacity:.4}8%{opacity:1}20%,100%{opacity:.4}}
+.mo .rv{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease;transition-delay:calc(var(--i,0)*70ms)}
+.mo .rv.in{opacity:1;transform:none}
+.a-pulse{animation:pu 2.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}@keyframes pu{50%{transform:scale(1.3);opacity:.6}}
+.a-move{animation:wk 6s ease-in-out infinite alternate}@keyframes wk{to{transform:translateX(300px)}}
+.a-fl{animation:dsh 1.2s linear infinite}
+.a-step{animation:stp 4s ease-in-out infinite}@keyframes stp{0%,10%{opacity:.35}25%,55%{opacity:1}80%,100%{opacity:.35}}
+.a-ship{animation:shp 5s linear infinite}@keyframes shp{0%{transform:translateX(0);opacity:0}10%,90%{opacity:1}100%{transform:translateX(420px);opacity:0}}
+.a-slide{animation:sld 5s ease-in-out infinite alternate}@keyframes sld{to{transform:translateX(60px);opacity:.3}}
+.s-spin{animation:spin 8s linear infinite;transform-origin:160px 100px}@keyframes spin{to{transform:rotate(360deg)}}
+.mo .tl::after{transition:transform .15s linear}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important;scroll-behavior:auto!important}.mq.cp{display:none}.mqw{overflow:visible;-webkit-mask-image:none;mask-image:none}.mq{width:auto;flex-wrap:wrap}.rot{display:inline}.rot span,.rot span+span{display:inline}.rot span+span::before{content:" \00b7 ";font-weight:400;color:var(--mut)}}</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap">
+<a class="brand" href="/sonith-apps/"><img src="/sonith-apps/img/logo.png" width="36" height="36" alt="">Sonith Manakkat</a>
+<button class="menu" id="mb" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+<nav aria-label="Main" id="nav"><ul>
+<li><a href="/sonith-apps/">Home</a></li><li><a href="/sonith-apps/articles/" aria-current="page">Articles</a></li><li><a href="/sonith-apps/apps/">Apps</a></li><li><a href="/sonith-apps/#contact">Contact</a></li>
+</ul></nav>
+</div><div id="pg" aria-hidden="true"></div></header>
+<main id="main">
+<div class="hero ahead"><div class="blobs" aria-hidden="true"><i></i><i></i><i></i></div><div class="wrap" style="position:relative"><nav class="crumb" aria-label="Breadcrumb"><ol><li><a href="/sonith-apps/">Home</a></li><li><a href="/sonith-apps/articles/">Articles</a></li><li><a href="/sonith-apps/articles/industry-explained/">Industry software, explained</a></li><li aria-current="page">Software in finance, explained for non-technical people</li></ol></nav>
+<p class="eyebrow">Industry software, explained: part 2 of 3</p><h1>Software in finance, explained for non-technical people</h1><p class="lead">Why software that handles money is built differently: ledgers and double-entry, accuracy, audit trails, reconciliation, idempotency, security and a compliance mindset. General education only.</p><p class="meta"><span>21 October 2026</span><span>5 min read</span></p><p class="meta"><span>Independent personal article, not affiliated with any company mentioned</span></p></div></div>
+<div class="wrap">
+<figure class="ahero"><svg viewBox="0 0 480 200" role="img" aria-label="A ledger entry has two sides that always match: money leaves one account and arrives in another." focusable="false"><rect class="a-bub" x="10" y="50" width="160" height="90" rx="14"/><text class="s-t" x="90" y="91" text-anchor="middle" style="font-size:16px">Account A</text><text class="s-t" x="90" y="111" text-anchor="middle" style="font-size:16px">minus 100</text><path class="a-fl" d="M176 95 H292"/><path class="s-ar" d="M292 88 L304 95 L292 102Z"/><rect class="a-bub" x="310" y="50" width="160" height="90" rx="14"/><text class="s-t" x="390" y="91" text-anchor="middle" style="font-size:16px">Account B</text><text class="s-t" x="390" y="111" text-anchor="middle" style="font-size:16px">plus 100</text><text class="s-t" x="240" y="170" text-anchor="middle" style="font-size:14px;font-weight:400">Both sides always match. Nothing is erased, only added.</text><text class="s-t" x="240" y="78" text-anchor="middle" style="font-size:13px">one entry</text></svg></figure>
+<details class="toc" open><summary>In this article</summary><ol><li><a href="#the-ledger-the-oldest-idea-in-the-book">The ledger: the oldest idea in the book</a></li><li><a href="#double-entry-every-entry-has-two-sides">Double-entry: every entry has two sides</a></li><li><a href="#never-erase-only-add">Never erase, only add</a></li><li><a href="#accuracy-why-computers-are-careful-with-money">Accuracy: why computers are careful with money</a></li><li><a href="#idempotency-pressing-pay-twice">Idempotency: pressing &quot;pay&quot; twice</a></li><li><a href="#reconciliation-checking-against-the-other-side">Reconciliation: checking against the other side</a></li><li><a href="#transactions-that-succeed-or-fail-as-a-whole">Transactions that succeed or fail as a whole</a></li><li><a href="#security-because-the-stakes-are-high">Security: because the stakes are high</a></li><li><a href="#the-compliance-mindset">The compliance mindset</a></li><li><a href="#what-this-means-for-people-building-it">What this means for people building it</a></li><li><a href="#why-it-is-satisfying-to-work-on">Why it is satisfying to work on</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></details>
+<article class="prose">
+<p>When a photo app has a bug, a picture looks odd. When software that handles money has a bug, someone is out of pocket, and trust is damaged. That single fact shapes how financial software is designed. This article explains the main ideas in plain language. It is general education only, not financial or legal advice, and it does not describe any specific organisation's systems.</p>
+<h2 id="the-ledger-the-oldest-idea-in-the-book">The ledger: the oldest idea in the book</h2>
+<p>A ledger is a record of money movements. For hundreds of years, businesses have kept ledgers: a list of entries saying what came in, what went out and when. Financial software is, at heart, a very careful ledger. Everything else, balances, statements, reports, is worked out from the entries.</p>
+<h2 id="double-entry-every-entry-has-two-sides">Double-entry: every entry has two sides</h2>
+<figure class="fig in-art"><svg viewBox="0 0 480 200" role="img" aria-label="A ledger entry has two sides that always match: money leaves one account and arrives in another." focusable="false"><rect class="a-bub" x="10" y="50" width="160" height="90" rx="14"/><text class="s-t" x="90" y="91" text-anchor="middle" style="font-size:16px">Account A</text><text class="s-t" x="90" y="111" text-anchor="middle" style="font-size:16px">minus 100</text><path class="a-fl" d="M176 95 H292"/><path class="s-ar" d="M292 88 L304 95 L292 102Z"/><rect class="a-bub" x="310" y="50" width="160" height="90" rx="14"/><text class="s-t" x="390" y="91" text-anchor="middle" style="font-size:16px">Account B</text><text class="s-t" x="390" y="111" text-anchor="middle" style="font-size:16px">plus 100</text><text class="s-t" x="240" y="170" text-anchor="middle" style="font-size:14px;font-weight:400">Both sides always match. Nothing is erased, only added.</text><text class="s-t" x="240" y="78" text-anchor="middle" style="font-size:13px">one entry</text></svg><figcaption>Every money movement is written twice, once as leaving an account and once as arriving. The two sides always match.</figcaption></figure>
+<p>In double-entry bookkeeping, every transaction is recorded in at least two places. If 100 moves from account A to account B, account A goes down by 100 and account B goes up by 100. The two sides must always balance. If they do not, something is wrong, and the system can tell immediately.</p>
+<aside class="co plain"><b class="k">In plain words</b><p>Money does not appear or disappear. It only moves. If the books show money vanishing, there is a bug or an error, and the design makes that visible.</p></aside>
+<h2 id="never-erase-only-add">Never erase, only add</h2>
+<p>A bank statement does not rub out last week's mistake. If an entry was wrong, a new correcting entry is added that reverses it. The history stays intact. In software terms, a ledger is <strong>append-only</strong>: you add records but never edit or delete old ones. This is what makes an <strong>audit trail</strong> possible: a complete, trustworthy history of what happened, when, and who did it.</p>
+<h2 id="accuracy-why-computers-are-careful-with-money">Accuracy: why computers are careful with money</h2>
+<p>Computers can make tiny rounding mistakes when they store decimal numbers in certain ways, and a tiny mistake repeated millions of times becomes real money. So careful financial software often stores amounts as whole numbers of the smallest unit (for example paise or cents) instead of fractions, and follows strict rules for rounding. The principle is simple: money maths must be exact, and where rounding is unavoidable, the rule must be written down and applied the same way every time.</p>
+<pre class="code" tabindex="0"><code>Risky:   price = 19.99, quantity = 3  -&gt;  total from decimals, may drift
+Safer:   price = 1999 (in smallest unit), quantity = 3  -&gt;  total = 5997 exactly</code></pre>
+<h2 id="idempotency-pressing-pay-twice">Idempotency: pressing &quot;pay&quot; twice</h2>
+<p>Imagine you tap &quot;pay&quot; and nothing seems to happen, so you tap again. Did you just pay twice? Good financial software is designed so that sending the same request twice has the same effect as sending it once. This property is called <strong>idempotency</strong>.</p>
+<p>A common way to achieve it: each payment request carries a unique reference. If the system sees the same reference again, it recognises the repeat and returns the original result, instead of moving money a second time.</p>
+<aside class="co key"><b class="k">Key idea</b><p>Networks fail and people double-tap. Safe money software assumes requests may arrive twice, late or not at all, and still ends up correct.</p></aside>
+<h2 id="reconciliation-checking-against-the-other-side">Reconciliation: checking against the other side</h2>
+<p>A company's records and the bank's records should agree. <strong>Reconciliation</strong> is the process of comparing them, entry by entry, and investigating differences. Software helps by matching thousands of entries automatically and flagging the few that do not match. A difference is not always an error; it may be a timing gap, such as a payment that has left one side but not yet arrived on the other. But every difference needs an explanation.</p>
+<aside class="co example"><b class="k">Real example</b><p>At the end of the day, a shop's till system says it took 50 payments. The payment provider's report says 49 were settled. Reconciliation finds the missing one, still pending. The next day it arrives, and the books match.</p></aside>
+<h2 id="transactions-that-succeed-or-fail-as-a-whole">Transactions that succeed or fail as a whole</h2>
+<p>Moving money involves several steps: take it from one place, add it to another, record the entry. If the system crashes halfway, money could vanish or be duplicated. The solution is a <strong>database transaction</strong>: a group of steps that either all happen or none do. It is the same idea as an all-or-nothing handshake.</p>
+<h2 id="security-because-the-stakes-are-high">Security: because the stakes are high</h2>
+<p>Money attracts attackers, so financial software is built defensively. Typical measures include strong login checks, encrypting data when it is stored and when it travels, limiting who can see or change what, logging every sensitive action, and separating duties so that no single person can both create and approve a payment. Sensitive items such as card numbers and personal documents are handled with extra care, or avoided entirely when possible.</p>
+<h2 id="the-compliance-mindset">The compliance mindset</h2>
+<p>Financial services are regulated. Rules cover how long records are kept, how customers are identified, how suspicious activity is reported and how data is protected. Engineers in this field learn to ask early, &quot;Who might need to audit this, and what will they ask?&quot; Building a record of who did what, and being able to explain every figure, is not an extra. It is part of the product.</p>
+<p>This is a mindset more than a checklist: be exact, be traceable, assume you will be asked to prove it.</p>
+<h2 id="what-this-means-for-people-building-it">What this means for people building it</h2>
+<ul><li>Treat the ledger as the source of truth, and derive everything else.</li><li>Make records append-only, and fix mistakes with reversing entries.</li><li>Make operations safe to repeat.</li><li>Test the edge cases: failures, duplicates, rounding, time zones, and month ends.</li><li>Reconcile automatically and look at the differences.</li><li>Keep an audit trail for every sensitive action.</li></ul>
+<h2 id="why-it-is-satisfying-to-work-on">Why it is satisfying to work on</h2>
+<p>The rules are clear, mistakes are visible, and quality really matters. A system that quietly stays correct, day after day, with real money flowing through it, is the kind of engineering that earns trust.</p>
+<aside class="co" aria-labelledby="gl-software-in-finance-explained"><b class="k" id="gl-software-in-finance-explained">Glossary</b><dl><dt>Ledger</dt><dd>The record of all money movements, from which balances are calculated.</dd><dt>Double-entry</dt><dd>Recording each transaction as two matching entries.</dd><dt>Append-only</dt><dd>Records can be added but never edited or deleted.</dd><dt>Audit trail</dt><dd>A complete, trustworthy history of what happened and who did it.</dd><dt>Idempotency</dt><dd>Doing the same request twice has the same result as doing it once.</dd><dt>Reconciliation</dt><dd>Comparing two sets of records to find and explain differences.</dd><dt>Database transaction</dt><dd>A group of steps that all succeed or all fail together.</dd><dt>Settlement</dt><dd>The final transfer that completes a payment between parties.</dd></dl></aside>
+<h2 id="faq">Frequently asked questions</h2><details class="q"><summary>Is this financial advice?</summary><p>No. It is general education about how financial software is designed.</p></details><details class="q"><summary>Why not just use ordinary decimal numbers?</summary><p>Because small rounding differences add up. Exact whole-number amounts and clear rounding rules avoid that.</p></details><details class="q"><summary>What is the biggest risk in money software?</summary><p>Silent errors, such as a double charge or a missing entry, that nobody notices until a customer does. Design aims to make errors loud, not silent.</p></details>
+</article>
+
+<nav class="sn" aria-label="Series"><b>Industry software, explained: part 2 of 3</b><ol><li><a href="/sonith-apps/articles/how-a-warehouse-management-system-works/">How a warehouse management system works</a></li><li><span aria-current="page">Software in finance, explained for non-technical people</span></li><li><a href="/sonith-apps/articles/digital-twins-and-simulators-explained/">Digital twins and simulators in industrial automation, explained</a></li></ol><a href="/sonith-apps/articles/industry-explained/">About this series</a></nav>
+<nav class="pn" aria-label="More articles"><a href="/sonith-apps/articles/how-a-warehouse-management-system-works/" rel="prev"><small>Previous part</small><b>How a warehouse management system works</b></a><a href="/sonith-apps/articles/digital-twins-and-simulators-explained/" rel="next"><small>Next part</small><b>Digital twins and simulators in industrial automation, explained</b></a></nav>
+<p class="back"><a class="btn alt" href="/sonith-apps/articles/">Back to all articles</a></p>
+</div>
+</main>
+<footer><div class="wrap"><ul>
+<li><a href="/sonith-apps/articles/">Articles</a></li>
+<li><a href="/sonith-apps/apps/">Apps</a></li>
+<li><a href="/sonith-apps/privacy/">Privacy policies</a></li>
+<li><a href="/sonith-apps/downloads/">Downloads</a></li>
+<li><a href="/sonith-apps/testers/">Testers</a></li>
+<li><a href="https://www.linkedin.com/in/sonith-manakkat-74860989/" rel="me noopener" target="_blank">LinkedIn</a></li>
+</ul><p>&copy; 2026 Sonith Manakkat. No ads and no trackers on this site.</p></div></footer>
+<script>(function(){var d=document,h=d.documentElement,R=matchMedia('(prefers-reduced-motion:reduce)').matches,q=function(s){return[].slice.call(d.querySelectorAll(s))};h.classList.add('js');
+var m=d.getElementById('mb'),n=d.getElementById('nav');if(m)m.onclick=function(){m.setAttribute('aria-expanded',n.classList.toggle('open'))};
+q('#nav a').forEach(function(a){a.onclick=function(){if(n){n.classList.remove('open');m&&m.setAttribute('aria-expanded','false')}}});
+var g=d.getElementById('gal');q('.gb button').forEach(function(b){b.onclick=function(){g.scrollBy({left:b.dataset.d*g.clientWidth*.8,behavior:R?'auto':'smooth'})}});
+if(R||!window.IntersectionObserver)return;h.classList.add('mo');
+q('section h2,.sub,p.bio,.stats li,ul.why li,.tl li,.skills li,.card,.flow li,.fig,.gal li,.mqw,.note,.co,.acard,.pn a').forEach(function(e){var p=e.parentNode,i=[].indexOf.call(p.children,e);e.classList.add('rv');e.style.setProperty('--i',Math.min(i,8))});
+var o=new IntersectionObserver(function(es){es.forEach(function(x){if(!x.isIntersecting)return;var e=x.target;e.classList.add('in');o.unobserve(e);setTimeout(function(){e.classList.remove('rv','in')},1400);
+var c=e.querySelector&&e.querySelector('.num');if(c){var t=+c.dataset.to,s=c.dataset.suf||'',t0=performance.now();(function f(t1){var k=Math.min((t1-t0)/1100,1);c.textContent=Math.round(t*(1-Math.pow(1-k,3)))+s;if(k<1)requestAnimationFrame(f)})(t0)}})},{threshold:.12});
+q('.rv').forEach(function(e){o.observe(e)});
+var tl=q('.tl'),tk=0;function u(){tk=0;var y=scrollY,H=h.scrollHeight-innerHeight;h.style.setProperty('--sp',H>0?y/H:0);tl.forEach(function(e){var r=e.getBoundingClientRect();e.style.setProperty('--p',Math.max(0,Math.min(1,(innerHeight*.75-r.top)/r.height)))})}
+addEventListener('scroll',function(){tk||(tk=requestAnimationFrame(u))},{passive:true});u()})();</script>
+</body>
+</html>
