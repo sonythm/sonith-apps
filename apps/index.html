@@ -66,6 +66,8 @@ ul.net li{margin:8px 0}
 ul.plain{margin:12px 0;padding-left:20px}ul.plain li{margin:8px 0}
 footer{border-top:1px solid var(--bd);padding:28px 0 40px;color:var(--mut);font-size:15px}
 footer ul{list-style:none;display:flex;flex-wrap:wrap;gap:0 10px;padding:0;margin:0 0 10px}footer a{display:inline-flex;align-items:center;min-height:44px}
+.gal{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;list-style:none;margin:16px 0 0;padding:0 0 12px;-webkit-overflow-scrolling:touch}.gal li{flex:0 0 min(70%,240px);scroll-snap-align:start;margin:0}.gal figure{margin:0}.gal img{display:block;width:100%;height:auto;border-radius:16px;border:1px solid var(--bd)}.gal figcaption{padding:6px 2px;font-size:15px}.gal figcaption a{display:inline-flex;align-items:center;min-height:44px}
+@media (min-width:800px){.gal{display:grid;grid-template-columns:repeat(6,1fr);overflow:visible}.gal li{flex:none}}
 .role{font-size:22px;font-weight:700;margin:0 0 4px}.loc{color:var(--mut);margin:0 0 16px}p.bio{max-width:40em;font-size:17px}nav a[aria-current=page]{font-weight:700;text-decoration:none}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}</style>
 </head>
@@ -91,27 +93,27 @@ footer ul{list-style:none;display:flex;flex-wrap:wrap;gap:0 10px;padding:0;margi
 <div id="apps-list">
 <h3 id="g-shops-business">Shops &amp; business</h3>
 <ul class="grid" aria-labelledby="g-shops-business">
-<li class="card">
+<li class="card" id="barber-book">
 <div class="ch"><img src="/sonith-apps/img/barber-book.png" width="64" height="64" loading="lazy" decoding="async" alt="Barber Book: Salon Accounts app icon"><div><h4>Barber Book: Salon Accounts</h4><span class="chip">In testing</span></div></div>
 <p>One-tap sales, expenses and reports for your barber shop. Works offline.</p>
 <div class="acts"><a class="l" href="/sonith-apps/barber-book/" aria-label="Privacy policy for Barber Book: Salon Accounts">Privacy policy</a><span class="soon">Coming to Google Play</span></div>
 </li>
-<li class="card">
+<li class="card" id="iron-book">
 <div class="ch"><img src="/sonith-apps/img/iron-book.png" width="64" height="64" loading="lazy" decoding="async" alt="Iron Book: Press Shop Khata app icon"><div><h4>Iron Book: Press Shop Khata</h4><span class="chip">In testing</span></div></div>
 <p>Ironing orders, customer khata, expenses and reports for press shops. Offline.</p>
 <div class="acts"><a class="l" href="/sonith-apps/iron-book/" aria-label="Privacy policy for Iron Book: Press Shop Khata">Privacy policy</a><span class="soon">Coming to Google Play</span></div>
 </li>
-<li class="card">
+<li class="card" id="home-chef-book">
 <div class="ch"><img src="/sonith-apps/img/home-chef-book.png" width="64" height="64" loading="lazy" decoding="async" alt="Home Chef Book: Order Diary app icon"><div><h4>Home Chef Book: Order Diary</h4><span class="chip">In testing</span></div></div>
 <p>Orders, menu, advance and khata for home bakers and cooks. Offline, no login.</p>
 <div class="acts"><a class="l" href="/sonith-apps/home-chef-book/" aria-label="Privacy policy for Home Chef Book: Order Diary">Privacy policy</a><span class="soon">Coming to Google Play</span></div>
 </li>
-<li class="card">
+<li class="card" id="voice-khata">
 <div class="ch"><img src="/sonith-apps/img/voice-khata.png" width="64" height="64" loading="lazy" decoding="async" alt="Voice Khata: Udhaar Ledger app icon"><div><h4>Voice Khata: Udhaar Ledger</h4><span class="chip">In testing</span></div></div>
 <p>Speak the udhaar in Hindi, Malayalam or English. Offline khata for your shop.</p>
 <div class="acts"><a class="l" href="/sonith-apps/voice-khata/" aria-label="Privacy policy for Voice Khata: Udhaar Ledger">Privacy policy</a><span class="soon">Coming to Google Play</span></div>
 </li>
-<li class="card">
+<li class="card" id="card-follow-up">
 <div class="ch"><img src="/sonith-apps/img/card-follow-up.png" width="64" height="64" loading="lazy" decoding="async" alt="Card to Follow-up app icon"><div><h4>Card to Follow-up</h4><span class="chip">In testing</span></div></div>
 <p>Scan a visiting card, note where you met, get a reminder to follow up.</p>
 <div class="acts"><a class="l" href="/sonith-apps/card-follow-up/" aria-label="Privacy policy for Card to Follow-up">Privacy policy</a><span class="soon">Coming to Google Play</span></div>
@@ -119,32 +121,32 @@ footer ul{list-style:none;display:flex;flex-wrap:wrap;gap:0 10px;padding:0;margi
 </ul>
 <h3 id="g-home-family">Home &amp; family</h3>
 <ul class="grid" aria-labelledby="g-home-family">
-<li class="card">
+<li class="card" id="kitchen-book">
 <div class="ch"><img src="/sonith-apps/img/kitchen-book.png" width="64" height="64" loading="lazy" decoding="async" alt="Kitchen Book: Grocery &amp; Meals app icon"><div><h4>Kitchen Book: Grocery &amp; Meals</h4><span class="chip">In testing</span></div></div>
 <p>Monthly grocery list, pantry, meal plan, gas booking and kitchen spend. Offline.</p>
 <div class="acts"><a class="l" href="/sonith-apps/kitchen-book/" aria-label="Privacy policy for Kitchen Book: Grocery &amp; Meals">Privacy policy</a><span class="soon">Coming to Google Play</span></div>
 </li>
-<li class="card">
+<li class="card" id="chore-rota">
 <div class="ch"><img src="/sonith-apps/img/chore-rota.png" width="64" height="64" loading="lazy" decoding="async" alt="Chore Rota app icon"><div><h4>Chore Rota</h4><span class="chip">In testing</span></div></div>
 <p>Fair household chores: rotation, proof photos, helper log, shareable week.</p>
 <div class="acts"><a class="l" href="/sonith-apps/chore-rota/" aria-label="Privacy policy for Chore Rota">Privacy policy</a><span class="soon">Coming to Google Play</span></div>
 </li>
-<li class="card">
+<li class="card" id="daily-dues">
 <div class="ch"><img src="/sonith-apps/img/daily-dues.png" width="64" height="64" loading="lazy" decoding="async" alt="Daily Dues app icon"><div><h4>Daily Dues</h4><span class="chip">In testing</span></div></div>
 <p>Track milk, maid, paper and more. One tap a day, exact monthly dues.</p>
 <div class="acts"><a class="l" href="/sonith-apps/daily-dues/" aria-label="Privacy policy for Daily Dues">Privacy policy</a><span class="soon">Coming to Google Play</span></div>
 </li>
-<li class="card">
+<li class="card" id="move-in-report">
 <div class="ch"><img src="/sonith-apps/img/move-in-report.png" width="64" height="64" loading="lazy" decoding="async" alt="Move-In Report app icon"><div><h4>Move-In Report</h4><span class="chip">In testing</span></div></div>
 <p>Room-by-room condition photos and notes for your rental, kept on your phone.</p>
 <div class="acts"><a class="l" href="/sonith-apps/move-in-report/" aria-label="Privacy policy for Move-In Report">Privacy policy</a><span class="soon">Coming to Google Play</span></div>
 </li>
-<li class="card">
+<li class="card" id="warranty-vault">
 <div class="ch"><img src="/sonith-apps/img/warranty-vault.png" width="64" height="64" loading="lazy" decoding="async" alt="Warranty Vault app icon"><div><h4>Warranty Vault</h4><span class="chip">In testing</span></div></div>
 <p>Keep warranties and documents in one place and get reminded before they expire.</p>
 <div class="acts"><a class="l" href="/sonith-apps/warranty-vault/" aria-label="Privacy policy for Warranty Vault">Privacy policy</a><span class="soon">Coming to Google Play</span></div>
 </li>
-<li class="card">
+<li class="card" id="kid-health-book">
 <div class="ch"><img src="/sonith-apps/img/kid-health-book.png" width="64" height="64" loading="lazy" decoding="async" alt="Kid Health Book: Vaccines app icon"><div><h4>Kid Health Book: Vaccines</h4><span class="chip">In testing</span></div></div>
 <p>Your child's vaccines, growth, doctor visits and medicines. Private, offline.</p>
 <div class="acts"><a class="l" href="/sonith-apps/kid-health-book/" aria-label="Privacy policy for Kid Health Book: Vaccines">Privacy policy</a><span class="soon">Coming to Google Play</span></div>
@@ -152,17 +154,17 @@ footer ul{list-style:none;display:flex;flex-wrap:wrap;gap:0 10px;padding:0;margi
 </ul>
 <h3 id="g-kids">Kids</h3>
 <ul class="grid" aria-labelledby="g-kids">
-<li class="card">
+<li class="card" id="tables-hero">
 <div class="ch"><img src="/sonith-apps/img/tables-hero.png" width="64" height="64" loading="lazy" decoding="async" alt="Tables Hero: Times Tables app icon"><div><h4>Tables Hero: Times Tables</h4><span class="chip">In testing</span></div></div>
 <p>Times tables and quick maths practice for kids. No ads, works offline.</p>
 <div class="acts"><a class="l" href="/sonith-apps/tables-hero/" aria-label="Privacy policy for Tables Hero: Times Tables">Privacy policy</a><span class="soon">Coming to Google Play</span></div>
 </li>
-<li class="card">
+<li class="card" id="star-chart">
 <div class="ch"><img src="/sonith-apps/img/star-chart.png" width="64" height="64" loading="lazy" decoding="async" alt="Star Chart: Kids Habit Rewards app icon"><div><h4>Star Chart: Kids Habit Rewards</h4><span class="chip">In testing</span></div></div>
 <p>A happy star chart for good habits and rewards. No ads. Stays on your phone.</p>
 <div class="acts"><a class="l" href="/sonith-apps/star-chart/" aria-label="Privacy policy for Star Chart: Kids Habit Rewards">Privacy policy</a><span class="soon">Coming to Google Play</span></div>
 </li>
-<li class="card">
+<li class="card" id="puzzle-tree">
 <div class="ch"><img src="/sonith-apps/img/puzzle-tree.png" width="64" height="64" loading="lazy" decoding="async" alt="Puzzle Tree: Kids Learning app icon"><div><h4>Puzzle Tree: Kids Learning</h4><span class="chip">In testing</span></div></div>
 <p>Maths, English, GK and logic puzzles for kids 5-12. No ads. Works offline.</p>
 <div class="acts"><a class="l" href="/sonith-apps/puzzle-tree/" aria-label="Privacy policy for Puzzle Tree: Kids Learning">Privacy policy</a><span class="soon">Coming to Google Play</span></div>
@@ -170,12 +172,12 @@ footer ul{list-style:none;display:flex;flex-wrap:wrap;gap:0 10px;padding:0;margi
 </ul>
 <h3 id="g-money-records">Money &amp; records</h3>
 <ul class="grid" aria-labelledby="g-money-records">
-<li class="card">
+<li class="card" id="rent-receipt">
 <div class="ch"><img src="/sonith-apps/img/rent-receipt.png" width="64" height="64" loading="lazy" decoding="async" alt="Rent Receipt Generator app icon"><div><h4>Rent Receipt Generator</h4><span class="chip">In testing</span></div></div>
 <p>Make a year of rent receipts as one A5 PDF for your HRA claim.</p>
 <div class="acts"><a class="l" href="/sonith-apps/rent-receipt/" aria-label="Privacy policy for Rent Receipt Generator">Privacy policy</a><span class="soon">Coming to Google Play</span></div>
 </li>
-<li class="card">
+<li class="card" id="myspend">
 <div class="ch"><img src="/sonith-apps/img/myspend.png" width="64" height="64" loading="lazy" decoding="async" alt="MySpend app icon"><div><h4>MySpend</h4><span class="chip">In testing</span></div></div>
 <p>Track spending, bills and budgets. Your data stays on your phone.</p>
 <div class="acts"><a class="l" href="/sonith-apps/myspend/" aria-label="Privacy policy for MySpend">Privacy policy</a><span class="soon">Coming to Google Play</span></div>
@@ -183,42 +185,42 @@ footer ul{list-style:none;display:flex;flex-wrap:wrap;gap:0 10px;padding:0;margi
 </ul>
 <h3 id="g-tools-productivity">Tools &amp; productivity</h3>
 <ul class="grid" aria-labelledby="g-tools-productivity">
-<li class="card">
+<li class="card" id="routine-runner">
 <div class="ch"><img src="/sonith-apps/img/routine-runner.png" width="64" height="64" loading="lazy" decoding="async" alt="ADHD Routine Runner app icon"><div><h4>ADHD Routine Runner</h4><span class="chip">In testing</span></div></div>
 <p>Run morning and evening routines one step at a time with a gentle timer.</p>
 <div class="acts"><a class="l" href="/sonith-apps/routine-runner/" aria-label="Privacy policy for ADHD Routine Runner">Privacy policy</a><span class="soon">Coming to Google Play</span></div>
 </li>
-<li class="card">
+<li class="card" id="flashcards">
 <div class="ch"><img src="/sonith-apps/img/flashcards.png" width="64" height="64" loading="lazy" decoding="async" alt="Flashcards from Screenshots app icon"><div><h4>Flashcards from Screenshots</h4><span class="chip">In testing</span></div></div>
 <p>Turn screenshots into flashcards and review them on schedule. No account.</p>
 <div class="acts"><a class="l" href="/sonith-apps/flashcards/" aria-label="Privacy policy for Flashcards from Screenshots">Privacy policy</a><span class="soon">Coming to Google Play</span></div>
 </li>
-<li class="card">
+<li class="card" id="screenshot-calendar">
 <div class="ch"><img src="/sonith-apps/img/screenshot-calendar.png" width="64" height="64" loading="lazy" decoding="async" alt="Screenshot to Calendar app icon"><div><h4>Screenshot to Calendar</h4><span class="chip">In testing</span></div></div>
 <p>Turn dates in screenshots and messages into calendar events.</p>
 <div class="acts"><a class="l" href="/sonith-apps/screenshot-calendar/" aria-label="Privacy policy for Screenshot to Calendar">Privacy policy</a><span class="soon">Coming to Google Play</span></div>
 </li>
-<li class="card">
+<li class="card" id="shift-roster">
 <div class="ch"><img src="/sonith-apps/img/shift-roster.png" width="64" height="64" loading="lazy" decoding="async" alt="Shift Roster to Calendar app icon"><div><h4>Shift Roster to Calendar</h4><span class="chip">In testing</span></div></div>
 <p>Photograph your duty roster and add your shifts to your calendar.</p>
 <div class="acts"><a class="l" href="/sonith-apps/shift-roster/" aria-label="Privacy policy for Shift Roster to Calendar">Privacy policy</a><span class="soon">Coming to Google Play</span></div>
 </li>
-<li class="card">
+<li class="card" id="voice-memo">
 <div class="ch"><img src="/sonith-apps/img/voice-memo.png" width="64" height="64" loading="lazy" decoding="async" alt="Voice Memo app icon"><div><h4>Voice Memo</h4><span class="chip">In testing</span></div></div>
 <p>Record, transcribe on your phone, and search every word you said.</p>
 <div class="acts"><a class="l" href="/sonith-apps/voice-memo/" aria-label="Privacy policy for Voice Memo">Privacy policy</a><span class="soon">Coming to Google Play</span></div>
 </li>
-<li class="card">
+<li class="card" id="share-logs">
 <div class="ch"><img src="/sonith-apps/img/share-logs.png" width="64" height="64" loading="lazy" decoding="async" alt="Share Logs to Insight app icon"><div><h4>Share Logs to Insight</h4><span class="chip">In testing</span></div></div>
 <p>Share a log file and see its errors grouped by cause, counted, on a timeline.</p>
 <div class="acts"><a class="l" href="/sonith-apps/share-logs/" aria-label="Privacy policy for Share Logs to Insight">Privacy policy</a><span class="soon">Coming to Google Play</span></div>
 </li>
-<li class="card">
+<li class="card" id="share-to-github-issue">
 <div class="ch"><img src="/sonith-apps/img/share-to-github-issue.png" width="64" height="64" loading="lazy" decoding="async" alt="Share to GitHub Issue app icon"><div><h4>Share to GitHub Issue</h4><span class="chip">In testing</span></div></div>
 <p>Share a screenshot, text or link from any app and it becomes a GitHub issue.</p>
 <div class="acts"><a class="l" href="/sonith-apps/share-to-github-issue/" aria-label="Privacy policy for Share to GitHub Issue">Privacy policy</a><span class="soon">Coming to Google Play</span></div>
 </li>
-<li class="card">
+<li class="card" id="repo-widget">
 <div class="ch"><img src="/sonith-apps/img/repo-widget.png" width="64" height="64" loading="lazy" decoding="async" alt="Repo Widget app icon"><div><h4>Repo Widget</h4><span class="chip">In testing</span></div></div>
 <p>GitHub reviews and failed builds on your Android home screen.</p>
 <div class="acts"><a class="l" href="/sonith-apps/repo-widget/" aria-label="Privacy policy for Repo Widget">Privacy policy</a><span class="soon">Coming to Google Play</span></div>

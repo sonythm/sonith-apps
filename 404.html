@@ -55,6 +55,8 @@ ul.net li{margin:8px 0}
 ul.plain{margin:12px 0;padding-left:20px}ul.plain li{margin:8px 0}
 footer{border-top:1px solid var(--bd);padding:28px 0 40px;color:var(--mut);font-size:15px}
 footer ul{list-style:none;display:flex;flex-wrap:wrap;gap:0 10px;padding:0;margin:0 0 10px}footer a{display:inline-flex;align-items:center;min-height:44px}
+.gal{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;list-style:none;margin:16px 0 0;padding:0 0 12px;-webkit-overflow-scrolling:touch}.gal li{flex:0 0 min(70%,240px);scroll-snap-align:start;margin:0}.gal figure{margin:0}.gal img{display:block;width:100%;height:auto;border-radius:16px;border:1px solid var(--bd)}.gal figcaption{padding:6px 2px;font-size:15px}.gal figcaption a{display:inline-flex;align-items:center;min-height:44px}
+@media (min-width:800px){.gal{display:grid;grid-template-columns:repeat(6,1fr);overflow:visible}.gal li{flex:none}}
 .role{font-size:22px;font-weight:700;margin:0 0 4px}.loc{color:var(--mut);margin:0 0 16px}p.bio{max-width:40em;font-size:17px}nav a[aria-current=page]{font-weight:700;text-decoration:none}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}</style>
 </head>
