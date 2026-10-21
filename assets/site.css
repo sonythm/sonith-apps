@@ -394,7 +394,7 @@ footer ul{list-style:none;display:flex;flex-wrap:wrap;gap:0 10px;padding:0;margi
 .fgar{stroke:var(--link);stroke-width:2.5;fill:none}.fgar.ret{stroke-dasharray:6 5}.fgh{fill:var(--link)}
 .fgb circle{fill:var(--btn)}.fgb text{fill:var(--btnfg);font:700 16px system-ui,sans-serif}
 .fgq .fa-p{fill:var(--btn);stroke:var(--card);stroke-width:2;opacity:0}
-.fgbar{fill:var(--chip);stroke:var(--bd);stroke-width:2}.fgcap{stroke:#b91c1c;stroke-width:3;stroke-dasharray:5 4}
+.fglb{fill:var(--card)}.fgdep{margin-top:10px}.fgbar{fill:var(--chip);stroke:var(--bd);stroke-width:2}.fgcap{stroke:#b91c1c;stroke-width:3;stroke-dasharray:5 4}
 .fgseg{stroke:var(--card);stroke-width:2}.fgseg.k0{fill:#6d5bd0}.fgseg.k1{fill:#0f766e}.fgseg.k2{fill:#b45309}.fgseg.k3{fill:#2563eb}.fgseg.k4{fill:#b91c1c}
 .fgfb .fgb circle{fill:var(--fg)}.fgfb .fgb text{fill:var(--bg)}
 .fgl{margin:12px 0 0;padding-left:28px;font-size:16px}.fgl li{margin:6px 0}.fgl li span{color:var(--mut)}
@@ -409,7 +409,7 @@ footer ul{list-style:none;display:flex;flex-wrap:wrap;gap:0 10px;padding:0;margi
 .fgf ol{grid-template-columns:repeat(var(--c),minmax(0,1fr));gap:34px 38px}.fgf li{min-width:0;overflow-wrap:break-word;padding:12px 12px 12px 50px}.fgf li b{padding-right:28px}
 .far{left:auto;right:-38px;top:50%;bottom:auto;width:38px;height:2px;border-left:0;border-top:2px dashed var(--link);--dx:30px;--dy:0px}
 .far u{left:0;top:-6px}
-.fgf.c2 li:nth-child(2n) .far,.fgf.c3 li:nth-child(3n) .far,.fgf.c4 li:nth-child(4n) .far,.fgf.c1 .far{display:none}
+.fgf.c1 .far{display:none}.fgf.c2 li:nth-child(2n):not(:last-child) .far,.fgf.c3 li:nth-child(3n):not(:last-child) .far{left:calc(50% - 1px);right:auto;top:auto;bottom:-34px;width:2px;height:34px;border-top:0;border-left:2px dashed var(--link);--dx:0px;--dy:28px}.fgf.c2 li:nth-child(2n):not(:last-child) .far u,.fgf.c3 li:nth-child(3n):not(:last-child) .far u{left:-6px;top:0}
 .fgf li{min-height:120px}
 .fgs.w .fgs-g{grid-template-columns:130px repeat(var(--n),minmax(0,1fr));gap:10px}
 .fgs.w .fgs-lane{display:flex;align-items:center;grid-column:1;grid-row:var(--r);font-weight:700;font-size:15px;padding:0 8px;border-radius:12px;background:var(--chip)}
