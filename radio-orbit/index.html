@@ -34,16 +34,15 @@
 <nav class="crumb" aria-label="Breadcrumb"><ol><li><a href="/sonith-apps/">Home</a></li><li><a href="/sonith-apps/privacy/">Privacy policies</a></li><li aria-current="page">Radio Orbit</li></ol></nav><div class="ch" style="margin:6px 0 10px"><img src="/sonith-apps/img/radio-orbit.png" width="72" height="72" alt="" style="border-radius:18px"><div><p class="eyebrow" style="margin:0">Privacy policy</p><h1 style="margin:0">Radio Orbit Privacy Policy</h1></div></div>
 
 </div></div>
-<div class="wrap"><article class="prose pol" style="margin-top:28px;margin-bottom:48px"><h1>Radio Orbit Privacy Policy</h1>
-<p>Effective date: 2026-11-23 App: com.sonith.radioorbit, version 0.2.0 (working name) Developer: Sonith Contact: sonythm@gmail.com</p>
+<div class="wrap"><article class="prose pol" style="margin-top:28px;margin-bottom:48px"><p>Effective date: 2026-11-24 App: com.sonith.radioorbit, version 0.2.1 (working name) Developer: Sonith Contact: sonythm@gmail.com</p>
 <h2>Short version</h2>
-<p>Your favourites, recent stations and settings stay on your phone. If you choose to use your location, it is used only on your phone and is never stored or sent. The developer does not receive any of it and runs no server for this app. There are no accounts, no ads, no analytics and no crash reporting. To work, the app talks to two kinds of servers run by others: the Radio Browser station directory, and the stream server of the station you choose to play.</p>
+<p>Your favourites, recent stations and settings stay on your phone. If you choose to use your location, it is used only on your phone and is not stored. If you choose a home area, only a rounded position (about 50 km) and its place name are saved on your phone; nothing is ever sent. The developer does not receive any of it and runs no server for this app. There are no accounts, no ads, no analytics and no crash reporting. To work, the app talks to two kinds of servers run by others: the Radio Browser station directory, and the stream server of the station you choose to play.</p>
 <h2>What the app stores on your device</h2>
 <ul>
 <li>A saved copy of the station list (name, place, stream address, logo address, genre tags, codec, bitrate, vote count), refreshed about once a day.</li>
 <li>Your favourite stations and your recently played stations (up to 30).</li>
-<li>Settings: whether the globe turns by itself, whether you chose to use your location (on or off only), your preferred languages (up to five), and whether the first-run tips were shown.</li>
-<li>Location coordinates are NOT stored: see the Location section.</li>
+<li>Settings: whether the globe turns by itself, whether you chose to use your location (on or off only), your preferred languages (up to five), whether the first-run tips were shown, whether the controls start hidden, and your optional home area (a rounded position and a place name, see the Location section).</li>
+<li>Your location itself (the coordinates your phone reports) is NOT stored. The only position kept is the coarse home area you choose yourself: see the Location section.</li>
 </ul>
 <p>This is kept in a local database on the phone (SQLite). The app adds no encryption beyond your phone's storage protection.</p>
 <h2>Network calls</h2>
@@ -59,7 +58,8 @@
 <li>Optional. The app can centre the globe on where you are and list nearby stations. It asks first on its own screen ("Use my location" or "Not now") and only then shows the Android permission dialog. You can say no, and the app works fully; it then centres on your country, guessed from your phone's time zone and language, without using any location sensor.</li>
 <li>It uses approximate (coarse) location only, while the app is open (permission ACCESS_COARSE_LOCATION). It never uses precise or background location.</li>
 <li>Your position is processed on your phone only, to centre the globe and find nearby stations from the saved list. It is kept in memory for the current session only. It is not stored in the app's database, not written to logs, not sent to the developer, not sent to the Radio Browser directory and not sent to any station. Directory requests do not include it.</li>
-<li>The app remembers only your choice (on or off). In Settings you can switch "Use my location to centre the globe" off or use "Forget my location choice", and you can withdraw the permission in Android settings at any time.</li>
+<li>Optional home area: you can set a place as your home (from a place list, from a search result, or from the "Near you" list after using your location). The app then stores on your phone only the position rounded to 0.5 degrees (about 50 km, never exact coordinates) and the place name, for example "Mumbai, India", so the globe can open there and show a small house marker. It is never sent to the developer, to the Radio Browser directory or to any station, and no request includes it. In Settings, "Change home" lets you pick another place and "Forget home" deletes it. "Delete my data" removes it too.</li>
+<li>Apart from the home area, the app remembers only your choice (on or off). In Settings you can switch "Use my location to centre the globe" off or use "Forget my location choice", and you can withdraw the permission in Android settings at any time.</li>
 </ul>
 <h2>Permissions the app requests</h2>
 <ul>
@@ -81,7 +81,7 @@
 <p>The app turns off Android Auto Backup for its data.</p>
 <h2>How to delete your data</h2>
 <ul>
-<li>In the app: Settings, "Delete my data" removes favourites, recents, settings and the saved station list. Remove a favourite with its heart. "Forget my location choice" resets the location choice. "Clear" in Recent removes the history.</li>
+<li>In the app: Settings, "Delete my data" removes favourites, recents, settings and the saved station list. Remove a favourite with its heart. "Forget my location choice" resets the location choice. "Forget home" in Settings removes your home area. "Clear" in Recent removes the history.</li>
 <li>Or uninstall the app, or clear its storage in Android settings.</li>
 </ul>
 <p>The developer holds no copy, so there is nothing to request from the developer. Requests already sent to Radio Browser or to stations are governed by those operators.</p>
