@@ -34,20 +34,20 @@
 <nav class="crumb" aria-label="Breadcrumb"><ol><li><a href="/sonith-apps/">Home</a></li><li><a href="/sonith-apps/privacy/">Privacy policies</a></li><li aria-current="page">Radio Orbit</li></ol></nav><div class="ch" style="margin:6px 0 10px"><img src="/sonith-apps/img/radio-orbit.png" width="72" height="72" alt="" style="border-radius:18px"><div><p class="eyebrow" style="margin:0">Privacy policy</p><h1 style="margin:0">Radio Orbit Privacy Policy</h1></div></div>
 
 </div></div>
-<div class="wrap"><article class="prose pol" style="margin-top:28px;margin-bottom:48px"><p>Effective date: 2026-11-24 App: com.sonith.radioorbit, version 0.2.1 (working name) Developer: Sonith Contact: sonythm@gmail.com</p>
+<div class="wrap"><article class="prose pol" style="margin-top:28px;margin-bottom:48px"><p>Effective date: 2026-11-24 App: com.sonith.radioorbit, version 0.3.0 (working name) Developer: Sonith Contact: sonythm@gmail.com</p>
 <h2>Short version</h2>
 <p>Your favourites, recent stations and settings stay on your phone. If you choose to use your location, it is used only on your phone and is not stored. If you choose a home area, only a rounded position (about 50 km) and its place name are saved on your phone; nothing is ever sent. The developer does not receive any of it and runs no server for this app. There are no accounts, no ads, no analytics and no crash reporting. To work, the app talks to two kinds of servers run by others: the Radio Browser station directory, and the stream server of the station you choose to play.</p>
 <h2>What the app stores on your device</h2>
 <ul>
 <li>A saved copy of the station list (name, place, stream address, logo address, genre tags, codec, bitrate, vote count), refreshed about once a day.</li>
 <li>Your favourite stations and your recently played stations (up to 30).</li>
-<li>Settings: whether the globe turns by itself, whether you chose to use your location (on or off only), your preferred languages (up to five), whether the first-run tips were shown, whether the controls start hidden, and your optional home area (a rounded position and a place name, see the Location section).</li>
+<li>Settings: whether the globe turns by itself, whether you chose to use your location (on or off only), your preferred languages (up to five), whether the first-run tips were shown, whether the controls start hidden, whether Satellite view is on or off, and your optional home area (a rounded position and a place name, see the Location section).</li>
 <li>Your location itself (the coordinates your phone reports) is NOT stored. The only position kept is the coarse home area you choose yourself: see the Location section.</li>
 </ul>
 <p>This is kept in a local database on the phone (SQLite). The app adds no encryption beyond your phone's storage protection.</p>
 <h2>Network calls</h2>
 <ol>
-<li>Radio Browser directory (radio-browser.info). The app asks all.api.radio-browser.info for the list of directory servers, then asks one of them for the list of stations and for your searches. When you press play, it also sends the directory's "station click" call with the station's identifier (the directory asks apps to do this to count listens). These servers receive your IP address and a User-Agent text "RadioOrbit/0.2", like any web request. Search words you type are sent to the directory as part of the search request. Their own policy applies: https://www.radio-browser.info</li>
+<li>Radio Browser directory (radio-browser.info). The app asks all.api.radio-browser.info for the list of directory servers, then asks one of them for the list of stations and for your searches. When you press play, it also sends the directory's "station click" call with the station's identifier (the directory asks apps to do this to count listens). These servers receive your IP address and a User-Agent text "RadioOrbit/0.3", like any web request. Search words you type are sent to the directory as part of the search request. Their own policy applies: https://www.radio-browser.info</li>
 <li>The station you play. Audio streams come directly from each station's own server (often a streaming provider). That server sees your IP address, your device's request and when you listen, as with any website or radio app. The app does not choose or vet these servers. Their own policies apply.</li>
 <li>Song titles. While a station is playing and the app is open on screen, the app may open a second, short connection to the same stream server you are already listening to, asking it for the current song title (the standard Icy-MetaData header), about every 30 seconds. This goes only to that station's server (it sees your IP address, as it does for the audio) and the title is shown on the screen and the lock screen. Song titles are never sent anywhere else, are not looked up online and are kept only for the current session (the last 20). A "Search this song" button opens your browser only if you tap it.</li>
 <li>Station logos. The app may load a station's small logo image from the address given in the directory, which is a request to that logo's host.</li>
@@ -74,7 +74,7 @@
 <h2>Sharing and sale of data</h2>
 <p>Nothing is sold or shared by the developer. There are no advertising or analytics SDKs.</p>
 <h2>Credits</h2>
-<p>Station data: Radio Browser (radio-browser.info), an open community directory. Land outlines: Natural Earth (public domain). Both are credited in the app under Settings, About.</p>
+<p>Station data: Radio Browser (radio-browser.info), an open community directory. Land outlines: Natural Earth (public domain). Satellite view: imagery from NASA Visible Earth / Blue Marble (public domain), turned into coloured dots and bundled inside the app, so it is never downloaded and nothing is sent anywhere to show it. All are credited in the app under Settings, About.</p>
 <h2>Third-party content</h2>
 <p>Stations are operated by third parties. The app does not control, moderate or endorse their content, and it is not affiliated with any station or any other radio service. Content may not be suitable for everyone.</p>
 <h2>Backups</h2>
