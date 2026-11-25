@@ -34,17 +34,22 @@
 <nav class="crumb" aria-label="Breadcrumb"><ol><li><a href="/sonith-apps/">Home</a></li><li><a href="/sonith-apps/privacy/">Privacy policies</a></li><li aria-current="page">Radio Orbit</li></ol></nav><div class="ch" style="margin:6px 0 10px"><img src="/sonith-apps/img/radio-orbit.png" width="72" height="72" alt="" style="border-radius:18px"><div><p class="eyebrow" style="margin:0">Privacy policy</p><h1 style="margin:0">Radio Orbit Privacy Policy</h1></div></div>
 
 </div></div>
-<div class="wrap"><article class="prose pol" style="margin-top:28px;margin-bottom:48px"><p>Effective date: 2026-11-24 App: com.sonith.radioorbit, version 0.3.0 (working name) Developer: Sonith Contact: sonythm@gmail.com</p>
+<div class="wrap"><article class="prose pol" style="margin-top:28px;margin-bottom:48px"><p>Effective date: 2026-11-25 App: com.sonith.radioorbit, version 0.3.1 (working name) Developer: Sonith Contact: sonythm@gmail.com</p>
 <h2>Short version</h2>
 <p>Your favourites, recent stations and settings stay on your phone. If you choose to use your location, it is used only on your phone and is not stored. If you choose a home area, only a rounded position (about 50 km) and its place name are saved on your phone; nothing is ever sent. The developer does not receive any of it and runs no server for this app. There are no accounts, no ads, no analytics and no crash reporting. To work, the app talks to two kinds of servers run by others: the Radio Browser station directory, and the stream server of the station you choose to play.</p>
 <h2>What the app stores on your device</h2>
 <ul>
 <li>A saved copy of the station list (name, place, stream address, logo address, genre tags, codec, bitrate, vote count), refreshed about once a day.</li>
 <li>Your favourite stations and your recently played stations (up to 30).</li>
-<li>Settings: whether the globe turns by itself, whether you chose to use your location (on or off only), your preferred languages (up to five), whether the first-run tips were shown, whether the controls start hidden, whether Satellite view is on or off, and your optional home area (a rounded position and a place name, see the Location section).</li>
+<li>Settings: whether the globe turns by itself, whether you chose to use your location (on or off only), your preferred languages (up to five), whether the first-run tips were shown, whether the controls start hidden, whether Satellite view is on or off, whether the Station of the day card is shown, the Station of the day history (the last 14 days of daily picks: a date and a station identifier, kept only on the phone so the same station is not picked again soon), and your optional home area (a rounded position and a place name, see the Location section).</li>
 <li>Your location itself (the coordinates your phone reports) is NOT stored. The only position kept is the coarse home area you choose yourself: see the Location section.</li>
 </ul>
 <p>This is kept in a local database on the phone (SQLite). The app adds no encryption beyond your phone's storage protection.</p>
+<h2>Station of the day and sharing</h2>
+<ul>
+<li>Station of the day is chosen on your phone from the saved station list, using the date, your preferred languages and your home area (if you set them). It makes no network request, sends no notification and runs nothing in the background. Its history is stored on the phone only and is removed by "Delete my data".</li>
+<li>Share a station uses your phone's own share sheet. The app only hands the share sheet a short text (the station name, its place name as listed in the directory, and the station's own website address if the directory has one). It never includes your location, home area or coordinates. Nothing is sent until you choose an app and send it, and nothing is sent to the developer.</li>
+</ul>
 <h2>Network calls</h2>
 <ol>
 <li>Radio Browser directory (radio-browser.info). The app asks all.api.radio-browser.info for the list of directory servers, then asks one of them for the list of stations and for your searches. When you press play, it also sends the directory's "station click" call with the station's identifier (the directory asks apps to do this to count listens). These servers receive your IP address and a User-Agent text "RadioOrbit/0.3", like any web request. Search words you type are sent to the directory as part of the search request. Their own policy applies: https://www.radio-browser.info</li>
