@@ -34,7 +34,8 @@
 <nav class="crumb" aria-label="Breadcrumb"><ol><li><a href="/sonith-apps/">Home</a></li><li><a href="/sonith-apps/privacy/">Privacy policies</a></li><li aria-current="page">Radio Orbit</li></ol></nav><div class="ch" style="margin:6px 0 10px"><img src="/sonith-apps/img/radio-orbit.png" width="72" height="72" alt="" style="border-radius:18px"><div><p class="eyebrow" style="margin:0">Privacy policy</p><h1 style="margin:0">Radio Orbit Privacy Policy</h1></div></div>
 
 </div></div>
-<div class="wrap"><article class="prose pol" style="margin-top:28px;margin-bottom:48px"><p>Effective date: 2026-11-25 App: com.sonith.radioorbit, version 0.3.1 (working name) Developer: Sonith Contact: sonythm@gmail.com</p>
+<div class="wrap"><article class="prose pol" style="margin-top:28px;margin-bottom:48px"><h1>Radio Orbit Privacy Policy</h1>
+<p>Effective date: 2026-11-27 App: com.sonith.radioorbit, version 0.5.0 (working name) Developer: Sonith Contact: sonythm@gmail.com</p>
 <h2>Short version</h2>
 <p>Your favourites, recent stations and settings stay on your phone. If you choose to use your location, it is used only on your phone and is not stored. If you choose a home area, only a rounded position (about 50 km) and its place name are saved on your phone; nothing is ever sent. The developer does not receive any of it and runs no server for this app. There are no accounts, no ads, no analytics and no crash reporting. To work, the app talks to two kinds of servers run by others: the Radio Browser station directory, and the stream server of the station you choose to play.</p>
 <h2>What the app stores on your device</h2>
@@ -45,6 +46,11 @@
 <li>Your location itself (the coordinates your phone reports) is NOT stored. The only position kept is the coarse home area you choose yourself: see the Location section.</li>
 </ul>
 <p>This is kept in a local database on the phone (SQLite). The app adds no encryption beyond your phone's storage protection.</p>
+<h2>Android Auto and the status-bar chip</h2>
+<ul>
+<li>Android Auto: if you use Radio Orbit in Android Auto, it shows your favourites, recently played stations and station lists on the car screen. These lists are read on your phone from the app's own local data; nothing is sent to us or anyone else. Playback uses the same station streams as the app and starts only when you choose a station or ask the Assistant.</li>
+<li>Status-bar chip (Android 16 and later): the app can show a small ongoing notification with the station name and place while a station you started is playing. It is shown only on your phone, can be turned off in Settings or in Android settings, and sends nothing anywhere.</li>
+</ul>
 <h2>Station of the day and sharing</h2>
 <ul>
 <li>Station of the day is chosen on your phone from the saved station list, using the date, your preferred languages and your home area (if you set them). It makes no network request, sends no notification and runs nothing in the background. Its history is stored on the phone only and is removed by "Delete my data".</li>
@@ -70,7 +76,7 @@
 <ul>
 <li>Internet: to load the station list, search, and play streams.</li>
 <li>Foreground service (media playback) and wake lock: so audio continues with the screen off and the system can show the media notification.</li>
-<li>Notifications (Android 13 and later): to show the playback notification and lock-screen controls. The app sends no other notifications.</li>
+<li>Notifications (Android 13 and later): to show the playback notification and lock-screen controls. The app sends no other notifications. On Android 16 a further permission for ongoing "live" notifications (POST_PROMOTED_NOTIFICATIONS) lets the optional status-bar chip appear; it collects nothing.</li>
 <li>Modify audio settings: used by the audio library for playback and audio focus.</li>
 <li>Approximate location (ACCESS_COARSE_LOCATION): optional, see the Location section. Requested only when you tap "Use my location" or "Near me".</li>
 <li>Network state and vibration: added by system libraries to detect connectivity and for button feedback; neither sends anything anywhere.</li>
